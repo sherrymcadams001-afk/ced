@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cedrick Logging | Tech-Stewardship in Sustainable Forestry</title>
+    <meta name="description" content="Cedrick Logging combines advanced technology with sustainable forestry practices. GIS/LiDAR mapping, carbon calculators, and premium timber services for landowners and buyers.">
+    <style>
+        /* ===== CSS RESET & BASE ===== */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* ===== TECH-TIMBER COLOR PALETTE ===== */
+        :root {
+            --white: #FFFFFF;
+            --off-white: #F8F9FA;
+            --pine-light: #D4A574;
+            --pine: #C4956A;
+            --pine-dark: #8B6914;
+            --charcoal: #2D2D2D;
+            --black: #1A1A1A;
+            --accent-gold: #B8860B;
+            --text-primary: #1A1A1A;
+            --text-secondary: #4A4A4A;
+            --text-light: #FFFFFF;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--white);
+        }
+
+        /* ===== TYPOGRAPHY ===== */
+        h1, h2, h3, h4 {
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        h1 { font-size: 3rem; }
+        h2 { font-size: 2.25rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+
+        /* ===== LAYOUT UTILITIES ===== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            padding: 5rem 0;
+        }
+
+        /* ===== HEADER & NAVIGATION ===== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--black);
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--pine) 0%, var(--pine-dark) 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-tagline {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--pine-dark);
+        }
+
+        .nav-cta {
+            background: var(--black);
+            color: var(--white) !important;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            transition: background 0.3s ease !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--charcoal) !important;
+        }
+
+        /* ===== HERO SECTION WITH VIDEO BACKGROUND ===== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: var(--black);
+        }
+
+        .hero-video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .hero-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.6;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                180deg,
+                rgba(26, 26, 26, 0.7) 0%,
+                rgba(26, 26, 26, 0.5) 50%,
+                rgba(26, 26, 26, 0.8) 100%
+            );
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            color: var(--white);
+            max-width: 900px;
+            padding: 2rem;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(196, 149, 106, 0.2);
+            border: 1px solid var(--pine);
+            color: var(--pine-light);
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ===== SPLIT-PATH NAVIGATION (LANDOWNER VS BUYER) ===== */
+        .path-selection {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .path-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 2.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .path-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--pine);
+            transform: translateY(-5px);
+        }
+
+        .path-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--pine) 0%, var(--pine-dark) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.75rem;
+        }
+
+        .path-card h3 {
+            color: var(--white);
+            margin-bottom: 0.75rem;
+        }
+
+        .path-card p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .path-btn {
+            display: inline-block;
+            background: var(--white);
+            color: var(--black);
+            padding: 0.875rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .path-btn:hover {
+            background: var(--pine-light);
+            color: var(--black);
+        }
+
+        /* ===== ESG/TRUST INDICATORS ===== */
+        .trust-bar {
+            background: var(--off-white);
+            padding: 3rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .trust-items {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            text-align: center;
+        }
+
+        .trust-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--pine-dark);
+        }
+
+        .trust-label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ===== SERVICES SECTION ===== */
+        .services {
+            background: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            color: var(--black);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--off-white);
+            border-radius: 16px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .service-card:hover {
+            border-color: var(--pine);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--pine-light) 0%, var(--pine) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .service-card h3 {
+            color: var(--black);
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-link {
+            color: var(--pine-dark);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap 0.3s ease;
+        }
+
+        .service-link:hover {
+            gap: 0.75rem;
+        }
+
+        /* ===== GIS/LIDAR MAPPING SECTION ===== */
+        .mapping {
+            background: var(--black);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mapping-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .mapping-content h2 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+
+        .mapping-content p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+        }
+
+        .mapping-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .mapping-features li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .mapping-features li::before {
+            content: "✓";
+            width: 24px;
+            height: 24px;
+            background: var(--pine);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            flex-shrink: 0;
+        }
+
+        .mapping-visual {
+            background: linear-gradient(135deg, var(--charcoal) 0%, var(--black) 100%);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            min-height: 400px;
+        }
+
+        .map-placeholder {
+            width: 100%;
+            height: 100%;
+            min-height: 360px;
+            background: 
+                linear-gradient(90deg, rgba(196, 149, 106, 0.1) 1px, transparent 1px),
+                linear-gradient(rgba(196, 149, 106, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .map-placeholder-icon {
+            font-size: 3rem;
+            opacity: 0.5;
+        }
+
+        .map-placeholder-text {
+            color: var(--pine-light);
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ===== CARBON CALCULATOR SECTION ===== */
+        .carbon-calculator {
+            background: var(--off-white);
+        }
+
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .calculator-form {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--pine);
+        }
+
+        .calculate-btn {
+            width: 100%;
+            background: var(--black);
+            color: var(--white);
+            padding: 1rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .calculate-btn:hover {
+            background: var(--charcoal);
+        }
+
+        .calculator-result {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, var(--pine-light) 0%, var(--pine) 100%);
+            border-radius: 12px;
+            text-align: center;
+            display: none;
+        }
+
+        .calculator-result.active {
+            display: block;
+        }
+
+        .result-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .result-label {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.875rem;
+        }
+
+        .calculator-info h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .calculator-info p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .carbon-benefits {
+            list-style: none;
+        }
+
+        .carbon-benefits li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+            padding: 1rem;
+            background: var(--white);
+            border-radius: 12px;
+        }
+
+        .benefit-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--pine-light) 0%, var(--pine) 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .benefit-text h4 {
+            margin-bottom: 0.25rem;
+        }
+
+        .benefit-text p {
+            font-size: 0.875rem;
+            margin-bottom: 0;
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials {
+            background: var(--white);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--off-white);
+            border-radius: 16px;
+            padding: 2rem;
+            border-left: 4px solid var(--pine);
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--pine-light) 0%, var(--pine) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .author-name {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .author-title {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            background: linear-gradient(135deg, var(--black) 0%, var(--charcoal) 100%);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--pine);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid var(--pine);
+        }
+
+        .btn-primary:hover {
+            background: var(--pine-dark);
+            border-color: var(--pine-dark);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--white);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 1rem;
+            max-width: 300px;
+        }
+
+        .footer-column h4 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-column a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column a:hover {
+            color: var(--pine-light);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.875rem;
+        }
+
+        .certifications {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .cert-badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 1024px) {
+            .mapping-grid,
+            .calculator-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .path-selection {
+                grid-template-columns: 1fr;
+            }
+
+            .trust-items {
+                gap: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header>
+        <nav>
+            <a href="#" class="logo">
+                <div class="logo-icon">CL</div>
+                <div>
+                    <div class="logo-text">Cedrick Logging</div>
+                    <div class="logo-tagline">Tech-Stewardship Forestry</div>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#mapping">GIS Mapping</a></li>
+                <li><a href="#carbon">Carbon Calculator</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Drone Video Background -->
+    <section class="hero" id="home">
+        <div class="hero-video-container">
+            <!-- Placeholder for drone video - would be replaced with actual video -->
+            <div class="hero-video" style="background: linear-gradient(135deg, #2D2D2D 0%, #1A1A1A 100%);"></div>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <span class="hero-badge animate-fadeInUp">🌲 ESG Certified Forestry Partner</span>
+            <h1 class="animate-fadeInUp delay-1">Technology Meets<br>Sustainable Timber</h1>
+            <p class="hero-subtitle animate-fadeInUp delay-2">
+                Combining precision LiDAR mapping, carbon sequestration analytics, and 
+                sustainable harvesting practices. Partner with us for responsible forestry 
+                that protects your investment and our planet.
+            </p>
+            
+            <!-- Split-Path Navigation -->
+            <div class="path-selection animate-fadeInUp delay-3">
+                <div class="path-card" id="landowner-path">
+                    <div class="path-icon">🏔️</div>
+                    <h3>I'm a Landowner</h3>
+                    <p>Maximize your timber value while maintaining forest health with our comprehensive land management services.</p>
+                    <a href="#landowner" class="path-btn">Explore Options</a>
+                </div>
+                <div class="path-card" id="buyer-path">
+                    <div class="path-icon">🪵</div>
+                    <h3>I'm a Buyer</h3>
+                    <p>Source premium, sustainably harvested timber with full chain-of-custody documentation and carbon tracking.</p>
+                    <a href="#buyer" class="path-btn">View Inventory</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators Bar -->
+    <section class="trust-bar">
+        <div class="container">
+            <div class="trust-items">
+                <div class="trust-item">
+                    <div class="trust-number">25+</div>
+                    <div class="trust-label">Years Experience</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-number">150K</div>
+                    <div class="trust-label">Acres Managed</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-number">98%</div>
+                    <div class="trust-label">Client Retention</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-number">45K</div>
+                    <div class="trust-label">Tons CO₂ Offset</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Comprehensive Forestry Services</h2>
+                <p>From initial assessment to final harvest, we provide end-to-end sustainable forestry solutions backed by cutting-edge technology.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">📍</div>
+                    <h3>GIS/LiDAR Mapping</h3>
+                    <p>Precision 3D terrain mapping and forest inventory using drone-mounted LiDAR technology for accurate timber valuations and harvest planning.</p>
+                    <a href="#mapping" class="service-link">Learn More →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🌱</div>
+                    <h3>Carbon Credit Programs</h3>
+                    <p>Monetize your forest's carbon sequestration potential through verified carbon credit programs and ESG compliance reporting.</p>
+                    <a href="#carbon" class="service-link">Calculate Value →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🪓</div>
+                    <h3>Sustainable Harvesting</h3>
+                    <p>Low-impact harvesting techniques that maximize timber value while preserving forest health and biodiversity for future generations.</p>
+                    <a href="#" class="service-link">Our Methods →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>Forest Analytics</h3>
+                    <p>Real-time forest health monitoring, growth projections, and market timing analytics to optimize your timber investment returns.</p>
+                    <a href="#" class="service-link">View Dashboard →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔒</div>
+                    <h3>Chain of Custody</h3>
+                    <p>Complete traceability from stump to mill with blockchain-verified documentation for ESG compliance and premium market access.</p>
+                    <a href="#" class="service-link">Certification Info →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🤝</div>
+                    <h3>Consulting Services</h3>
+                    <p>Expert guidance on forest management plans, regulatory compliance, succession planning, and maximizing long-term forest value.</p>
+                    <a href="#" class="service-link">Book Consultation →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GIS/LiDAR Mapping Section -->
+    <section class="mapping section" id="mapping">
+        <div class="container">
+            <div class="mapping-grid">
+                <div class="mapping-content">
+                    <h2>Precision GIS & LiDAR Forest Mapping</h2>
+                    <p>Our advanced drone-mounted LiDAR systems capture millions of data points per acre, creating detailed 3D models of your forest that reveal insights invisible to traditional surveying methods.</p>
+                    <ul class="mapping-features">
+                        <li>Sub-meter accuracy terrain modeling</li>
+                        <li>Individual tree species identification</li>
+                        <li>Biomass and carbon stock estimation</li>
+                        <li>Optimal harvest route planning</li>
+                        <li>Erosion risk assessment</li>
+                        <li>Wildlife habitat mapping</li>
+                    </ul>
+                    <a href="#contact" class="btn-primary">Request a Survey</a>
+                </div>
+                <div class="mapping-visual">
+                    <div class="map-placeholder">
+                        <div class="map-placeholder-icon">🛰️</div>
+                        <div class="map-placeholder-text">Interactive GIS Map</div>
+                        <p style="color: rgba(255,255,255,0.5); font-size: 0.875rem; padding: 0 2rem; text-align: center;">
+                            Real-time LiDAR visualization would display here with your property data
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carbon Calculator Section -->
+    <section class="carbon-calculator section" id="carbon">
+        <div class="container">
+            <div class="calculator-grid">
+                <div class="calculator-form">
+                    <h3 style="margin-bottom: 1.5rem;">Carbon Sequestration Calculator</h3>
+                    <div class="form-group">
+                        <label for="acres">Total Forest Acres</label>
+                        <input type="number" id="acres" placeholder="Enter acreage" min="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="forest-type">Primary Forest Type</label>
+                        <select id="forest-type">
+                            <option value="">Select forest type</option>
+                            <option value="pine">Pine/Softwood</option>
+                            <option value="hardwood">Hardwood/Mixed</option>
+                            <option value="oak">Oak Dominant</option>
+                            <option value="maple">Maple/Birch</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="forest-age">Average Stand Age (years)</label>
+                        <input type="number" id="forest-age" placeholder="Enter average age" min="1">
+                    </div>
+                    <button class="calculate-btn" onclick="calculateCarbon()">Calculate Carbon Value</button>
+                    <div class="calculator-result" id="carbon-result">
+                        <div class="result-number" id="result-value">0</div>
+                        <div class="result-label">Estimated Annual CO₂ Sequestration (tons)</div>
+                        <p style="margin-top: 1rem; font-size: 0.875rem; color: rgba(255,255,255,0.8);">
+                            Potential carbon credit value: $<span id="credit-value">0</span>/year
+                        </p>
+                    </div>
+                </div>
+                <div class="calculator-info">
+                    <h2>Unlock Your Forest's Carbon Potential</h2>
+                    <p>Forests are one of Earth's most effective carbon sinks. Our carbon credit programs help you monetize this natural benefit while contributing to global climate goals.</p>
+                    <ul class="carbon-benefits">
+                        <li>
+                            <div class="benefit-icon">💰</div>
+                            <div class="benefit-text">
+                                <h4>Additional Revenue Stream</h4>
+                                <p>Generate income from verified carbon credits without harvesting a single tree.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="benefit-icon">📈</div>
+                            <div class="benefit-text">
+                                <h4>ESG Compliance</h4>
+                                <p>Meet corporate sustainability requirements and access premium buyers.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="benefit-icon">🌍</div>
+                            <div class="benefit-text">
+                                <h4>Climate Leadership</h4>
+                                <p>Contribute to global carbon reduction goals while growing your investment.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Trusted by Landowners & Buyers</h2>
+                <p>Hear from partners who have experienced our tech-forward approach to sustainable forestry.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The LiDAR mapping revealed timber value we didn't know existed. Their carbon credit program now generates $15,000 annually from our 200-acre woodlot."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JM</div>
+                        <div>
+                            <div class="author-name">James Mitchell</div>
+                            <div class="author-title">Multi-generational Landowner, Vermont</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"As a furniture manufacturer, traceability matters. Cedrick's chain-of-custody documentation gives our customers confidence in our sustainability claims."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SR</div>
+                        <div>
+                            <div class="author-name">Sarah Rodriguez</div>
+                            <div class="author-title">Procurement Director, Artisan Woods Co.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Their tech-stewardship approach aligned perfectly with our ESG goals. The real-time forest analytics dashboard keeps our stakeholders informed and confident."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">DK</div>
+                        <div>
+                            <div class="author-name">David Kim</div>
+                            <div class="author-title">Sustainability Officer, GreenBuild Inc.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section section" id="contact">
+        <div class="container">
+            <h2>Ready to Transform Your Forest Assets?</h2>
+            <p>Whether you're a landowner seeking to maximize sustainable value or a buyer sourcing certified timber, our team is ready to help.</p>
+            <div class="cta-buttons">
+                <a href="mailto:contact@cedricklogging.com" class="btn-primary">Schedule Consultation</a>
+                <a href="tel:+18005551234" class="btn-secondary">Call (800) 555-1234</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">CL</div>
+                        <div>
+                            <div class="logo-text" style="color: var(--white);">Cedrick Logging</div>
+                            <div class="logo-tagline">Tech-Stewardship Forestry</div>
+                        </div>
+                    </a>
+                    <p>Pioneering sustainable forestry through advanced technology and responsible land stewardship since 1998.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>For Landowners</h4>
+                    <ul>
+                        <li><a href="#">Forest Assessment</a></li>
+                        <li><a href="#">GIS Mapping</a></li>
+                        <li><a href="#">Carbon Credits</a></li>
+                        <li><a href="#">Harvest Planning</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>For Buyers</h4>
+                    <ul>
+                        <li><a href="#">Timber Inventory</a></li>
+                        <li><a href="#">Certification Docs</a></li>
+                        <li><a href="#">Volume Pricing</a></li>
+                        <li><a href="#">Delivery Options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About C. Thomas</a></li>
+                        <li><a href="#">Our Technology</a></li>
+                        <li><a href="#">ESG Report</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cedrick Logging. Owner: C. Thomas. All rights reserved.</p>
+                <div class="certifications">
+                    <span class="cert-badge">FSC Certified</span>
+                    <span class="cert-badge">SFI Member</span>
+                    <span class="cert-badge">Carbon Verified</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Carbon Calculator -->
+    <script>
+        function calculateCarbon() {
+            const acres = parseFloat(document.getElementById('acres').value) || 0;
+            const forestType = document.getElementById('forest-type').value;
+            const forestAge = parseFloat(document.getElementById('forest-age').value) || 0;
+
+            if (acres <= 0 || !forestType || forestAge <= 0) {
+                alert('Please fill in all fields with valid values.');
+                return;
+            }
+
+            // Carbon sequestration rates (tons CO2 per acre per year) based on forest type
+            const sequestrationRates = {
+                'pine': 2.5,
+                'hardwood': 3.2,
+                'oak': 2.8,
+                'maple': 3.0
+            };
+
+            // Age factor (younger forests grow faster and sequester more)
+            let ageFactor = 1;
+            if (forestAge < 20) {
+                ageFactor = 1.3;
+            } else if (forestAge < 50) {
+                ageFactor = 1.0;
+            } else if (forestAge < 80) {
+                ageFactor = 0.7;
+            } else {
+                ageFactor = 0.5;
+            }
+
+            const baseRate = sequestrationRates[forestType] || 2.5;
+            const annualSequestration = Math.round(acres * baseRate * ageFactor);
+            
+            // Carbon credit pricing (approximate $15-25 per ton)
+            const creditValue = Math.round(annualSequestration * 20);
+
+            // Display results
+            document.getElementById('result-value').textContent = annualSequestration.toLocaleString();
+            document.getElementById('credit-value').textContent = creditValue.toLocaleString();
+            document.getElementById('carbon-result').classList.add('active');
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            } else {
+                header.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
