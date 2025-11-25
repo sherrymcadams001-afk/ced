@@ -27,7 +27,8 @@
                         'accent-orange': '#FF6B00',
                         'jet-black': '#1A1A1A',
                         'charcoal': '#2D2D2D',
-                        'blue-sky': '#87CEEB'
+                        'blue-sky': '#87CEEB',
+                        'sky-mid': '#5BA3C6'
                     },
                     fontFamily: {
                         'slab': ['Roboto Slab', 'Georgia', 'serif'],
@@ -39,11 +40,16 @@
     </script>
     <style>
         /* Custom styles that complement Tailwind */
+        :root {
+            --color-blue-sky: #87CEEB;
+            --color-sky-mid: #5BA3C6;
+            --color-jet-black: #1A1A1A;
+        }
         html { scroll-behavior: smooth; }
         
         /* Hero video background */
         .hero-gradient {
-            background: linear-gradient(180deg, #87CEEB 0%, #5BA3C6 40%, #1A1A1A 100%);
+            background: linear-gradient(180deg, var(--color-blue-sky) 0%, var(--color-sky-mid) 40%, var(--color-jet-black) 100%);
         }
         
         /* Lifecycle horizontal scroll */
@@ -130,7 +136,7 @@
     <section class="relative min-h-screen flex items-center justify-center overflow-hidden hero-gradient" id="home">
         <div class="absolute inset-0 z-0">
             <!-- Video placeholder with gradient background simulating drone footage over forest canopy with blue sky -->
-            <div class="w-full h-full bg-gradient-to-b from-blue-sky via-[#5BA3C6] to-jet-black opacity-70"></div>
+            <div class="w-full h-full bg-gradient-to-b from-blue-sky via-sky-mid to-jet-black opacity-70"></div>
             <div class="absolute inset-0 bg-gradient-to-b from-blue-sky/30 via-jet-black/40 to-jet-black/85"></div>
         </div>
         <div class="relative z-10 text-center text-white max-w-4xl px-6 py-8">
@@ -278,161 +284,16 @@
         </div>
     </section>
 
-    <!-- GIS/LiDAR Mapping Section -->
-    <!-- 
-    IMAGE PROMPT FOR GIS MAPPING VISUALIZATION:
-    High-tech 3D visualization of forest terrain data on a large monitor or holographic display.
-    Show colorful topographic layers with tree canopy height data in green gradients,
-    terrain elevation in blue/brown gradients, and harvest route overlays in orange/yellow.
-    Include data panels showing statistics: tree count, board feet estimates, carbon sequestration values.
-    Style: Clean, modern data visualization aesthetic similar to high-end GIS software.
-    Optional: Show a technician or forester pointing at the screen, demonstrating the technology.
-    -->
-    <section class="py-20 bg-jet-black text-white" id="mapping">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-3xl md:text-4xl font-bold font-slab mb-6 text-white">Precision GIS & LiDAR Forest Mapping</h2>
-                    <p class="text-white/80 mb-8">Our advanced drone-mounted LiDAR systems capture millions of data points per acre, creating detailed 3D models of your forest that reveal insights invisible to traditional surveying methods. Trusted by international clients across North America, Europe, and Asia-Pacific.</p>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center gap-3"><span class="w-6 h-6 bg-pine rounded-full flex items-center justify-center text-xs">✓</span> Sub-meter accuracy terrain modeling</li>
-                        <li class="flex items-center gap-3"><span class="w-6 h-6 bg-pine rounded-full flex items-center justify-center text-xs">✓</span> Individual tree species identification</li>
-                        <li class="flex items-center gap-3"><span class="w-6 h-6 bg-pine rounded-full flex items-center justify-center text-xs">✓</span> Biomass and carbon stock estimation</li>
-                        <li class="flex items-center gap-3"><span class="w-6 h-6 bg-pine rounded-full flex items-center justify-center text-xs">✓</span> Optimal harvest route planning</li>
-                        <li class="flex items-center gap-3"><span class="w-6 h-6 bg-pine rounded-full flex items-center justify-center text-xs">✓</span> Erosion risk assessment</li>
-                        <li class="flex items-center gap-3"><span class="w-6 h-6 bg-pine rounded-full flex items-center justify-center text-xs">✓</span> Wildlife habitat mapping</li>
-                    </ul>
-                    <a href="#contact" class="inline-block bg-accent-orange text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-600 transition-all">Request a Survey</a>
-                </div>
-                <div class="bg-gradient-to-br from-charcoal to-black rounded-2xl p-6 border border-white/10">
-                    <div class="min-h-[360px] rounded-xl flex flex-col items-center justify-center gap-4 media-placeholder" style="background: linear-gradient(90deg, rgba(196, 149, 106, 0.1) 1px, transparent 1px), linear-gradient(rgba(196, 149, 106, 0.1) 1px, transparent 1px); background-size: 20px 20px;">
-                        <div class="text-5xl opacity-50">🛰️</div>
-                        <div class="text-pine-light text-sm uppercase tracking-wider">Interactive GIS Map</div>
-                        <p class="text-white/50 text-sm text-center max-w-xs">Real-time LiDAR visualization displays here with your property data</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Carbon Calculator Section -->
-    <section class="carbon-calculator section" id="carbon">
-        <div class="container">
-            <div class="calculator-grid">
-                <form class="calculator-form" id="carbonForm" novalidate>
-                    <h3 style="margin-bottom: 1.5rem;">Carbon Sequestration Calculator</h3>
-                    <div class="form-group">
-                        <label for="acres">Total Forest Acres</label>
-                        <input type="number" id="acres" placeholder="Enter acreage" min="1" required aria-describedby="acres-error">
-                        <span id="acres-error" class="error-message" role="alert" aria-live="polite"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="forest-type">Primary Forest Type</label>
-                        <select id="forest-type" required aria-describedby="forest-type-error">
-                            <option value="">Select forest type</option>
-                            <option value="pine">Pine/Softwood</option>
-                            <option value="hardwood">Hardwood/Mixed</option>
-                            <option value="oak">Oak Dominant</option>
-                            <option value="maple">Maple/Birch</option>
-                        </select>
-                        <span id="forest-type-error" class="error-message" role="alert" aria-live="polite"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="forest-age">Average Stand Age (years)</label>
-                        <input type="number" id="forest-age" placeholder="Enter average age" min="1" required aria-describedby="forest-age-error">
-                        <span id="forest-age-error" class="error-message" role="alert" aria-live="polite"></span>
-                    </div>
-                    <button class="calculate-btn" id="calculateBtn" type="submit">Calculate Carbon Value</button>
-                    <div class="calculator-result" id="carbon-result">
-                        <div class="result-number" id="result-value">0</div>
-                        <div class="result-label">Estimated Annual CO₂ Sequestration (tons)</div>
-                        <p style="margin-top: 1rem; font-size: 0.875rem; color: rgba(255,255,255,0.8);">
-                            Potential carbon credit value: $<span id="credit-value">0</span>/year
-                        </p>
-                    </div>
-                </form>
-                <div class="calculator-info">
-                    <h2>Unlock Your Forest's Carbon Potential</h2>
-                    <p>Forests are one of Earth's most effective carbon sinks. Our carbon credit programs help you monetize this natural benefit while contributing to global climate goals.</p>
-                    <ul class="carbon-benefits">
-                        <li>
-                            <div class="benefit-icon">💰</div>
-                            <div class="benefit-text">
-                                <h4>Additional Revenue Stream</h4>
-                                <p>Generate income from verified carbon credits without harvesting a single tree.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="benefit-icon">📈</div>
-                            <div class="benefit-text">
-                                <h4>ESG Compliance</h4>
-                                <p>Meet corporate sustainability requirements and access premium buyers.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="benefit-icon">🌍</div>
-                            <div class="benefit-text">
-                                <h4>Climate Leadership</h4>
-                                <p>Contribute to global carbon reduction goals while growing your investment.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stewardship Hub Section -->
-    <section class="stewardship-hub section" id="stewardship">
-        <div class="container">
-            <div class="stewardship-content">
-                <h2>The Stewardship Hub</h2>
-                <p class="stewardship-narrative">"We are Stewards first, Loggers second. Every tree we harvest is a promise to plant three more. Every forest we manage is a legacy we protect for the next generation."</p>
-            </div>
-            <div class="carbon-widget">
-                <h3>Live Carbon Calculator</h3>
-                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Real-time CO₂ sequestration metrics per board foot</p>
-                <div class="carbon-metric">
-                    <div class="metric-item">
-                        <div class="metric-value">1.2</div>
-                        <div class="metric-label">Tons CO₂ / Board Foot</div>
-                    </div>
-                    <div class="metric-item">
-                        <div class="metric-value">$24</div>
-                        <div class="metric-label">Carbon Value / BF</div>
-                    </div>
-                    <div class="metric-item">
-                        <div class="metric-value">45K</div>
-                        <div class="metric-label">Total Offset (Tons)</div>
-                    </div>
-                </div>
-                <a href="#carbon" class="btn-primary" style="margin-top: 1.5rem;">Calculate Your Forest's Value</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- The Cedrick Factor (About/Trust) Section -->
-    <!-- 
-    IMAGE PROMPT FOR CEDRICK THOMAS PORTRAIT:
-    Professional corporate portrait of a confident male forester/CEO in his 50s.
-    Setting: Standing in a modern office with large windows overlooking a forest landscape.
-    Attire: High-visibility safety vest over a crisp button-down shirt, hard hat in one hand, 
-    tablet/iPad showing forest mapping data in the other hand.
-    Expression: Warm, approachable smile with confident posture suggesting leadership and expertise.
-    Lighting: Natural light from windows creating a professional, editorial quality.
-    Background: Blur showing mix of office technology (monitors with GIS data) and forest view.
-    Style: Corporate editorial photography, magazine cover quality.
-    -->
-    <section class="py-20 bg-white" id="about">
+    <!-- About Preview Section - Links to About page -->
+    <section class="py-16 bg-white" id="about">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="relative">
                     <div class="bg-gradient-to-br from-pine-light to-pine rounded-3xl p-6">
-                        <div class="bg-gradient-to-b from-blue-sky via-[#5BA3C6] to-jet-black rounded-2xl min-h-[450px] flex flex-col items-center justify-center text-white text-center p-8 media-placeholder">
+                        <div class="bg-gradient-to-b from-blue-sky via-sky-mid to-jet-black rounded-2xl min-h-[350px] flex flex-col items-center justify-center text-white text-center p-8">
                             <div class="text-6xl mb-4">👷</div>
                             <p class="font-bold text-xl">Cedrick Thomas</p>
                             <p class="text-sm uppercase tracking-wider opacity-80 mt-2">Founder & CEO</p>
-                            <p class="text-sm mt-4 opacity-90 max-w-xs">High-tech safety gear, tablet in hand—the modern face of international precision forestry</p>
                         </div>
                         <div class="absolute -bottom-4 -right-4 bg-jet-black text-white px-6 py-4 rounded-xl shadow-2xl">
                             <span class="text-accent-orange text-xs uppercase tracking-wider block">Since 1998</span>
@@ -445,38 +306,7 @@
                     <p class="text-xl text-accent-orange font-semibold mb-4">Generational Trust Meets Precision Technology</p>
                     <p class="text-gray-600 mb-4">Cedrick Thomas didn't just build a logging company—he revolutionized the industry. With a forestry degree from the University of Arizona and a vision for sustainable timber, he's spent 25 years proving that advanced technology and environmental stewardship work together.</p>
                     <p class="text-gray-600 mb-6 italic border-l-4 border-accent-orange pl-4">"My grandfather taught me to read the forest. Today's LiDAR systems let me understand it at the molecular level. But the mission remains the same: leave this land better than we found it."</p>
-                    
-                    <div class="grid sm:grid-cols-2 gap-4 mt-8">
-                        <div class="bg-gray-50 rounded-xl p-4 flex items-start gap-3">
-                            <div class="w-10 h-10 bg-gradient-to-br from-pine-light to-pine rounded-lg flex items-center justify-center text-xl">🎯</div>
-                            <div>
-                                <h4 class="font-bold font-slab">Precision First</h4>
-                                <p class="text-sm text-gray-600">Data-driven decisions for every harvest</p>
-                            </div>
-                        </div>
-                        <div class="bg-gray-50 rounded-xl p-4 flex items-start gap-3">
-                            <div class="w-10 h-10 bg-gradient-to-br from-pine-light to-pine rounded-lg flex items-center justify-center text-xl">🌍</div>
-                            <div>
-                                <h4 class="font-bold font-slab">ESG Committed</h4>
-                                <p class="text-sm text-gray-600">Full transparency in every operation</p>
-                            </div>
-                        </div>
-                        <div class="bg-gray-50 rounded-xl p-4 flex items-start gap-3">
-                            <div class="w-10 h-10 bg-gradient-to-br from-pine-light to-pine rounded-lg flex items-center justify-center text-xl">🏗️</div>
-                            <div>
-                                <h4 class="font-bold font-slab">Mass Timber Ready</h4>
-                                <p class="text-sm text-gray-600">CLT-grade timber for modern builds</p>
-                            </div>
-                        </div>
-                        <div class="bg-gray-50 rounded-xl p-4 flex items-start gap-3">
-                            <div class="w-10 h-10 bg-gradient-to-br from-pine-light to-pine rounded-lg flex items-center justify-center text-xl">🤝</div>
-                            <div>
-                                <h4 class="font-bold font-slab">Personal Service</h4>
-                                <p class="text-sm text-gray-600">Direct access to Cedrick's team</p>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#contact" class="inline-block bg-accent-orange text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-600 transition-all mt-8">Contact Cedrick's Team</a>
+                    <a href="about.html" class="inline-block bg-accent-orange text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-600 transition-all">Meet Our Team →</a>
                 </div>
             </div>
         </div>
@@ -595,77 +425,38 @@
         </div>
     </section>
 
-    <!-- Contact Us Section -->
-    <section class="py-20 bg-gray-50" id="contact">
+    <!-- Contact Preview Section - Links to Contact page -->
+    <section class="py-16 bg-gray-50" id="contact">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold font-slab mb-4">Get In Touch</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Whether you own land seeking sustainable stewardship or you're a buyer sourcing certified Mass Timber, our international team is ready to help.</p>
-            </div>
-            
-            <div class="grid lg:grid-cols-3 gap-8">
-                <!-- Headquarters -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
-                    <div class="w-14 h-14 bg-gradient-to-br from-pine-light to-pine rounded-xl flex items-center justify-center mb-6 text-2xl">🏢</div>
-                    <h3 class="text-xl font-bold font-slab mb-2">Headquarters</h3>
-                    <p class="text-accent-orange font-semibold text-sm mb-3">La Cholla Corporate Center</p>
-                    <address class="text-gray-600 not-italic mb-4 leading-relaxed">
-                        📍 6261 N La Cholla Blvd<br>
-                        Tucson, AZ 85741<br>
-                        United States
-                    </address>
-                    <a href="https://maps.google.com/?q=6261+N+La+Cholla+Blvd+Tucson+AZ" target="_blank" rel="noopener noreferrer" aria-label="View Headquarters location on Google Maps (opens in new tab)" class="text-pine-dark font-semibold hover:text-pine transition-colors inline-flex items-center gap-2">
-                        View on Map →
-                    </a>
-                </div>
-                
-                <!-- Colorado Branch -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
-                    <div class="w-14 h-14 bg-gradient-to-br from-pine-light to-pine rounded-xl flex items-center justify-center mb-6 text-2xl">🏔️</div>
-                    <h3 class="text-xl font-bold font-slab mb-2">Colorado Branch</h3>
-                    <p class="text-accent-orange font-semibold text-sm mb-3">Rocky Mountain Operations</p>
-                    <address class="text-gray-600 not-italic mb-4 leading-relaxed">
-                        📍 5404 Ward Ave<br>
-                        Arvada, CO 80002<br>
-                        United States
-                    </address>
-                    <a href="https://maps.google.com/?q=5404+Ward+Ave+Arvada+CO+80002" target="_blank" rel="noopener noreferrer" aria-label="View Colorado Branch location on Google Maps (opens in new tab)" class="text-pine-dark font-semibold hover:text-pine transition-colors inline-flex items-center gap-2">
-                        View on Map →
-                    </a>
-                </div>
-                
-                <!-- Contact Info -->
-                <div class="bg-gradient-to-br from-jet-black to-charcoal rounded-2xl p-8 text-white">
-                    <div class="w-14 h-14 bg-accent-orange rounded-xl flex items-center justify-center mb-6 text-2xl">📞</div>
-                    <h3 class="text-xl font-bold font-slab mb-4">Contact Cedrick's Team</h3>
-                    <div class="space-y-4">
-                        <a href="tel:+15204279815" class="flex items-center gap-3 text-white/90 hover:text-white transition-colors group">
-                            <span class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center group-hover:bg-accent-orange transition-colors">📱</span>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <!-- Contact Summary -->
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold font-slab mb-4">Get In Touch</h2>
+                    <p class="text-gray-600 mb-6">Whether you own land seeking sustainable stewardship or you're a buyer sourcing certified Mass Timber, our international team is ready to help.</p>
+                    <div class="space-y-4 mb-6">
+                        <a href="tel:+15204279815" class="flex items-center gap-3 text-gray-700 hover:text-accent-orange transition-colors">
+                            <span class="w-10 h-10 bg-pine rounded-lg flex items-center justify-center text-white">📞</span>
                             <span class="font-semibold">+1 (520) 427-9815</span>
                         </a>
-                        <a href="mailto:info@cedricklogging.com" class="flex items-center gap-3 text-white/90 hover:text-white transition-colors group">
-                            <span class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center group-hover:bg-accent-orange transition-colors">✉️</span>
+                        <a href="mailto:info@cedricklogging.com" class="flex items-center gap-3 text-gray-700 hover:text-accent-orange transition-colors">
+                            <span class="w-10 h-10 bg-pine rounded-lg flex items-center justify-center text-white">✉️</span>
                             <span>info@cedricklogging.com</span>
                         </a>
                     </div>
-                    <div class="mt-8 pt-6 border-t border-white/10">
-                        <p class="text-white/70 text-sm mb-4">Office Hours</p>
-                        <p class="text-white/90">Mon - Fri: 7:00 AM - 6:00 PM MST</p>
-                        <p class="text-white/70 text-sm mt-2">24/7 Emergency Line Available</p>
-                    </div>
+                    <a href="contact.html" class="inline-block bg-accent-orange text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-600 transition-all">Contact Us →</a>
                 </div>
-            </div>
-            
-            <!-- International Reach Banner -->
-            <div class="mt-12 bg-gradient-to-r from-pine to-pine-dark rounded-2xl p-8 md:p-12 text-white text-center">
-                <h3 class="text-2xl font-bold font-slab mb-4">International Forestry Expertise</h3>
-                <p class="text-white/90 max-w-2xl mx-auto mb-6">With accomplished contracts across North America, Europe, and Asia-Pacific, Cedrick Logging brings world-class sustainable forestry solutions to landowners and lumber buyers globally.</p>
-                <div class="flex flex-wrap justify-center gap-4">
-                    <span class="bg-white/20 px-4 py-2 rounded-full text-sm font-medium">🇺🇸 United States</span>
-                    <span class="bg-white/20 px-4 py-2 rounded-full text-sm font-medium">🇨🇦 Canada</span>
-                    <span class="bg-white/20 px-4 py-2 rounded-full text-sm font-medium">🇩🇪 Germany</span>
-                    <span class="bg-white/20 px-4 py-2 rounded-full text-sm font-medium">🇦🇺 Australia</span>
-                    <span class="bg-white/20 px-4 py-2 rounded-full text-sm font-medium">🇯🇵 Japan</span>
+                
+                <!-- International Reach -->
+                <div class="bg-gradient-to-br from-jet-black to-charcoal rounded-2xl p-8 text-white">
+                    <h3 class="text-xl font-bold font-slab mb-4">International Forestry Expertise</h3>
+                    <p class="text-white/80 mb-6">Contracts across North America, Europe, and Asia-Pacific.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-white/20 px-3 py-1.5 rounded-full text-sm">🇺🇸 USA</span>
+                        <span class="bg-white/20 px-3 py-1.5 rounded-full text-sm">🇨🇦 Canada</span>
+                        <span class="bg-white/20 px-3 py-1.5 rounded-full text-sm">🇩🇪 Germany</span>
+                        <span class="bg-white/20 px-3 py-1.5 rounded-full text-sm">🇦🇺 Australia</span>
+                        <span class="bg-white/20 px-3 py-1.5 rounded-full text-sm">🇯🇵 Japan</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -754,80 +545,8 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Carbon Calculator -->
+    <!-- JavaScript for Homepage -->
     <script>
-        function clearErrors() {
-            document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
-            document.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
-        }
-
-        function showError(fieldId, message) {
-            const field = document.getElementById(fieldId);
-            const errorSpan = document.getElementById(fieldId + '-error');
-            if (field) field.classList.add('error');
-            if (errorSpan) errorSpan.textContent = message;
-        }
-
-        function calculateCarbon(event) {
-            if (event) event.preventDefault();
-            
-            clearErrors();
-            
-            const acres = parseFloat(document.getElementById('acres').value) || 0;
-            const forestType = document.getElementById('forest-type').value;
-            const forestAge = parseFloat(document.getElementById('forest-age').value) || 0;
-
-            let hasErrors = false;
-
-            if (acres <= 0) {
-                showError('acres', 'Please enter a valid number of acres.');
-                hasErrors = true;
-            }
-            
-            if (!forestType) {
-                showError('forest-type', 'Please select a forest type.');
-                hasErrors = true;
-            }
-            
-            if (forestAge <= 0) {
-                showError('forest-age', 'Please enter a valid stand age.');
-                hasErrors = true;
-            }
-
-            if (hasErrors) return;
-
-            // Carbon sequestration rates (tons CO2 per acre per year) based on forest type
-            const sequestrationRates = {
-                'pine': 2.5,
-                'hardwood': 3.2,
-                'oak': 2.8,
-                'maple': 3.0
-            };
-
-            // Age factor (younger forests grow faster and sequester more)
-            let ageFactor = 1;
-            if (forestAge < 20) {
-                ageFactor = 1.3;
-            } else if (forestAge < 50) {
-                ageFactor = 1.0;
-            } else if (forestAge < 80) {
-                ageFactor = 0.7;
-            } else {
-                ageFactor = 0.5;
-            }
-
-            const baseRate = sequestrationRates[forestType] || 2.5;
-            const annualSequestration = Math.round(acres * baseRate * ageFactor);
-            
-            // Carbon credit pricing (approximate $15-25 per ton)
-            const creditValue = Math.round(annualSequestration * 20);
-
-            // Display results
-            document.getElementById('result-value').textContent = annualSequestration.toLocaleString();
-            document.getElementById('credit-value').textContent = creditValue.toLocaleString();
-            document.getElementById('carbon-result').classList.add('active');
-        }
-
         // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -872,9 +591,6 @@
             });
         });
 
-        // Carbon Calculator form submission handler
-        document.getElementById('carbonForm').addEventListener('submit', calculateCarbon);
-
         // Harvest Estimator Logic
         function calculateHarvestEstimate(event) {
             if (event) event.preventDefault();
@@ -891,56 +607,51 @@
 
             // Board feet per acre estimates by species and age
             // Source: USDA Forest Service regional averages for mature managed stands
-            // Base: Average merchantable board feet per acre for species
-            // AgeMultiplier: Premium factor for species with slower growth but higher value at maturity
+            // ageMultiplier: Premium factor for species with slower growth but higher value at maturity
             const bfPerAcre = {
-                'pine': { base: 8000, ageMultiplier: 1.0 },      // Fast growth, industry standard
-                'oak': { base: 6000, ageMultiplier: 1.2 },       // Slower growth, premium hardwood
-                'maple': { base: 5500, ageMultiplier: 1.1 },     // Moderate growth, veneer quality
-                'mixed': { base: 6500, ageMultiplier: 1.05 },    // Average of hardwood mix
-                'walnut': { base: 4000, ageMultiplier: 1.5 }     // Low volume, premium value wood
+                'pine': { base: 8000, ageMultiplier: 1.0 },      // Fast growth softwood
+                'oak': { base: 6000, ageMultiplier: 1.2 },       // Premium hardwood
+                'maple': { base: 5500, ageMultiplier: 1.1 },     // Veneer quality
+                'mixed': { base: 6500, ageMultiplier: 1.05 },    // Hardwood mix
+                'walnut': { base: 4000, ageMultiplier: 1.5 }     // Premium value
             };
 
             // Price per board foot by species (USD)
             // Source: 2024 regional timber price reports, stumpage rates
             // Note: Prices are approximate and vary by region, quality, and market conditions
             const pricePerBF = {
-                'pine': 0.35,     // Commodity softwood pricing
-                'oak': 0.55,     // Red/white oak market average
-                'maple': 0.50,   // Hard maple, veneer potential
-                'mixed': 0.45,   // Blended hardwood rate
-                'walnut': 1.25   // Premium furniture-grade walnut
+                'pine': 0.35,     // Commodity softwood
+                'oak': 0.55,      // Red/white oak average
+                'maple': 0.50,    // Hard maple
+                'mixed': 0.45,    // Blended rate
+                'walnut': 1.25    // Premium furniture-grade
             };
 
             // Access discount factors - reflects logging cost differentials
-            // Better access = lower harvest costs = higher net value to landowner
             const accessFactors = {
-                'excellent': 1.0,   // Paved road access, minimal setup costs
-                'good': 0.95,       // Gravel roads, standard equipment
-                'moderate': 0.85,   // Seasonal roads, weather-dependent
-                'limited': 0.70     // Trail only, significant equipment mobilization
+                'excellent': 1.0,   // Paved road access
+                'good': 0.95,       // Gravel roads
+                'moderate': 0.85,   // Seasonal access
+                'limited': 0.70     // Trail only
             };
 
             // Age factor (optimal harvest at 40-60 years for most species)
-            // Younger stands have less merchantable volume, very old stands may have quality degradation
             let ageFactor = 1;
-            if (age < 30) ageFactor = 0.6;        // Pre-commercial thinning stage
-            else if (age < 40) ageFactor = 0.85;  // Early commercial stage
-            else if (age <= 60) ageFactor = 1.0;  // Optimal harvest window
-            else if (age <= 80) ageFactor = 0.95; // Mature, some quality decline
-            else ageFactor = 0.85;                // Over-mature, increased defect risk
+            if (age < 30) ageFactor = 0.6;
+            else if (age < 40) ageFactor = 0.85;
+            else if (age <= 60) ageFactor = 1.0;
+            else if (age <= 80) ageFactor = 0.95;
+            else ageFactor = 0.85;
 
             const speciesData = bfPerAcre[species];
             const totalBF = Math.round(acres * speciesData.base * ageFactor * speciesData.ageMultiplier);
             const accessFactor = accessFactors[access];
             
-            // Apply +/- 15% range to account for site-specific variability
+            // Apply +/- 15% range
             const timberValueLow = Math.round(totalBF * pricePerBF[species] * accessFactor * 0.85);
             const timberValueHigh = Math.round(totalBF * pricePerBF[species] * accessFactor * 1.15);
             
             // Carbon credit estimate
-            // ~2.5 tons CO2 sequestered per forested acre per year (EPA/USDA average)
-            // $20/ton average voluntary carbon credit price (2024 market rate, range $15-25)
             const CO2_TONS_PER_ACRE_PER_YEAR = 2.5;
             const CARBON_CREDIT_PRICE_PER_TON = 20;
             const carbonCredits = Math.round(acres * CO2_TONS_PER_ACRE_PER_YEAR * CARBON_CREDIT_PRICE_PER_TON);
