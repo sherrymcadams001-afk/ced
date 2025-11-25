@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forest Analytics Dashboard | Real-Time Monitoring | Cedrick Logging</title>
+    <meta name="description" content="Real-time forest monitoring, growth projections, market analytics, and health indicators. Access your forest data anytime through our client portal.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Slab:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pine': { light: '#D4A574', DEFAULT: '#C4956A', dark: '#8B6914' },
+                        'accent-orange': '#FF6B00',
+                        'jet-black': '#1A1A1A',
+                        'charcoal': '#2D2D2D',
+                        'blue-sky': '#87CEEB'
+                    },
+                    fontFamily: {
+                        'slab': ['Roboto Slab', 'Georgia', 'serif'],
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-900 bg-white antialiased">
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm">
+        <nav class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+            <a href="index.html" class="flex items-center gap-3 no-underline text-black">
+                <div class="w-10 h-10 bg-gradient-to-br from-pine to-pine-dark rounded-lg flex items-center justify-center text-white font-bold text-xl">CL</div>
+                <div>
+                    <div class="text-xl font-bold tracking-tight font-slab">Cedrick Logging</div>
+                    <div class="text-xs text-gray-500 uppercase tracking-wider">The Cedrick Thomas Standard</div>
+                </div>
+            </a>
+            <ul class="hidden lg:flex gap-8 list-none">
+                <li><a href="index.html#process" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">Process</a></li>
+                <li><a href="index.html#services" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">Services</a></li>
+                <li><a href="about.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">About Cedrick</a></li>
+                <li><a href="index.html#harvest-estimator" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">Estimate Value</a></li>
+                <li><a href="contact.html" class="bg-accent-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Forest Analytics Dashboard</h1>
+            <p>Real-time insights into your forest's health, value, and growth potential. Data-driven forestry for the modern landowner.</p>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li><a href="index.html">Home</a></li>
+                <li class="separator">/</li>
+                <li><a href="index.html#services">Services</a></li>
+                <li class="separator">/</li>
+                <li class="current" aria-current="page">Forest Analytics</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="section">
+        <div class="container">
+            <!-- Overview -->
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="text-3xl font-bold font-slab mb-6">Know Your Forest Like Never Before</h2>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    Our Forest Analytics Dashboard transforms complex forestry data into actionable insights. Powered by LiDAR surveys, satellite imagery, and proprietary growth models, you'll have a complete picture of your timberland's current state and future potential.
+                </p>
+            </div>
+
+            <!-- Dashboard Preview -->
+            <div class="bg-jet-black rounded-2xl p-8 mb-16">
+                <h3 class="text-white font-bold font-slab text-xl mb-6 text-center">Sample Dashboard Interface</h3>
+                
+                <!-- Mock Dashboard -->
+                <div class="grid md:grid-cols-4 gap-4 mb-8">
+                    <div class="bg-charcoal rounded-xl p-4 text-center">
+                        <p class="text-gray-400 text-xs uppercase mb-1">Total Acreage</p>
+                        <p class="text-3xl font-bold text-white font-slab">847</p>
+                        <p class="text-xs text-green-400">+12 from 2023</p>
+                    </div>
+                    <div class="bg-charcoal rounded-xl p-4 text-center">
+                        <p class="text-gray-400 text-xs uppercase mb-1">Est. Board Feet</p>
+                        <p class="text-3xl font-bold text-accent-orange font-slab">4.2M</p>
+                        <p class="text-xs text-green-400">↑ 8.3% YoY</p>
+                    </div>
+                    <div class="bg-charcoal rounded-xl p-4 text-center">
+                        <p class="text-gray-400 text-xs uppercase mb-1">Carbon Credits</p>
+                        <p class="text-3xl font-bold text-white font-slab">2,140</p>
+                        <p class="text-xs text-gray-400">tons/year</p>
+                    </div>
+                    <div class="bg-charcoal rounded-xl p-4 text-center">
+                        <p class="text-gray-400 text-xs uppercase mb-1">Est. Value</p>
+                        <p class="text-3xl font-bold text-green-400 font-slab">$1.47M</p>
+                        <p class="text-xs text-green-400">↑ 12% YoY</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Growth Chart Placeholder -->
+                    <div class="bg-charcoal rounded-xl p-4 md:col-span-2">
+                        <p class="text-gray-400 text-sm mb-4">Volume Growth Projection (10 Year)</p>
+                        <div class="h-48 flex items-end gap-2 px-4">
+                            <div class="flex-1 bg-pine/30 rounded-t" style="height: 40%;"></div>
+                            <div class="flex-1 bg-pine/40 rounded-t" style="height: 48%;"></div>
+                            <div class="flex-1 bg-pine/50 rounded-t" style="height: 55%;"></div>
+                            <div class="flex-1 bg-pine/60 rounded-t" style="height: 62%;"></div>
+                            <div class="flex-1 bg-pine/70 rounded-t" style="height: 70%;"></div>
+                            <div class="flex-1 bg-pine/80 rounded-t" style="height: 78%;"></div>
+                            <div class="flex-1 bg-pine/90 rounded-t" style="height: 85%;"></div>
+                            <div class="flex-1 bg-pine rounded-t" style="height: 92%;"></div>
+                            <div class="flex-1 bg-accent-orange/80 rounded-t" style="height: 98%;"></div>
+                            <div class="flex-1 bg-accent-orange rounded-t" style="height: 100%;"></div>
+                        </div>
+                        <div class="flex justify-between text-xs text-gray-500 mt-2 px-4">
+                            <span>2024</span>
+                            <span>2026</span>
+                            <span>2028</span>
+                            <span>2030</span>
+                            <span>2034</span>
+                        </div>
+                    </div>
+
+                    <!-- Species Distribution -->
+                    <div class="bg-charcoal rounded-xl p-4">
+                        <p class="text-gray-400 text-sm mb-4">Species Distribution</p>
+                        <div class="space-y-3">
+                            <div>
+                                <div class="flex justify-between text-xs text-gray-300 mb-1">
+                                    <span>Ponderosa Pine</span>
+                                    <span>42%</span>
+                                </div>
+                                <div class="h-2 bg-gray-700 rounded-full overflow-hidden">
+                                    <div class="h-full bg-pine" style="width: 42%;"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs text-gray-300 mb-1">
+                                    <span>Douglas Fir</span>
+                                    <span>28%</span>
+                                </div>
+                                <div class="h-2 bg-gray-700 rounded-full overflow-hidden">
+                                    <div class="h-full bg-accent-orange" style="width: 28%;"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs text-gray-300 mb-1">
+                                    <span>Mixed Hardwood</span>
+                                    <span>18%</span>
+                                </div>
+                                <div class="h-2 bg-gray-700 rounded-full overflow-hidden">
+                                    <div class="h-full bg-blue-sky" style="width: 18%;"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs text-gray-300 mb-1">
+                                    <span>Other</span>
+                                    <span>12%</span>
+                                </div>
+                                <div class="h-2 bg-gray-700 rounded-full overflow-hidden">
+                                    <div class="h-full bg-gray-500" style="width: 12%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-center text-gray-500 text-sm mt-6">
+                    * Sample data shown. Your dashboard will reflect your actual property data.
+                </p>
+            </div>
+
+            <!-- Features Grid -->
+            <h2 class="text-3xl font-bold font-slab mb-8 text-center">Dashboard Features</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+                <div class="content-card">
+                    <div class="text-3xl mb-4">📊</div>
+                    <h3 class="font-bold font-slab text-lg mb-2">Real-Time Monitoring</h3>
+                    <p class="text-gray-600 text-sm">
+                        Satellite imagery updates every 10 days to track canopy changes, disturbances, and growth patterns across your entire property.
+                    </p>
+                </div>
+                <div class="content-card">
+                    <div class="text-3xl mb-4">📈</div>
+                    <h3 class="font-bold font-slab text-lg mb-2">Growth Projections</h3>
+                    <p class="text-gray-600 text-sm">
+                        Proprietary models predict volume growth 5, 10, and 20 years into the future based on species, site index, and climate factors.
+                    </p>
+                </div>
+                <div class="content-card">
+                    <div class="text-3xl mb-4">💹</div>
+                    <h3 class="font-bold font-slab text-lg mb-2">Market Analytics</h3>
+                    <p class="text-gray-600 text-sm">
+                        Track regional timber prices, identify optimal harvest timing, and compare your returns to market benchmarks.
+                    </p>
+                </div>
+                <div class="content-card">
+                    <div class="text-3xl mb-4">🌡️</div>
+                    <h3 class="font-bold font-slab text-lg mb-2">Health Indicators</h3>
+                    <p class="text-gray-600 text-sm">
+                        Early detection of pest infestations, disease outbreaks, and drought stress through spectral analysis and machine learning.
+                    </p>
+                </div>
+                <div class="content-card">
+                    <div class="text-3xl mb-4">💰</div>
+                    <h3 class="font-bold font-slab text-lg mb-2">ROI Tracking</h3>
+                    <p class="text-gray-600 text-sm">
+                        Monitor your investment performance over time, including timber appreciation, carbon credit income, and management costs.
+                    </p>
+                </div>
+                <div class="content-card">
+                    <div class="text-3xl mb-4">📱</div>
+                    <h3 class="font-bold font-slab text-lg mb-2">Mobile App</h3>
+                    <p class="text-gray-600 text-sm">
+                        Access your forest data on the go with our iOS and Android apps. Field mapping, photo documentation, and offline access.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Data Sources -->
+            <h2 class="text-3xl font-bold font-slab mb-8 text-center">Data Sources & Accuracy</h2>
+            <div class="overflow-x-auto mb-16">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Data Type</th>
+                            <th>Source</th>
+                            <th>Update Frequency</th>
+                            <th>Accuracy</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Forest Inventory</td>
+                            <td>Drone LiDAR Survey</td>
+                            <td>Annual (optional quarterly)</td>
+                            <td>±5% volume</td>
+                        </tr>
+                        <tr>
+                            <td>Canopy Cover</td>
+                            <td>Sentinel-2 Satellite</td>
+                            <td>Every 10 days</td>
+                            <td>10m resolution</td>
+                        </tr>
+                        <tr>
+                            <td>Growth Models</td>
+                            <td>FVS + Proprietary</td>
+                            <td>Continuous</td>
+                            <td>±8% at 10 years</td>
+                        </tr>
+                        <tr>
+                            <td>Timber Prices</td>
+                            <td>Regional Mills + Indices</td>
+                            <td>Weekly</td>
+                            <td>±3% of market</td>
+                        </tr>
+                        <tr>
+                            <td>Carbon Sequestration</td>
+                            <td>LiDAR + Allometry</td>
+                            <td>Annual</td>
+                            <td>±10% of actual</td>
+                        </tr>
+                        <tr>
+                            <td>Health Alerts</td>
+                            <td>Spectral Analysis + AI</td>
+                            <td>Every 10 days</td>
+                            <td>85% detection rate</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Client Portal -->
+            <h2 class="text-3xl font-bold font-slab mb-8 text-center">Client Portal Access</h2>
+            <div class="content-grid mb-16">
+                <div>
+                    <p class="text-gray-600 mb-6 text-lg">
+                        All Cedrick Logging clients receive complimentary access to our secure online portal. Features include:
+                    </p>
+                    <ul class="feature-list">
+                        <li>
+                            <span class="icon">🔐</span>
+                            <div>
+                                <h4>Secure Login</h4>
+                                <p>Two-factor authentication protects your data. Role-based access for family members or advisors.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">📄</span>
+                            <div>
+                                <h4>Document Library</h4>
+                                <p>All contracts, survey reports, and certifications stored in one place.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">📧</span>
+                            <div>
+                                <h4>Alert Notifications</h4>
+                                <p>Email and SMS alerts for health issues, market opportunities, or scheduled activities.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">💬</span>
+                            <div>
+                                <h4>Direct Messaging</h4>
+                                <p>Communicate directly with your assigned forester through the portal.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <aside>
+                    <div class="content-card" style="background: linear-gradient(135deg, var(--jet-black) 0%, var(--charcoal) 100%); color: white;">
+                        <h4 class="font-bold font-slab text-lg mb-4" style="color: white;">Already a Client?</h4>
+                        <p class="text-white/80 mb-4">Access your personalized forest dashboard.</p>
+                        <a href="#" class="btn-primary" style="display: block; text-align: center;">Login to Portal</a>
+                        <p class="text-white/60 text-sm mt-4 text-center">Need login credentials? <a href="contact.html" class="text-accent-orange">Contact Support</a></p>
+                    </div>
+                    <div class="content-card mt-6">
+                        <h4 class="font-bold font-slab text-lg mb-4">Mobile Apps</h4>
+                        <div class="space-y-3">
+                            <a href="#" class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                                <span class="text-2xl">📱</span>
+                                <div>
+                                    <p class="font-semibold text-sm">iOS App</p>
+                                    <p class="text-xs text-gray-500">Download on App Store</p>
+                                </div>
+                            </a>
+                            <a href="#" class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                                <span class="text-2xl">🤖</span>
+                                <div>
+                                    <p class="font-semibold text-sm">Android App</p>
+                                    <p class="text-xs text-gray-500">Get on Google Play</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- CTA -->
+            <div class="cta-banner">
+                <h3>Ready to See Your Forest Data?</h3>
+                <p>Schedule a LiDAR survey and get access to your personalized analytics dashboard.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn-primary">Request Demo</a>
+                    <a href="gis-lidar.html" class="btn-secondary">Learn About LiDAR</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <a href="index.html" class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-pine to-pine-dark rounded-lg flex items-center justify-center text-white font-bold">CL</div>
+                        <div>
+                            <div class="text-xl font-bold font-slab">Cedrick Logging</div>
+                            <div class="text-xs text-gray-400 uppercase tracking-wider">The Cedrick Thomas Standard</div>
+                        </div>
+                    </a>
+                    <p class="text-gray-400 max-w-sm">From Seedling to Solution. Pioneering sustainable forestry through precision technology.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-white font-slab">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="gis-lidar.html" class="text-gray-400 hover:text-pine-light transition-colors">GIS/LiDAR Mapping</a></li>
+                        <li><a href="carbon-credits.html" class="text-gray-400 hover:text-pine-light transition-colors">Carbon Credits</a></li>
+                        <li><a href="mass-timber.html" class="text-gray-400 hover:text-pine-light transition-colors">Mass Timber/CLT</a></li>
+                        <li><a href="sustainability.html" class="text-gray-400 hover:text-pine-light transition-colors">Sustainable Forestry</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-white font-slab">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="landowner-resources.html" class="text-gray-400 hover:text-pine-light transition-colors">Landowner Resources</a></li>
+                        <li><a href="buyer-resources.html" class="text-gray-400 hover:text-pine-light transition-colors">Buyer Resources</a></li>
+                        <li><a href="faq.html" class="text-gray-400 hover:text-pine-light transition-colors">FAQ</a></li>
+                        <li><a href="case-studies.html" class="text-gray-400 hover:text-pine-light transition-colors">Case Studies</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-white font-slab">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>📍 6261 N La Cholla Blvd, Tucson, AZ</li>
+                        <li>📞 +1 (520) 427-9815</li>
+                        <li>✉️ info@cedricklogging.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2024 Cedrick Logging. CEO: Cedrick Thomas. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landowner Resources | Forestry Education | Cedrick Logging</title>
+    <meta name="description" content="Comprehensive forestry education for landowners. Guides, tutorials, tax benefits, estate planning, grants, and seasonal management calendars.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Slab:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pine': { light: '#D4A574', DEFAULT: '#C4956A', dark: '#8B6914' },
+                        'accent-orange': '#FF6B00',
+                        'jet-black': '#1A1A1A',
+                        'charcoal': '#2D2D2D',
+                        'blue-sky': '#87CEEB'
+                    },
+                    fontFamily: {
+                        'slab': ['Roboto Slab', 'Georgia', 'serif'],
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-900 bg-white antialiased">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm">
+        <nav class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+            <a href="index.html" class="flex items-center gap-3 no-underline text-black">
+                <div class="w-10 h-10 bg-gradient-to-br from-pine to-pine-dark rounded-lg flex items-center justify-center text-white font-bold text-xl">CL</div>
+                <div>
+                    <div class="text-xl font-bold tracking-tight font-slab">Cedrick Logging</div>
+                    <div class="text-xs text-gray-500 uppercase tracking-wider">The Cedrick Thomas Standard</div>
+                </div>
+            </a>
+            <ul class="hidden lg:flex gap-8 list-none">
+                <li><a href="index.html#process" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">Process</a></li>
+                <li><a href="index.html#services" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">Services</a></li>
+                <li><a href="about.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">About Cedrick</a></li>
+                <li><a href="contact.html" class="bg-accent-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Landowner Resources</h1>
+            <p>Your comprehensive guide to forest stewardship. Education, guides, financial tools, and seasonal management advice for responsible landowners.</p>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li><a href="index.html">Home</a></li>
+                <li class="separator">/</li>
+                <li class="current" aria-current="page">Landowner Resources</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="section">
+        <div class="container">
+            <div class="content-grid">
+                <div>
+                    <!-- Education Library -->
+                    <h2 class="text-3xl font-bold font-slab mb-6">Forestry Education Library</h2>
+                    <p class="text-gray-600 mb-8 text-lg">
+                        Whether you're a first-generation landowner or managing a multi-generational family forest, our educational resources help you make informed decisions about your timberland.
+                    </p>
+
+                    <!-- Downloadable Guides -->
+                    <h3 class="text-2xl font-bold font-slab mb-4">Downloadable Guides</h3>
+                    <div class="space-y-4 mb-12">
+                        <div class="resource-card">
+                            <div class="resource-icon">📘</div>
+                            <div class="resource-content">
+                                <h4>Getting Started with Timber Management</h4>
+                                <p>A beginner's guide to understanding your forest's value and developing a management plan.</p>
+                                <div class="resource-meta">
+                                    <span>PDF • 24 pages</span>
+                                    <span>|</span>
+                                    <span>Updated 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <div class="resource-icon">📗</div>
+                            <div class="resource-content">
+                                <h4>Understanding Carbon Credits for Forest Owners</h4>
+                                <p>Complete guide to monetizing your forest's carbon sequestration potential.</p>
+                                <div class="resource-meta">
+                                    <span>PDF • 32 pages</span>
+                                    <span>|</span>
+                                    <span>Updated 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <div class="resource-icon">📙</div>
+                            <div class="resource-content">
+                                <h4>LiDAR Technology Explained</h4>
+                                <p>How modern forest mapping works and what it means for your property assessment.</p>
+                                <div class="resource-meta">
+                                    <span>PDF • 16 pages</span>
+                                    <span>|</span>
+                                    <span>Updated 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <div class="resource-icon">📕</div>
+                            <div class="resource-content">
+                                <h4>Selecting a Logging Contractor</h4>
+                                <p>What to look for, questions to ask, and red flags to avoid.</p>
+                                <div class="resource-meta">
+                                    <span>PDF • 12 pages</span>
+                                    <span>|</span>
+                                    <span>Updated 2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tax Benefits -->
+                    <h3 class="text-2xl font-bold font-slab mb-4">Tax Benefits of Forest Ownership</h3>
+                    <div class="bg-gray-50 rounded-2xl p-8 mb-12">
+                        <p class="text-gray-600 mb-6">
+                            Timberland offers unique tax advantages that can significantly improve your after-tax returns. Here are key provisions every landowner should understand:
+                        </p>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="bg-white rounded-xl p-6">
+                                <h4 class="font-bold font-slab mb-2 text-accent-orange">Capital Gains Treatment</h4>
+                                <p class="text-gray-600 text-sm">Timber sales often qualify for long-term capital gains rates (0-20%) rather than ordinary income rates (up to 37%).</p>
+                            </div>
+                            <div class="bg-white rounded-xl p-6">
+                                <h4 class="font-bold font-slab mb-2 text-accent-orange">Depletion Deductions</h4>
+                                <p class="text-gray-600 text-sm">Recover your timber investment tax-free through cost depletion as trees are harvested.</p>
+                            </div>
+                            <div class="bg-white rounded-xl p-6">
+                                <h4 class="font-bold font-slab mb-2 text-accent-orange">Management Expenses</h4>
+                                <p class="text-gray-600 text-sm">Reforestation, road maintenance, and management costs are deductible expenses.</p>
+                            </div>
+                            <div class="bg-white rounded-xl p-6">
+                                <h4 class="font-bold font-slab mb-2 text-accent-orange">Section 631(b) Election</h4>
+                                <p class="text-gray-600 text-sm">Treat outright timber sales as capital gains with proper basis allocation.</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-6 italic">* Consult a qualified tax professional for advice specific to your situation.</p>
+                    </div>
+
+                    <!-- Estate Planning -->
+                    <h3 class="text-2xl font-bold font-slab mb-4">Estate Planning for Timberland</h3>
+                    <div class="content-card mb-12">
+                        <p class="text-gray-600 mb-6">
+                            Timberland is often the largest asset in a family's estate. Proper planning ensures your forest legacy passes to the next generation without forced sales.
+                        </p>
+                        <ul class="feature-list">
+                            <li>
+                                <span class="icon">🌲</span>
+                                <div>
+                                    <h4>Conservation Easements</h4>
+                                    <p>Permanently protect your land while receiving significant tax benefits.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="icon">👨‍👩‍👧‍👦</span>
+                                <div>
+                                    <h4>Family Limited Partnerships</h4>
+                                    <p>Transfer ownership gradually while maintaining management control.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="icon">📋</span>
+                                <div>
+                                    <h4>Special Use Valuation (IRC 2032A)</h4>
+                                    <p>Reduce estate tax burden by valuing land at forest use rather than development potential.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="icon">💰</span>
+                                <div>
+                                    <h4>Installment Sales</h4>
+                                    <p>Spread timber sale income across multiple years to reduce tax impact.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Grants & Funding -->
+                    <h3 class="text-2xl font-bold font-slab mb-4">Grants & Funding Opportunities</h3>
+                    <div class="grid md:grid-cols-2 gap-6 mb-12">
+                        <div class="content-card">
+                            <h4 class="font-bold font-slab mb-2">EQIP (Environmental Quality)</h4>
+                            <p class="text-gray-600 text-sm mb-3">USDA cost-share program for conservation practices including tree planting, forest stand improvement, and wildlife habitat.</p>
+                            <span class="spec-tag">Up to 75% cost-share</span>
+                        </div>
+                        <div class="content-card">
+                            <h4 class="font-bold font-slab mb-2">CRP (Conservation Reserve)</h4>
+                            <p class="text-gray-600 text-sm mb-3">Annual rental payments for establishing forest cover on environmentally sensitive cropland.</p>
+                            <span class="spec-tag">10-15 year contracts</span>
+                        </div>
+                        <div class="content-card">
+                            <h4 class="font-bold font-slab mb-2">State Cost-Share Programs</h4>
+                            <p class="text-gray-600 text-sm mb-3">Many states offer additional incentives for reforestation, fire breaks, and water quality protection.</p>
+                            <span class="spec-tag">Varies by state</span>
+                        </div>
+                        <div class="content-card">
+                            <h4 class="font-bold font-slab mb-2">Carbon Credit Advance</h4>
+                            <p class="text-gray-600 text-sm mb-3">Some programs offer upfront payments against future carbon credit revenue.</p>
+                            <span class="spec-tag">Cedrick Logging Program</span>
+                        </div>
+                    </div>
+
+                    <!-- Seasonal Calendar -->
+                    <h3 class="text-2xl font-bold font-slab mb-4">Seasonal Management Calendar</h3>
+                    <div class="overflow-x-auto mb-12">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Season</th>
+                                    <th>Key Activities</th>
+                                    <th>Timing Notes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Spring (Mar-May)</strong></td>
+                                    <td>Tree planting, prescribed burns, boundary maintenance</td>
+                                    <td>Plant before buds break; burn before green-up</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Summer (Jun-Aug)</strong></td>
+                                    <td>Timber cruising, harvest planning, road maintenance</td>
+                                    <td>Best access; dry conditions for inventory</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Fall (Sep-Nov)</strong></td>
+                                    <td>Harvesting (leaf-off), pest surveys, hunting leases</td>
+                                    <td>Optimal harvest conditions in many regions</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Winter (Dec-Feb)</strong></td>
+                                    <td>Frozen ground logging, planning, tax prep</td>
+                                    <td>Reduced soil compaction; year-end decisions</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Pest & Disease -->
+                    <h3 class="text-2xl font-bold font-slab mb-4">Pest & Disease Identification</h3>
+                    <div class="grid md:grid-cols-3 gap-6 mb-12">
+                        <div class="content-card text-center">
+                            <div class="text-4xl mb-3">🪲</div>
+                            <h4 class="font-bold font-slab mb-2">Bark Beetles</h4>
+                            <p class="text-gray-600 text-sm">Pitch tubes, boring dust, fading crowns. Report immediately—infestations spread rapidly.</p>
+                        </div>
+                        <div class="content-card text-center">
+                            <div class="text-4xl mb-3">🍄</div>
+                            <h4 class="font-bold font-slab mb-2">Root Rot</h4>
+                            <p class="text-gray-600 text-sm">Yellowing needles, thin crowns, mushrooms at base. Avoid harvesting during wet conditions.</p>
+                        </div>
+                        <div class="content-card text-center">
+                            <div class="text-4xl mb-3">🐛</div>
+                            <h4 class="font-bold font-slab mb-2">Defoliators</h4>
+                            <p class="text-gray-600 text-sm">Caterpillars, sawflies, gypsy moth. Most trees recover, but repeated years cause mortality.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="sidebar-widget" style="background: linear-gradient(135deg, var(--jet-black) 0%, var(--charcoal) 100%); color: white;">
+                        <h4 style="color: white; border-color: var(--accent-orange);">Get a Free Assessment</h4>
+                        <p style="color: rgba(255,255,255,0.8); margin-bottom: 1rem;">Discover your forest's true potential with our complimentary property evaluation.</p>
+                        <a href="contact.html" class="btn-primary" style="display: block; text-align: center;">Request Assessment</a>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html#harvest-estimator">→ Harvest Value Estimator</a></li>
+                            <li><a href="carbon-credits.html">→ Carbon Credit Calculator</a></li>
+                            <li><a href="gis-lidar.html">→ LiDAR Survey Info</a></li>
+                            <li><a href="faq.html">→ Landowner FAQ</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h4>Helpful Organizations</h4>
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li>• American Forest Foundation</li>
+                            <li>• Tree Farm System</li>
+                            <li>• Cooperative Extension Service</li>
+                            <li>• State Forestry Agencies</li>
+                            <li>• National Woodland Owners</li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h4>Emergency Contacts</h4>
+                        <div class="space-y-3 text-sm">
+                            <p><strong>Wildfire:</strong> 911</p>
+                            <p><strong>State Forestry Hotline:</strong> Check your state</p>
+                            <p><strong>Cedrick Emergency:</strong> +1 (520) 427-9815</p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <a href="index.html" class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-pine to-pine-dark rounded-lg flex items-center justify-center text-white font-bold">CL</div>
+                        <div>
+                            <div class="text-xl font-bold font-slab">Cedrick Logging</div>
+                            <div class="text-xs text-gray-400 uppercase tracking-wider">The Cedrick Thomas Standard</div>
+                        </div>
+                    </a>
+                    <p class="text-gray-400 max-w-sm">From Seedling to Solution. Pioneering sustainable forestry through precision technology.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-white font-slab">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="gis-lidar.html" class="text-gray-400 hover:text-pine-light transition-colors">GIS/LiDAR Mapping</a></li>
+                        <li><a href="carbon-credits.html" class="text-gray-400 hover:text-pine-light transition-colors">Carbon Credits</a></li>
+                        <li><a href="mass-timber.html" class="text-gray-400 hover:text-pine-light transition-colors">Mass Timber/CLT</a></li>
+                        <li><a href="sustainability.html" class="text-gray-400 hover:text-pine-light transition-colors">Sustainable Forestry</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-white font-slab">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="landowner-resources.html" class="text-gray-400 hover:text-pine-light transition-colors">Landowner Resources</a></li>
+                        <li><a href="buyer-resources.html" class="text-gray-400 hover:text-pine-light transition-colors">Buyer Resources</a></li>
+                        <li><a href="faq.html" class="text-gray-400 hover:text-pine-light transition-colors">FAQ</a></li>
+                        <li><a href="case-studies.html" class="text-gray-400 hover:text-pine-light transition-colors">Case Studies</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-white font-slab">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>📍 6261 N La Cholla Blvd, Tucson, AZ</li>
+                        <li>📞 +1 (520) 427-9815</li>
+                        <li>✉️ info@cedricklogging.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2024 Cedrick Logging. CEO: Cedrick Thomas. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
