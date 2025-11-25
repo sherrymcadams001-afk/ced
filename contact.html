@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Request a Quote | Cedrick Logging</title>
+    <meta name="description" content="Contact Cedrick Logging for forestry services, timber sales, carbon credits, or Mass Timber products. Request a quote, schedule a consultation, or visit our offices.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Slab:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pine': { light: '#D4A574', DEFAULT: '#C4956A', dark: '#8B6914' },
+                        'accent-orange': '#FF6B00',
+                        'jet-black': '#1A1A1A',
+                        'charcoal': '#2D2D2D',
+                        'blue-sky': '#87CEEB'
+                    },
+                    fontFamily: {
+                        'slab': ['Roboto Slab', 'Georgia', 'serif'],
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-900 bg-white antialiased">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm">
+        <nav class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+            <a href="index.html" class="flex items-center gap-3 no-underline text-black">
+                <div class="w-10 h-10 bg-gradient-to-br from-pine to-pine-dark rounded-lg flex items-center justify-center text-white font-bold text-xl">CL</div>
+                <div>
+                    <div class="text-xl font-bold tracking-tight font-slab">Cedrick Logging</div>
+                    <div class="text-xs text-gray-500 uppercase tracking-wider">The Cedrick Thomas Standard</div>
+                </div>
+            </a>
+            <ul class="hidden lg:flex gap-8 list-none">
+                <li><a href="index.html#process" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">Process</a></li>
+                <li><a href="index.html#services" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">Services</a></li>
+                <li><a href="about.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">About Cedrick</a></li>
+                <li><a href="contact.html" class="bg-accent-orange text-white px-6 py-3 rounded-lg font-semibold">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Ready to maximize your forest's potential? Our team is here to help landowners and buyers achieve their goals.</p>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li><a href="index.html">Home</a></li>
+                <li class="separator">/</li>
+                <li class="current" aria-current="page">Contact</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="section">
+        <div class="container">
+            <!-- Contact Options -->
+            <div class="grid md:grid-cols-3 gap-6 mb-16">
+                <div class="content-card text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-pine to-pine-dark rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">📞</div>
+                    <h3 class="font-bold font-slab text-xl mb-2">Call Us</h3>
+                    <p class="text-gray-600 mb-4">Speak directly with our team</p>
+                    <a href="tel:+15204279815" class="text-accent-orange font-bold text-xl hover:underline">+1 (520) 427-9815</a>
+                    <p class="text-gray-500 text-sm mt-2">Mon-Fri, 7:00 AM - 6:00 PM MST</p>
+                </div>
+                <div class="content-card text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-pine to-pine-dark rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">✉️</div>
+                    <h3 class="font-bold font-slab text-xl mb-2">Email Us</h3>
+                    <p class="text-gray-600 mb-4">We respond within 24 hours</p>
+                    <a href="mailto:info@cedricklogging.com" class="text-accent-orange font-bold hover:underline">info@cedricklogging.com</a>
+                    <p class="text-gray-500 text-sm mt-2">General inquiries & quotes</p>
+                </div>
+                <div class="content-card text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-accent-orange to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl text-white">🚨</div>
+                    <h3 class="font-bold font-slab text-xl mb-2">Emergency Line</h3>
+                    <p class="text-gray-600 mb-4">24/7 for urgent situations</p>
+                    <a href="tel:+15204279815" class="text-accent-orange font-bold text-xl hover:underline">+1 (520) 427-9815</a>
+                    <p class="text-gray-500 text-sm mt-2">Press 9 for emergency</p>
+                </div>
+            </div>
+
+            <!-- Forms Section -->
+            <div class="grid lg:grid-cols-2 gap-12 mb-16">
+                <!-- Landowner Form -->
+                <div class="contact-form">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 bg-pine rounded-lg flex items-center justify-center text-2xl">🏔️</div>
+                        <div>
+                            <h3 class="font-bold font-slab text-xl">I Own Land</h3>
+                            <p class="text-gray-500 text-sm">Request a property assessment</p>
+                        </div>
+                    </div>
+                    <form id="landownerForm" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="lo-name">Full Name *</label>
+                                <input type="text" id="lo-name" placeholder="John Smith" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lo-phone">Phone Number *</label>
+                                <input type="tel" id="lo-phone" placeholder="(555) 123-4567" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lo-email">Email Address *</label>
+                            <input type="email" id="lo-email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="lo-state">State/Province *</label>
+                                <select id="lo-state" required>
+                                    <option value="">Select state</option>
+                                    <option value="AZ">Arizona</option>
+                                    <option value="CO">Colorado</option>
+                                    <option value="NM">New Mexico</option>
+                                    <option value="UT">Utah</option>
+                                    <option value="CA">California</option>
+                                    <option value="OR">Oregon</option>
+                                    <option value="WA">Washington</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="lo-acres">Approximate Acres *</label>
+                                <input type="number" id="lo-acres" placeholder="e.g., 100" min="1" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lo-interest">I'm interested in...</label>
+                            <select id="lo-interest">
+                                <option value="">Select primary interest</option>
+                                <option value="assessment">Free Property Assessment</option>
+                                <option value="harvest">Timber Harvest</option>
+                                <option value="carbon">Carbon Credit Program</option>
+                                <option value="lidar">LiDAR Survey</option>
+                                <option value="management">Forest Management Plan</option>
+                                <option value="other">Other / Multiple Services</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="lo-message">Additional Details</label>
+                            <textarea id="lo-message" placeholder="Tell us about your property and goals..."></textarea>
+                        </div>
+                        <button type="submit" class="calculate-btn" style="background: linear-gradient(135deg, var(--pine) 0%, var(--pine-dark) 100%);">Request Assessment</button>
+                    </form>
+                </div>
+
+                <!-- Buyer Form -->
+                <div class="contact-form">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 bg-jet-black rounded-lg flex items-center justify-center text-2xl">🪵</div>
+                        <div>
+                            <h3 class="font-bold font-slab text-xl">I Buy Lumber</h3>
+                            <p class="text-gray-500 text-sm">Request a quote for products</p>
+                        </div>
+                    </div>
+                    <form id="buyerForm" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="by-name">Contact Name *</label>
+                                <input type="text" id="by-name" placeholder="Jane Smith" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="by-company">Company Name *</label>
+                                <input type="text" id="by-company" placeholder="Acme Construction" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="by-email">Email Address *</label>
+                                <input type="email" id="by-email" placeholder="jane@company.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="by-phone">Phone Number *</label>
+                                <input type="tel" id="by-phone" placeholder="(555) 123-4567" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="by-product">Product Interest *</label>
+                            <select id="by-product" required>
+                                <option value="">Select product type</option>
+                                <option value="clt">CLT Panels</option>
+                                <option value="glulam">Glulam Beams</option>
+                                <option value="nlt">NLT/DLT Panels</option>
+                                <option value="softwood">Dimensional Softwood</option>
+                                <option value="hardwood">Hardwood Lumber</option>
+                                <option value="custom">Custom Fabrication</option>
+                                <option value="multiple">Multiple Products</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="by-volume">Estimated Volume</label>
+                                <input type="text" id="by-volume" placeholder="e.g., 50,000 BF">
+                            </div>
+                            <div class="form-group">
+                                <label for="by-timeline">Timeline</label>
+                                <select id="by-timeline">
+                                    <option value="">Select timeline</option>
+                                    <option value="immediate">Immediate (within 30 days)</option>
+                                    <option value="quarter">This quarter</option>
+                                    <option value="6month">Within 6 months</option>
+                                    <option value="planning">Planning stage</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="by-message">Project Details</label>
+                            <textarea id="by-message" placeholder="Tell us about your project requirements..."></textarea>
+                        </div>
+                        <button type="submit" class="calculate-btn">Request Quote</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Office Locations -->
+            <h2 class="text-3xl font-bold font-slab mb-8 text-center">Our Locations</h2>
+            <div class="grid md:grid-cols-2 gap-8 mb-16">
+                <!-- Headquarters -->
+                <div class="content-card">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-14 h-14 bg-gradient-to-br from-pine to-pine-dark rounded-xl flex items-center justify-center text-2xl text-white">🏢</div>
+                        <div>
+                            <h3 class="font-bold font-slab text-xl">Headquarters</h3>
+                            <p class="text-accent-orange font-medium">La Cholla Corporate Center</p>
+                        </div>
+                    </div>
+                    <address class="text-gray-600 not-italic mb-4">
+                        6261 N La Cholla Blvd<br>
+                        Tucson, AZ 85741<br>
+                        United States
+                    </address>
+                    <div class="space-y-2 text-gray-600 mb-4">
+                        <p>📞 +1 (520) 427-9815</p>
+                        <p>📠 +1 (520) 427-9816</p>
+                        <p>✉️ info@cedricklogging.com</p>
+                    </div>
+                    <p class="text-gray-500 text-sm mb-4">
+                        <strong>Office Hours:</strong> Mon-Fri, 7:00 AM - 6:00 PM MST
+                    </p>
+                    <a href="https://maps.google.com/?q=6261+N+La+Cholla+Blvd+Tucson+AZ" target="_blank" rel="noopener noreferrer" class="btn-outline" style="display: inline-block;">View on Map →</a>
+                </div>
+
+                <!-- Colorado Branch -->
+                <div class="content-card">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-14 h-14 bg-gradient-to-br from-pine to-pine-dark rounded-xl flex items-center justify-center text-2xl text-white">🏔️</div>
+                        <div>
+                            <h3 class="font-bold font-slab text-xl">Colorado Branch</h3>
+                            <p class="text-accent-orange font-medium">Rocky Mountain Operations</p>
+                        </div>
+                    </div>
+                    <address class="text-gray-600 not-italic mb-4">
+                        5404 Ward Ave<br>
+                        Arvada, CO 80002<br>
+                        United States
+                    </address>
+                    <div class="space-y-2 text-gray-600 mb-4">
+                        <p>📞 +1 (303) 555-0150</p>
+                        <p>✉️ colorado@cedricklogging.com</p>
+                    </div>
+                    <p class="text-gray-500 text-sm mb-4">
+                        <strong>Office Hours:</strong> Mon-Fri, 7:00 AM - 5:00 PM MST
+                    </p>
+                    <a href="https://maps.google.com/?q=5404+Ward+Ave+Arvada+CO+80002" target="_blank" rel="noopener noreferrer" class="btn-outline" style="display: inline-block;">View on Map →</a>
+                </div>
+            </div>
+
+            <!-- Team Directory -->
+            <h2 class="text-3xl font-bold font-slab mb-8 text-center">Direct Contacts</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                <div class="content-card text-center">
+                    <div class="w-16 h-16 bg-pine rounded-full flex items-center justify-center text-2xl mx-auto mb-3">👩‍💼</div>
+                    <h4 class="font-bold font-slab">Elena Rodriguez</h4>
+                    <p class="text-accent-orange text-sm mb-2">VP, Client Relations</p>
+                    <p class="text-gray-500 text-sm">Landowner inquiries</p>
+                    <p class="text-gray-600 text-sm mt-2">ext. 205</p>
+                </div>
+                <div class="content-card text-center">
+                    <div class="w-16 h-16 bg-pine rounded-full flex items-center justify-center text-2xl mx-auto mb-3">👨‍💼</div>
+                    <h4 class="font-bold font-slab">Marcus Johnson</h4>
+                    <p class="text-accent-orange text-sm mb-2">Chief Operations</p>
+                    <p class="text-gray-500 text-sm">Large projects</p>
+                    <p class="text-gray-600 text-sm mt-2">ext. 201</p>
+                </div>
+                <div class="content-card text-center">
+                    <div class="w-16 h-16 bg-pine rounded-full flex items-center justify-center text-2xl mx-auto mb-3">👩‍💻</div>
+                    <h4 class="font-bold font-slab">Dr. Sarah Chen</h4>
+                    <p class="text-accent-orange text-sm mb-2">Technology Director</p>
+                    <p class="text-gray-500 text-sm">LiDAR & Analytics</p>
+                    <p class="text-gray-600 text-sm mt-2">ext. 210</p>
+                </div>
+                <div class="content-card text-center">
+                    <div class="w-16 h-16 bg-pine rounded-full flex items-center justify-center text-2xl mx-auto mb-3">👨‍⚖️</div>
+                    <h4 class="font-bold font-slab">Robert Tanaka</h4>
+                    <p class="text-accent-orange text-sm mb-2">International Director</p>
+                    <p class="text-gray-500 text-sm">Global operations</p>
+                    <p class="text-gray-600 text-sm mt-2">ext. 215</p>
+                </div>
+            </div>
+
+            <!-- Partnership Inquiry -->
+            <div class="bg-jet-black rounded-2xl p-8 text-white mb-16">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold font-slab mb-4">Partnership Opportunities</h3>
+                        <p class="text-white/80 mb-4">
+                            We're always looking for partnerships with mills, contractors, technology providers, and sustainability organizations. If you're interested in collaborating with Cedrick Logging, we'd love to hear from you.
+                        </p>
+                        <ul class="space-y-2 text-white/90">
+                            <li>✓ Mill partnerships and supply agreements</li>
+                            <li>✓ Technology integration partnerships</li>
+                            <li>✓ Sustainability certification bodies</li>
+                            <li>✓ Research and academic collaborations</li>
+                        </ul>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-white/70 mb-4">For partnership inquiries:</p>
+                        <a href="mailto:partnerships@cedricklogging.com" class="text-accent-orange font-bold text-xl hover:underline">partnerships@cedricklogging.com</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Live Chat Placeholder -->
+            <div class="content-card text-center mb-16">
+                <div class="text-4xl mb-4">💬</div>
+                <h3 class="font-bold font-slab text-xl mb-2">Live Chat Coming Soon</h3>
+                <p class="text-gray-600 max-w-lg mx-auto">
+                    We're implementing live chat support to provide instant answers during business hours. In the meantime, please use our contact forms or call us directly.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <a href="index.html" class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-pine to-pine-dark rounded-lg flex items-center justify-center text-white font-bold">CL</div>
+                        <div>
+                            <div class="text-xl font-bold font-slab">Cedrick Logging</div>
+                            <div class="text-xs text-gray-400 uppercase tracking-wider">The Cedrick Thomas Standard</div>
+                        </div>
+                    </a>
+                    <p class="text-gray-400 max-w-sm">From Seedling to Solution. Pioneering sustainable forestry through precision technology.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-white font-slab">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="gis-lidar.html" class="text-gray-400 hover:text-pine-light transition-colors">GIS/LiDAR Mapping</a></li>
+                        <li><a href="carbon-credits.html" class="text-gray-400 hover:text-pine-light transition-colors">Carbon Credits</a></li>
+                        <li><a href="mass-timber.html" class="text-gray-400 hover:text-pine-light transition-colors">Mass Timber/CLT</a></li>
+                        <li><a href="sustainability.html" class="text-gray-400 hover:text-pine-light transition-colors">Sustainable Forestry</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-white font-slab">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="landowner-resources.html" class="text-gray-400 hover:text-pine-light transition-colors">Landowner Resources</a></li>
+                        <li><a href="buyer-resources.html" class="text-gray-400 hover:text-pine-light transition-colors">Buyer Resources</a></li>
+                        <li><a href="faq.html" class="text-gray-400 hover:text-pine-light transition-colors">FAQ</a></li>
+                        <li><a href="case-studies.html" class="text-gray-400 hover:text-pine-light transition-colors">Case Studies</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-white font-slab">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>📍 6261 N La Cholla Blvd, Tucson, AZ</li>
+                        <li>📞 +1 (520) 427-9815</li>
+                        <li>✉️ info@cedricklogging.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2024 Cedrick Logging. CEO: Cedrick Thomas. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Form Submission Handlers
+        document.getElementById('landownerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your inquiry! Our team will contact you within 24 hours.');
+            this.reset();
+        });
+
+        document.getElementById('buyerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your quote request! Our sales team will respond within 24 hours.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ & Knowledge Base | Questions Answered | Cedrick Logging</title>
+    <meta name="description" content="Frequently asked questions about forestry services, LiDAR mapping, carbon credits, timber buying, and sustainable harvesting. Find answers to common questions.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Slab:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pine': { light: '#D4A574', DEFAULT: '#C4956A', dark: '#8B6914' },
+                        'accent-orange': '#FF6B00',
+                        'jet-black': '#1A1A1A',
+                        'charcoal': '#2D2D2D',
+                        'blue-sky': '#87CEEB'
+                    },
+                    fontFamily: {
+                        'slab': ['Roboto Slab', 'Georgia', 'serif'],
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-900 bg-white antialiased">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm">
+        <nav class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+            <a href="index.html" class="flex items-center gap-3 no-underline text-black">
+                <div class="w-10 h-10 bg-gradient-to-br from-pine to-pine-dark rounded-lg flex items-center justify-center text-white font-bold text-xl">CL</div>
+                <div>
+                    <div class="text-xl font-bold tracking-tight font-slab">Cedrick Logging</div>
+                    <div class="text-xs text-gray-500 uppercase tracking-wider">The Cedrick Thomas Standard</div>
+                </div>
+            </a>
+            <ul class="hidden lg:flex gap-8 list-none">
+                <li><a href="index.html#process" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">Process</a></li>
+                <li><a href="index.html#services" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">Services</a></li>
+                <li><a href="about.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">About Cedrick</a></li>
+                <li><a href="contact.html" class="bg-accent-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>FAQ & Knowledge Base</h1>
+            <p>Find answers to common questions about our services, technology, and sustainable forestry practices.</p>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li><a href="index.html">Home</a></li>
+                <li class="separator">/</li>
+                <li class="current" aria-current="page">FAQ</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="section">
+        <div class="container">
+            <!-- Category Navigation -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+                <a href="#landowners" class="bg-gray-100 hover:bg-pine hover:text-white px-4 py-2 rounded-full font-medium transition-colors">For Landowners</a>
+                <a href="#buyers" class="bg-gray-100 hover:bg-pine hover:text-white px-4 py-2 rounded-full font-medium transition-colors">For Buyers</a>
+                <a href="#technology" class="bg-gray-100 hover:bg-pine hover:text-white px-4 py-2 rounded-full font-medium transition-colors">Technology</a>
+                <a href="#carbon" class="bg-gray-100 hover:bg-pine hover:text-white px-4 py-2 rounded-full font-medium transition-colors">Carbon Credits</a>
+                <a href="#sustainability" class="bg-gray-100 hover:bg-pine hover:text-white px-4 py-2 rounded-full font-medium transition-colors">Sustainability</a>
+                <a href="#general" class="bg-gray-100 hover:bg-pine hover:text-white px-4 py-2 rounded-full font-medium transition-colors">General</a>
+            </div>
+
+            <!-- For Landowners -->
+            <div class="faq-section" id="landowners">
+                <h3>🏔️ For Landowners</h3>
+                <div class="faq-item">
+                    <button class="faq-question">How do I know if my property is suitable for timber harvesting?</button>
+                    <div class="faq-answer">
+                        <p>Most forested properties with at least 20 acres of mature timber are suitable for some form of harvest. Key factors include tree species, age (typically 40+ years for softwoods, 60+ for hardwoods), road access, and terrain. We offer free initial consultations to assess your property's potential. Our LiDAR surveys provide precise valuations once you decide to move forward.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What is the typical contract structure for timber sales?</button>
+                    <div class="faq-answer">
+                        <p>We offer several contract types: lump-sum (fixed price for marked timber), pay-as-cut (payment based on actual volume harvested), and share arrangements. Most contracts include provisions for access, liability, site cleanup, and payment schedules. All contracts are reviewed by our legal team and can be customized to your preferences. Typical terms range from 6 months to 2 years depending on the harvest size.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How long does the harvest process take from start to finish?</button>
+                    <div class="faq-answer">
+                        <p>Timeline varies by project size and complexity. A typical 100-acre selective harvest: 2-4 weeks for planning and permitting, 4-8 weeks for harvesting operations, and 2-4 weeks for site restoration. We provide detailed timelines during the planning phase and keep you informed throughout the process via our client portal.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What happens to my property after harvesting?</button>
+                    <div class="faq-answer">
+                        <p>Our "Stewards First" philosophy means we leave your property better than we found it. Post-harvest activities include: water bar installation on roads, spreading slash on skid trails, seeding disturbed areas, and our 3-for-1 reforestation program (we plant three seedlings for every tree harvested). Most properties show significant regrowth within 2-3 years.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How are payment amounts determined?</button>
+                    <div class="faq-answer">
+                        <p>Payment is based on species, grade, and volume of timber harvested, multiplied by current market prices. Our LiDAR inventory provides accurate pre-harvest estimates. Final payment is calculated using certified scale tickets from the receiving mill. We provide transparent accounting and typically pay within 30 days of delivery.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- For Buyers -->
+            <div class="faq-section" id="buyers">
+                <h3>🪵 For Buyers</h3>
+                <div class="faq-item">
+                    <button class="faq-question">What species and products do you offer?</button>
+                    <div class="faq-answer">
+                        <p>We supply a full range of softwoods (Ponderosa Pine, Douglas Fir, Spruce, Cedar, Hemlock) and hardwoods (Oak, Maple, Walnut, Cherry). Products include dimensional lumber, CLT panels, glulam beams, NLT/DLT panels, and custom fabrication. All products are available with FSC, PEFC, or SFI certification.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What are your minimum order quantities?</button>
+                    <div class="faq-answer">
+                        <p>For standard lumber products, our minimum is typically one full truckload (approximately 40,000 board feet for softwood, 25,000 for hardwood). For CLT and engineered products, minimums vary by specification. We can accommodate smaller sample orders for new customers evaluating our products.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What is your typical lead time?</button>
+                    <div class="faq-answer">
+                        <p>Standard lumber: 2-4 weeks. CLT panels: 6-10 weeks. Custom glulam: 4-8 weeks. Lead times vary based on current production schedules and specifications. We recommend contacting us early in your project timeline, especially for large or complex orders. Expedited delivery may be available for an additional fee.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How do I verify the chain of custody for my order?</button>
+                    <div class="faq-answer">
+                        <p>Every order includes complete chain of custody documentation with a unique lot number traceable through our blockchain verification system. You can verify any order's origin using the certificate number on our website or through direct API access. Our CoC certificates are third-party verified and accepted by all major certification bodies.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Do you ship internationally?</button>
+                    <div class="faq-answer">
+                        <p>Yes, we ship to customers worldwide. We handle all export documentation, phytosanitary certificates, and customs clearance. Products are ISPM-15 compliant for international shipping. We can quote in USD, CAD, EUR, AUD, or JPY and coordinate delivery to any major port.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technology -->
+            <div class="faq-section" id="technology">
+                <h3>🛰️ About Technology</h3>
+                <div class="faq-item">
+                    <button class="faq-question">What is LiDAR and why is it better than traditional surveying?</button>
+                    <div class="faq-answer">
+                        <p>LiDAR (Light Detection and Ranging) uses laser pulses to create incredibly detailed 3D maps. Unlike traditional ground-based cruising, LiDAR captures data on every tree, provides sub-meter accuracy, and can cover 200+ acres per day. It also penetrates forest canopy to map terrain. This results in 15-25% more accurate volume estimates compared to traditional sampling methods.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How accurate are your forest inventory estimates?</button>
+                    <div class="faq-answer">
+                        <p>Our LiDAR-based inventories typically achieve ±5% accuracy for total volume estimates at the stand level, compared to ±15-20% for traditional cruise methods. Individual tree detection rates exceed 95% for trees over 6" DBH. All estimates are validated against ground-truth plots and historical harvest data.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Do I need to be present during drone surveys?</button>
+                    <div class="faq-answer">
+                        <p>No, you don't need to be present. We just need permission to access your property on the scheduled survey dates. Our pilots operate autonomously following pre-approved flight plans. We'll coordinate access details and notify you of results. You can track survey progress through our client portal.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What data formats do you provide?</button>
+                    <div class="faq-answer">
+                        <p>We deliver data in industry-standard formats: LAS/LAZ (point clouds), GeoTIFF (raster DEMs and canopy height models), Shapefile/GeoPackage (vector layers), and KMZ (Google Earth). All datasets include complete metadata and coordinate system documentation. Custom formats available upon request.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carbon Credits -->
+            <div class="faq-section" id="carbon">
+                <h3>🌱 Carbon Credits</h3>
+                <div class="faq-item">
+                    <button class="faq-question">What are the minimum requirements to enroll in a carbon credit program?</button>
+                    <div class="faq-answer">
+                        <p>Basic requirements: 40+ acres of contiguous forestland, clear title to the property, forest cover for at least 10 years (no recent deforestation), and willingness to commit to a 20+ year management agreement. Some programs have additional requirements based on location or forest type. We offer a free eligibility assessment.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How much can I earn from carbon credits?</button>
+                    <div class="faq-answer">
+                        <p>Earnings vary based on forest type, location, and market conditions. Typical ranges: $15-40 per ton of CO2 sequestered. A well-managed 100-acre forest might sequester 250-400 tons annually, generating $3,750-16,000/year. Our calculator provides personalized estimates based on your specific property characteristics.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Can I still harvest timber if I'm enrolled in a carbon program?</button>
+                    <div class="faq-answer">
+                        <p>Yes, in most programs. "Improved Forest Management" (IFM) projects allow sustainable harvesting as long as overall carbon stocks increase over time. Some programs restrict the intensity or timing of harvests. We help you design management plans that optimize both timber revenue and carbon credit income.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How long does it take to receive carbon credit payments?</button>
+                    <div class="faq-answer">
+                        <p>Initial project development takes 6-12 months (baseline inventory, project design, third-party verification). Once verified, credits are issued annually. Payment timing depends on your sales agreement—some buyers pay upfront, others upon credit issuance. We offer advance payment options against future credits for qualified projects.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What happens if I sell my property?</button>
+                    <div class="faq-answer">
+                        <p>Carbon credit agreements typically transfer with the land. New owners inherit both the benefits (ongoing credit revenue) and obligations (management commitments). We facilitate smooth transitions and can provide documentation for real estate transactions. Some programs allow buyout provisions under specific circumstances.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sustainability -->
+            <div class="faq-section" id="sustainability">
+                <h3>🌍 Sustainability</h3>
+                <div class="faq-item">
+                    <button class="faq-question">What certifications do you hold?</button>
+                    <div class="faq-answer">
+                        <p>We maintain FSC Chain of Custody (FSC-C123456), PEFC endorsement, SFI Certified Sourcing, and are certified to APA PRG 320 for CLT products. All certifications are audited annually by accredited third-party bodies. Certification documents are available upon request.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How do you minimize environmental impact during harvesting?</button>
+                    <div class="faq-answer">
+                        <p>Our practices include: selective harvesting (no clearcutting), streamside management zones (50-150ft buffers), seasonal timing to protect soil, designated skid trails with slash mats, wildlife habitat retention (snags, den trees), and our 3-for-1 reforestation program. We exceed all state and federal environmental regulations.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What is your reforestation policy?</button>
+                    <div class="faq-answer">
+                        <p>For every tree we harvest, we plant three climate-adapted seedlings. Since 2010, we've planted over 2 million trees. We use locally-sourced genetic stock matched to site conditions, with 5-year survival monitoring showing 85%+ establishment rates. Reforestation is included at no additional cost to landowners.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- General -->
+            <div class="faq-section" id="general">
+                <h3>ℹ️ General Questions</h3>
+                <div class="faq-item">
+                    <button class="faq-question">What areas do you serve?</button>
+                    <div class="faq-answer">
+                        <p>Our headquarters in Tucson, AZ and Colorado branch serve 12 states across the western United States. Internationally, we have operations in Canada (BC, AB), Germany, Australia, and Japan. For areas outside our direct service region, we maintain partnerships with certified operators who meet our quality standards.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How do I get started?</button>
+                    <div class="faq-answer">
+                        <p>Contact us via phone, email, or the online form. We'll schedule a free consultation to understand your goals and assess your property. For landowners, we can provide a preliminary estimate. For buyers, we'll discuss your specifications and provide a quote. No obligation until you sign a contract.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What makes Cedrick Logging different from other companies?</button>
+                    <div class="faq-answer">
+                        <p>Three things set us apart: 1) Technology leadership—our LiDAR and analytics capabilities are unmatched in the industry; 2) Sustainability commitment—we're stewards first, with third-party certifications to prove it; 3) Personal service—Cedrick Thomas built this company on relationships, and our 98% client retention rate reflects that philosophy.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How can I contact you?</button>
+                    <div class="faq-answer">
+                        <p>Phone: +1 (520) 427-9815 (Mon-Fri, 7am-6pm MST). Email: info@cedricklogging.com. Headquarters: 6261 N La Cholla Blvd, Tucson, AZ 85741. Colorado: 5404 Ward Ave, Arvada, CO 80002. We respond to all inquiries within one business day.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Still Have Questions -->
+            <div class="cta-banner mt-16">
+                <h3>Still Have Questions?</h3>
+                <p>Our team is ready to help. Contact us for personalized answers to your forestry questions.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn-primary">Contact Us</a>
+                    <a href="tel:+15204279815" class="btn-secondary">Call +1 (520) 427-9815</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <a href="index.html" class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-pine to-pine-dark rounded-lg flex items-center justify-center text-white font-bold">CL</div>
+                        <div>
+                            <div class="text-xl font-bold font-slab">Cedrick Logging</div>
+                            <div class="text-xs text-gray-400 uppercase tracking-wider">The Cedrick Thomas Standard</div>
+                        </div>
+                    </a>
+                    <p class="text-gray-400 max-w-sm">From Seedling to Solution. Pioneering sustainable forestry through precision technology.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-white font-slab">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="gis-lidar.html" class="text-gray-400 hover:text-pine-light transition-colors">GIS/LiDAR Mapping</a></li>
+                        <li><a href="carbon-credits.html" class="text-gray-400 hover:text-pine-light transition-colors">Carbon Credits</a></li>
+                        <li><a href="mass-timber.html" class="text-gray-400 hover:text-pine-light transition-colors">Mass Timber/CLT</a></li>
+                        <li><a href="sustainability.html" class="text-gray-400 hover:text-pine-light transition-colors">Sustainable Forestry</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-white font-slab">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="landowner-resources.html" class="text-gray-400 hover:text-pine-light transition-colors">Landowner Resources</a></li>
+                        <li><a href="buyer-resources.html" class="text-gray-400 hover:text-pine-light transition-colors">Buyer Resources</a></li>
+                        <li><a href="faq.html" class="text-gray-400 hover:text-pine-light transition-colors">FAQ</a></li>
+                        <li><a href="case-studies.html" class="text-gray-400 hover:text-pine-light transition-colors">Case Studies</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-white font-slab">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>📍 6261 N La Cholla Blvd, Tucson, AZ</li>
+                        <li>📞 +1 (520) 427-9815</li>
+                        <li>✉️ info@cedricklogging.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2024 Cedrick Logging. CEO: Cedrick Thomas. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                // Close other items in same section
+                const section = item.parentElement;
+                section.querySelectorAll('.faq-item.active').forEach(activeItem => {
+                    if (activeItem !== item) {
+                        activeItem.classList.remove('active');
+                    }
+                });
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

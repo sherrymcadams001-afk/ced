@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIS/LiDAR Technology | Precision Forest Mapping | Cedrick Logging</title>
+    <meta name="description" content="Advanced drone-mounted LiDAR and GIS mapping technology for precision forestry. Sub-meter accuracy terrain modeling, individual tree identification, and optimal harvest planning.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Slab:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pine': { light: '#D4A574', DEFAULT: '#C4956A', dark: '#8B6914' },
+                        'accent-orange': '#FF6B00',
+                        'jet-black': '#1A1A1A',
+                        'charcoal': '#2D2D2D',
+                        'blue-sky': '#87CEEB'
+                    },
+                    fontFamily: {
+                        'slab': ['Roboto Slab', 'Georgia', 'serif'],
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-900 bg-white antialiased">
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm">
+        <nav class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+            <a href="index.html" class="flex items-center gap-3 no-underline text-black">
+                <div class="w-10 h-10 bg-gradient-to-br from-pine to-pine-dark rounded-lg flex items-center justify-center text-white font-bold text-xl">CL</div>
+                <div>
+                    <div class="text-xl font-bold tracking-tight font-slab">Cedrick Logging</div>
+                    <div class="text-xs text-gray-500 uppercase tracking-wider">The Cedrick Thomas Standard</div>
+                </div>
+            </a>
+            <ul class="hidden lg:flex gap-8 list-none">
+                <li><a href="index.html#process" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">Process</a></li>
+                <li><a href="index.html#services" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">Services</a></li>
+                <li><a href="about.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">About Cedrick</a></li>
+                <li><a href="index.html#harvest-estimator" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">Estimate Value</a></li>
+                <li><a href="contact.html" class="bg-accent-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>GIS/LiDAR Technology</h1>
+            <p>Advanced drone-mounted LiDAR systems capturing millions of data points per acre, creating detailed 3D models that reveal insights invisible to traditional surveying methods.</p>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li><a href="index.html">Home</a></li>
+                <li class="separator">/</li>
+                <li><a href="index.html#services">Services</a></li>
+                <li class="separator">/</li>
+                <li class="current" aria-current="page">GIS/LiDAR Technology</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="section">
+        <div class="container">
+            <div class="content-grid">
+                <div>
+                    <!-- What is LiDAR Section -->
+                    <h2 class="text-3xl font-bold font-slab mb-6">What is LiDAR Technology?</h2>
+                    <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                        LiDAR (Light Detection and Ranging) is a remote sensing technology that uses laser pulses to measure distances to the Earth's surface. When mounted on drones, LiDAR systems can penetrate forest canopies and create incredibly detailed three-dimensional maps of terrain and vegetation structure.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        At Cedrick Logging, we utilize the latest drone-mounted LiDAR systems capable of capturing over 1 million data points per second. This unprecedented level of detail allows us to identify individual trees, measure their heights and diameters, assess timber volume, and plan optimal harvest routes—all before setting foot on your property.
+                    </p>
+
+                    <!-- How It Works -->
+                    <h3 class="text-2xl font-bold font-slab mb-4">How Drone Mapping Works</h3>
+                    <div class="bg-gray-50 rounded-2xl p-8 mb-8">
+                        <ol class="space-y-6">
+                            <li class="flex gap-4">
+                                <span class="flex-shrink-0 w-10 h-10 bg-accent-orange rounded-full flex items-center justify-center text-white font-bold">1</span>
+                                <div>
+                                    <h4 class="font-bold font-slab text-lg">Flight Planning</h4>
+                                    <p class="text-gray-600">Our certified drone pilots create optimized flight paths based on your property boundaries, terrain features, and specific survey requirements.</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="flex-shrink-0 w-10 h-10 bg-accent-orange rounded-full flex items-center justify-center text-white font-bold">2</span>
+                                <div>
+                                    <h4 class="font-bold font-slab text-lg">Data Acquisition</h4>
+                                    <p class="text-gray-600">Drones equipped with LiDAR sensors fly automated missions, capturing millions of laser returns that penetrate the forest canopy to map both vegetation and ground surface.</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="flex-shrink-0 w-10 h-10 bg-accent-orange rounded-full flex items-center justify-center text-white font-bold">3</span>
+                                <div>
+                                    <h4 class="font-bold font-slab text-lg">Point Cloud Processing</h4>
+                                    <p class="text-gray-600">Raw LiDAR data is processed into classified point clouds, separating ground, understory, and canopy layers for detailed analysis.</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="flex-shrink-0 w-10 h-10 bg-accent-orange rounded-full flex items-center justify-center text-white font-bold">4</span>
+                                <div>
+                                    <h4 class="font-bold font-slab text-lg">Forest Inventory Generation</h4>
+                                    <p class="text-gray-600">Advanced algorithms identify individual trees, estimate heights, diameters, and species, generating comprehensive forest inventory reports.</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="flex-shrink-0 w-10 h-10 bg-accent-orange rounded-full flex items-center justify-center text-white font-bold">5</span>
+                                <div>
+                                    <h4 class="font-bold font-slab text-lg">Deliverables & Integration</h4>
+                                    <p class="text-gray-600">Final products include digital elevation models, canopy height models, timber volume estimates, and GIS-ready datasets compatible with forestry management software.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <!-- Technical Specifications -->
+                    <h3 class="text-2xl font-bold font-slab mb-4">Technical Specifications</h3>
+                    <div class="overflow-x-auto mb-8">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Specification</th>
+                                    <th>Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Horizontal Accuracy</td>
+                                    <td>±5 cm (2 inches)</td>
+                                </tr>
+                                <tr>
+                                    <td>Vertical Accuracy</td>
+                                    <td>±3 cm (1.2 inches)</td>
+                                </tr>
+                                <tr>
+                                    <td>Point Density</td>
+                                    <td>100+ points per m²</td>
+                                </tr>
+                                <tr>
+                                    <td>Canopy Penetration</td>
+                                    <td>Up to 95% in deciduous forests</td>
+                                </tr>
+                                <tr>
+                                    <td>Coverage Rate</td>
+                                    <td>200-500 acres per day</td>
+                                </tr>
+                                <tr>
+                                    <td>Tree Detection Rate</td>
+                                    <td>&gt;95% for trees &gt;6" DBH</td>
+                                </tr>
+                                <tr>
+                                    <td>Height Measurement Accuracy</td>
+                                    <td>±0.5 meters</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Case Study -->
+                    <h3 class="text-2xl font-bold font-slab mb-4">Case Study: Vermont Mixed Hardwood</h3>
+                    <div class="case-study-card mb-8">
+                        <div class="case-study-image">🛰️</div>
+                        <div class="case-study-content">
+                            <span class="case-study-tag">Before/After Analysis</span>
+                            <h3>500-Acre Mixed Hardwood Tract</h3>
+                            <p>A Vermont landowner with a 500-acre mixed hardwood tract had relied on traditional cruise estimates for decades. Our LiDAR survey revealed 23% more merchantable timber than previous estimates, including a previously unmapped 40-acre section of valuable black walnut.</p>
+                            <div class="case-study-metrics">
+                                <div class="metric">
+                                    <div class="metric-val">23%</div>
+                                    <div class="metric-lbl">More Timber</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-val">$180K</div>
+                                    <div class="metric-lbl">Added Value</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-val">2 Days</div>
+                                    <div class="metric-lbl">Survey Time</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ROI Calculator -->
+                    <h3 class="text-2xl font-bold font-slab mb-4">GIS Mapping ROI Calculator</h3>
+                    <div class="bg-jet-black rounded-2xl p-6 mb-8">
+                        <form class="calculator-form" id="gisRoiForm" style="background: transparent; border: none; padding: 0;">
+                            <div class="form-group">
+                                <label for="gis-acres">Property Size (Acres)</label>
+                                <input type="number" id="gis-acres" placeholder="Enter acreage" min="50" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="gis-terrain">Terrain Complexity</label>
+                                <select id="gis-terrain" required>
+                                    <option value="">Select terrain type</option>
+                                    <option value="flat">Flat (0-10% slope)</option>
+                                    <option value="moderate">Moderate (10-30% slope)</option>
+                                    <option value="steep">Steep (30%+ slope)</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="calculate-btn">Calculate ROI</button>
+                            <div class="calculator-result" id="gis-result">
+                                <div class="result-number" id="gis-roi">0%</div>
+                                <div class="result-label">Estimated ROI from LiDAR Survey</div>
+                                <p style="margin-top: 1rem; font-size: 0.875rem; color: rgba(255,255,255,0.8);">
+                                    Average value discovery: $<span id="gis-value">0</span>/acre
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- FAQ Section -->
+                    <h3 class="text-2xl font-bold font-slab mb-4">Frequently Asked Questions</h3>
+                    <div class="faq-section">
+                        <div class="faq-item">
+                            <button class="faq-question">How long does a LiDAR survey take?</button>
+                            <div class="faq-answer">
+                                <p>Flight time depends on property size and terrain. Most surveys of 100-500 acres can be completed in 1-2 days of flight time. Data processing and report generation typically takes an additional 1-2 weeks.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">What weather conditions are required?</button>
+                            <div class="faq-answer">
+                                <p>LiDAR works in most weather conditions except heavy rain, fog, or high winds (>20 mph). Unlike traditional aerial photography, LiDAR can even operate in cloudy conditions since it uses active laser sensing rather than sunlight.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">Can LiDAR see through dense canopy?</button>
+                            <div class="faq-answer">
+                                <p>Yes! LiDAR excels at penetrating dense forest canopy. In deciduous forests during leaf-on conditions, we typically achieve 70-80% ground penetration. During leaf-off seasons, this can exceed 95%. Conifer forests typically see 60-70% penetration.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">What file formats do you provide?</button>
+                            <div class="faq-answer">
+                                <p>We deliver data in industry-standard formats including LAS/LAZ (point clouds), GeoTIFF (raster products), Shapefile/GeoPackage (vector features), and KMZ for Google Earth visualization. All datasets are compatible with major forestry software including ESRI ArcGIS, QGIS, and ForestView.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">Do you need permission from the FAA?</button>
+                            <div class="faq-answer">
+                                <p>All our pilots hold FAA Part 107 certifications. For operations requiring airspace authorization (near airports, etc.), we obtain necessary waivers in advance. We handle all regulatory compliance—you just need to provide property access.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="sidebar-widget" style="background: linear-gradient(135deg, var(--jet-black) 0%, var(--charcoal) 100%); color: white;">
+                        <h4 style="color: white; border-color: var(--accent-orange);">Request a Survey</h4>
+                        <p style="color: rgba(255,255,255,0.8); margin-bottom: 1rem;">Get a comprehensive LiDAR assessment of your property.</p>
+                        <a href="contact.html" class="btn-primary" style="display: block; text-align: center;">Request Quote</a>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h4>Key Benefits</h4>
+                        <ul class="feature-list" style="padding: 0;">
+                            <li style="border: none; padding: 0.5rem 0;">
+                                <span class="icon">✓</span>
+                                <div>
+                                    <h4 style="font-size: 0.9rem;">Sub-meter Accuracy</h4>
+                                    <p style="font-size: 0.8rem;">GPS-grade precision for every data point</p>
+                                </div>
+                            </li>
+                            <li style="border: none; padding: 0.5rem 0;">
+                                <span class="icon">✓</span>
+                                <div>
+                                    <h4 style="font-size: 0.9rem;">Individual Tree Detection</h4>
+                                    <p style="font-size: 0.8rem;">Identify and measure every tree</p>
+                                </div>
+                            </li>
+                            <li style="border: none; padding: 0.5rem 0;">
+                                <span class="icon">✓</span>
+                                <div>
+                                    <h4 style="font-size: 0.9rem;">Terrain Analysis</h4>
+                                    <p style="font-size: 0.8rem;">Map slopes, drainage, and access routes</p>
+                                </div>
+                            </li>
+                            <li style="border: none; padding: 0.5rem 0;">
+                                <span class="icon">✓</span>
+                                <div>
+                                    <h4 style="font-size: 0.9rem;">Biomass Estimation</h4>
+                                    <p style="font-size: 0.8rem;">Calculate carbon stocks and timber volume</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h4>Related Services</h4>
+                        <ul>
+                            <li><a href="carbon-credits.html">→ Carbon Credit Programs</a></li>
+                            <li><a href="analytics.html">→ Forest Analytics Dashboard</a></li>
+                            <li><a href="sustainability.html">→ Sustainable Harvesting</a></li>
+                            <li><a href="chain-of-custody.html">→ Chain of Custody</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h4>Software Integration</h4>
+                        <p class="text-sm text-gray-600 mb-3">Our data integrates with:</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="spec-tag">ESRI ArcGIS</span>
+                            <span class="spec-tag">QGIS</span>
+                            <span class="spec-tag">ForestView</span>
+                            <span class="spec-tag">Trimble</span>
+                            <span class="spec-tag">Global Mapper</span>
+                            <span class="spec-tag">AutoCAD</span>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-black to-charcoal text-white text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold font-slab mb-4 text-white">Ready for Precision Forestry?</h2>
+            <p class="text-white/80 mb-8 max-w-2xl mx-auto">Discover the true potential of your timberland with our advanced LiDAR mapping technology.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="contact.html" class="bg-accent-orange text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-600 transition-all">Request a Survey</a>
+                <a href="tel:+15204279815" class="bg-transparent text-white px-8 py-4 rounded-lg font-semibold border-2 border-white/30 hover:border-white hover:bg-white/10 transition-all">Call +1 (520) 427-9815</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <a href="index.html" class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-pine to-pine-dark rounded-lg flex items-center justify-center text-white font-bold">CL</div>
+                        <div>
+                            <div class="text-xl font-bold font-slab">Cedrick Logging</div>
+                            <div class="text-xs text-gray-400 uppercase tracking-wider">The Cedrick Thomas Standard</div>
+                        </div>
+                    </a>
+                    <p class="text-gray-400 max-w-sm">From Seedling to Solution. Pioneering sustainable forestry through precision technology.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-white font-slab">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="gis-lidar.html" class="text-gray-400 hover:text-pine-light transition-colors">GIS/LiDAR Mapping</a></li>
+                        <li><a href="carbon-credits.html" class="text-gray-400 hover:text-pine-light transition-colors">Carbon Credits</a></li>
+                        <li><a href="mass-timber.html" class="text-gray-400 hover:text-pine-light transition-colors">Mass Timber/CLT</a></li>
+                        <li><a href="sustainability.html" class="text-gray-400 hover:text-pine-light transition-colors">Sustainable Forestry</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-white font-slab">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="landowner-resources.html" class="text-gray-400 hover:text-pine-light transition-colors">Landowner Resources</a></li>
+                        <li><a href="buyer-resources.html" class="text-gray-400 hover:text-pine-light transition-colors">Buyer Resources</a></li>
+                        <li><a href="faq.html" class="text-gray-400 hover:text-pine-light transition-colors">FAQ</a></li>
+                        <li><a href="case-studies.html" class="text-gray-400 hover:text-pine-light transition-colors">Case Studies</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-white font-slab">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>📍 6261 N La Cholla Blvd, Tucson, AZ</li>
+                        <li>📞 +1 (520) 427-9815</li>
+                        <li>✉️ info@cedricklogging.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2024 Cedrick Logging. CEO: Cedrick Thomas. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+
+        // GIS ROI Calculator
+        document.getElementById('gisRoiForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const acres = parseFloat(document.getElementById('gis-acres').value) || 0;
+            const terrain = document.getElementById('gis-terrain').value;
+            
+            if (acres < 50 || !terrain) {
+                alert('Please fill in all fields. Minimum 50 acres.');
+                return;
+            }
+            
+            // Base value discovery per acre
+            let baseValue = 150;
+            if (terrain === 'moderate') baseValue = 200;
+            if (terrain === 'steep') baseValue = 250;
+            
+            const totalValueDiscovery = acres * baseValue;
+            const surveyCost = Math.max(2500, acres * 5);
+            const roi = Math.round((totalValueDiscovery - surveyCost) / surveyCost * 100);
+            
+            document.getElementById('gis-roi').textContent = roi + '%';
+            document.getElementById('gis-value').textContent = baseValue.toLocaleString();
+            document.getElementById('gis-result').classList.add('active');
+        });
+    </script>
+</body>
+</html>

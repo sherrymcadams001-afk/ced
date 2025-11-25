@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & News | Industry Insights | Cedrick Logging</title>
+    <meta name="description" content="Forestry industry news, sustainable practices insights, technology updates, and seasonal tips from the Cedrick Logging team.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Slab:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pine': { light: '#D4A574', DEFAULT: '#C4956A', dark: '#8B6914' },
+                        'accent-orange': '#FF6B00',
+                        'jet-black': '#1A1A1A',
+                        'charcoal': '#2D2D2D',
+                        'blue-sky': '#87CEEB'
+                    },
+                    fontFamily: {
+                        'slab': ['Roboto Slab', 'Georgia', 'serif'],
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-900 bg-white antialiased">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm">
+        <nav class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+            <a href="index.html" class="flex items-center gap-3 no-underline text-black">
+                <div class="w-10 h-10 bg-gradient-to-br from-pine to-pine-dark rounded-lg flex items-center justify-center text-white font-bold text-xl">CL</div>
+                <div>
+                    <div class="text-xl font-bold tracking-tight font-slab">Cedrick Logging</div>
+                    <div class="text-xs text-gray-500 uppercase tracking-wider">The Cedrick Thomas Standard</div>
+                </div>
+            </a>
+            <ul class="hidden lg:flex gap-8 list-none">
+                <li><a href="index.html#process" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">Process</a></li>
+                <li><a href="index.html#services" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">Services</a></li>
+                <li><a href="about.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">About Cedrick</a></li>
+                <li><a href="contact.html" class="bg-accent-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Blog & News</h1>
+            <p>Industry insights, technology updates, and sustainable forestry tips from the Cedrick Logging team.</p>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li><a href="index.html">Home</a></li>
+                <li class="separator">/</li>
+                <li class="current" aria-current="page">Blog</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="section">
+        <div class="container">
+            <div class="content-grid">
+                <div>
+                    <!-- Featured Article -->
+                    <article class="mb-12">
+                        <div class="bg-gradient-to-r from-pine to-pine-dark rounded-2xl overflow-hidden">
+                            <div class="p-8 text-white">
+                                <span class="bg-accent-orange text-white px-3 py-1 rounded-full text-xs font-semibold uppercase">Featured</span>
+                                <h2 class="text-3xl font-bold font-slab mt-4 mb-4">
+                                    <a href="#" class="text-white hover:text-pine-light transition-colors">2024 State of the Forest: Market Trends and Technology Outlook</a>
+                                </h2>
+                                <p class="text-white/80 mb-6">Our annual analysis of timber markets, carbon credit pricing, and emerging technologies shaping the future of sustainable forestry.</p>
+                                <div class="flex items-center gap-4 text-white/70 text-sm">
+                                    <span>📅 November 15, 2024</span>
+                                    <span>•</span>
+                                    <span>By Cedrick Thomas</span>
+                                    <span>•</span>
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Grid -->
+                    <div class="blog-grid mb-12">
+                        <article class="blog-card">
+                            <div class="blog-image" style="background: linear-gradient(135deg, #87CEEB 0%, #5BA3C6 100%);">🛰️</div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="blog-category">Technology</span>
+                                    <span>Oct 28, 2024</span>
+                                </div>
+                                <h3><a href="#">How LiDAR is Revolutionizing Forest Inventory</a></h3>
+                                <p>New developments in drone-mounted sensors are changing how we measure and value timberland.</p>
+                            </div>
+                        </article>
+
+                        <article class="blog-card">
+                            <div class="blog-image" style="background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);">🌱</div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="blog-category">Carbon</span>
+                                    <span>Oct 15, 2024</span>
+                                </div>
+                                <h3><a href="#">Carbon Credit Markets: Q3 2024 Update</a></h3>
+                                <p>Voluntary carbon credit prices continue to rise as corporate net-zero commitments increase demand.</p>
+                            </div>
+                        </article>
+
+                        <article class="blog-card">
+                            <div class="blog-image" style="background: linear-gradient(135deg, #FF6B00 0%, #e55a00 100%); color: white;">🔥</div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="blog-category">Safety</span>
+                                    <span>Sep 30, 2024</span>
+                                </div>
+                                <h3><a href="#">Wildfire Season Recap: Lessons for Landowners</a></h3>
+                                <p>What the 2024 fire season taught us about forest management and fire-adapted silviculture.</p>
+                            </div>
+                        </article>
+
+                        <article class="blog-card">
+                            <div class="blog-image" style="background: linear-gradient(135deg, #D4A574 0%, #8B6914 100%);">🪵</div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="blog-category">Markets</span>
+                                    <span>Sep 12, 2024</span>
+                                </div>
+                                <h3><a href="#">Timber Price Outlook: Housing Demand Drives Recovery</a></h3>
+                                <p>Regional analysis of softwood and hardwood pricing as construction activity rebounds.</p>
+                            </div>
+                        </article>
+
+                        <article class="blog-card">
+                            <div class="blog-image" style="background: linear-gradient(135deg, #1A1A1A 0%, #2D2D2D 100%); color: white;">🏗️</div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="blog-category">CLT</span>
+                                    <span>Aug 25, 2024</span>
+                                </div>
+                                <h3><a href="#">Mass Timber Reaches New Heights: 20-Story Buildings Approved</a></h3>
+                                <p>Updated building codes and fire engineering research enable taller wood structures.</p>
+                            </div>
+                        </article>
+
+                        <article class="blog-card">
+                            <div class="blog-image" style="background: linear-gradient(135deg, #C4956A 0%, #8B6914 100%);">🍂</div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="blog-category">Seasonal</span>
+                                    <span>Aug 10, 2024</span>
+                                </div>
+                                <h3><a href="#">Fall Harvest Planning: A Checklist for Landowners</a></h3>
+                                <p>Essential steps to prepare your property for optimal autumn harvesting conditions.</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Load More -->
+                    <div class="text-center mb-12">
+                        <button class="btn-outline">Load More Articles</button>
+                    </div>
+
+                    <!-- Older Articles List -->
+                    <h3 class="text-2xl font-bold font-slab mb-6">Article Archive</h3>
+                    <div class="space-y-4">
+                        <article class="flex gap-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div class="flex-shrink-0 w-16 h-16 bg-pine rounded-lg flex items-center justify-center text-2xl">📊</div>
+                            <div>
+                                <span class="text-sm text-gray-500">Jul 28, 2024 • Markets</span>
+                                <h4 class="font-bold font-slab"><a href="#" class="hover:text-accent-orange">Mid-Year Market Review: Timber, Carbon, and CLT</a></h4>
+                            </div>
+                        </article>
+                        <article class="flex gap-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div class="flex-shrink-0 w-16 h-16 bg-pine rounded-lg flex items-center justify-center text-2xl">🌲</div>
+                            <div>
+                                <span class="text-sm text-gray-500">Jul 15, 2024 • Sustainability</span>
+                                <h4 class="font-bold font-slab"><a href="#" class="hover:text-accent-orange">FSC vs SFI vs PEFC: Understanding Forest Certifications</a></h4>
+                            </div>
+                        </article>
+                        <article class="flex gap-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div class="flex-shrink-0 w-16 h-16 bg-pine rounded-lg flex items-center justify-center text-2xl">💰</div>
+                            <div>
+                                <span class="text-sm text-gray-500">Jun 30, 2024 • Tax</span>
+                                <h4 class="font-bold font-slab"><a href="#" class="hover:text-accent-orange">Timber Tax Strategies: Maximizing After-Tax Returns</a></h4>
+                            </div>
+                        </article>
+                        <article class="flex gap-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div class="flex-shrink-0 w-16 h-16 bg-pine rounded-lg flex items-center justify-center text-2xl">🤖</div>
+                            <div>
+                                <span class="text-sm text-gray-500">Jun 12, 2024 • Technology</span>
+                                <h4 class="font-bold font-slab"><a href="#" class="hover:text-accent-orange">AI in Forestry: From Pest Detection to Yield Prediction</a></h4>
+                            </div>
+                        </article>
+                        <article class="flex gap-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div class="flex-shrink-0 w-16 h-16 bg-pine rounded-lg flex items-center justify-center text-2xl">🏆</div>
+                            <div>
+                                <span class="text-sm text-gray-500">May 25, 2024 • Company</span>
+                                <h4 class="font-bold font-slab"><a href="#" class="hover:text-accent-orange">Cedrick Logging Receives SAF Excellence Award</a></h4>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="sidebar-widget">
+                        <h4>Categories</h4>
+                        <ul>
+                            <li><a href="#">Technology (12)</a></li>
+                            <li><a href="#">Carbon Credits (8)</a></li>
+                            <li><a href="#">Markets (15)</a></li>
+                            <li><a href="#">Sustainability (10)</a></li>
+                            <li><a href="#">Seasonal Tips (6)</a></li>
+                            <li><a href="#">Company News (9)</a></li>
+                            <li><a href="#">Regulatory (5)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget" style="background: linear-gradient(135deg, var(--jet-black) 0%, var(--charcoal) 100%); color: white;">
+                        <h4 style="color: white; border-color: var(--accent-orange);">Newsletter</h4>
+                        <p style="color: rgba(255,255,255,0.8); margin-bottom: 1rem; font-size: 0.9rem;">Get monthly forestry insights delivered to your inbox.</p>
+                        <form>
+                            <input type="email" placeholder="Your email" style="width: 100%; padding: 0.75rem; border-radius: 0.5rem; border: none; margin-bottom: 0.75rem;">
+                            <button type="submit" class="btn-primary" style="width: 100%;">Subscribe</button>
+                        </form>
+                        <p style="color: rgba(255,255,255,0.5); font-size: 0.75rem; margin-top: 0.75rem;">No spam, ever. Unsubscribe anytime.</p>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h4>Popular Posts</h4>
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="#" class="text-gray-700 hover:text-accent-orange text-sm font-medium">
+                                    Understanding Carbon Credit Pricing in 2024
+                                </a>
+                                <p class="text-xs text-gray-400">5,420 views</p>
+                            </li>
+                            <li>
+                                <a href="#" class="text-gray-700 hover:text-accent-orange text-sm font-medium">
+                                    LiDAR vs Traditional Cruising: A Comparison
+                                </a>
+                                <p class="text-xs text-gray-400">4,890 views</p>
+                            </li>
+                            <li>
+                                <a href="#" class="text-gray-700 hover:text-accent-orange text-sm font-medium">
+                                    Tax Benefits Every Landowner Should Know
+                                </a>
+                                <p class="text-xs text-gray-400">4,215 views</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h4>Follow Us</h4>
+                        <div class="flex gap-3">
+                            <a href="#" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-lg hover:bg-pine hover:text-white transition-colors">📘</a>
+                            <a href="#" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-lg hover:bg-pine hover:text-white transition-colors">🐦</a>
+                            <a href="#" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-lg hover:bg-pine hover:text-white transition-colors">💼</a>
+                            <a href="#" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-lg hover:bg-pine hover:text-white transition-colors">📸</a>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h4>Tags</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="#" class="spec-tag hover:bg-pine hover:text-white transition-colors">LiDAR</a>
+                            <a href="#" class="spec-tag hover:bg-pine hover:text-white transition-colors">Carbon</a>
+                            <a href="#" class="spec-tag hover:bg-pine hover:text-white transition-colors">CLT</a>
+                            <a href="#" class="spec-tag hover:bg-pine hover:text-white transition-colors">FSC</a>
+                            <a href="#" class="spec-tag hover:bg-pine hover:text-white transition-colors">Timber</a>
+                            <a href="#" class="spec-tag hover:bg-pine hover:text-white transition-colors">Drones</a>
+                            <a href="#" class="spec-tag hover:bg-pine hover:text-white transition-colors">Tax</a>
+                            <a href="#" class="spec-tag hover:bg-pine hover:text-white transition-colors">Harvest</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <a href="index.html" class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-pine to-pine-dark rounded-lg flex items-center justify-center text-white font-bold">CL</div>
+                        <div>
+                            <div class="text-xl font-bold font-slab">Cedrick Logging</div>
+                            <div class="text-xs text-gray-400 uppercase tracking-wider">The Cedrick Thomas Standard</div>
+                        </div>
+                    </a>
+                    <p class="text-gray-400 max-w-sm">From Seedling to Solution. Pioneering sustainable forestry through precision technology.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-white font-slab">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="gis-lidar.html" class="text-gray-400 hover:text-pine-light transition-colors">GIS/LiDAR Mapping</a></li>
+                        <li><a href="carbon-credits.html" class="text-gray-400 hover:text-pine-light transition-colors">Carbon Credits</a></li>
+                        <li><a href="mass-timber.html" class="text-gray-400 hover:text-pine-light transition-colors">Mass Timber/CLT</a></li>
+                        <li><a href="sustainability.html" class="text-gray-400 hover:text-pine-light transition-colors">Sustainable Forestry</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-white font-slab">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="landowner-resources.html" class="text-gray-400 hover:text-pine-light transition-colors">Landowner Resources</a></li>
+                        <li><a href="buyer-resources.html" class="text-gray-400 hover:text-pine-light transition-colors">Buyer Resources</a></li>
+                        <li><a href="faq.html" class="text-gray-400 hover:text-pine-light transition-colors">FAQ</a></li>
+                        <li><a href="case-studies.html" class="text-gray-400 hover:text-pine-light transition-colors">Case Studies</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-white font-slab">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>📍 6261 N La Cholla Blvd, Tucson, AZ</li>
+                        <li>📞 +1 (520) 427-9815</li>
+                        <li>✉️ info@cedricklogging.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2024 Cedrick Logging. CEO: Cedrick Thomas. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

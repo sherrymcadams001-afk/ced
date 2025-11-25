@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainable Forestry Practices | Environmental Stewardship | Cedrick Logging</title>
+    <meta name="description" content="Discover our sustainable harvesting methods, biodiversity preservation, water quality protection, and 3-for-1 reforestation program. FSC, SFI, and PEFC certified.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Slab:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pine': { light: '#D4A574', DEFAULT: '#C4956A', dark: '#8B6914' },
+                        'accent-orange': '#FF6B00',
+                        'jet-black': '#1A1A1A',
+                        'charcoal': '#2D2D2D',
+                        'blue-sky': '#87CEEB'
+                    },
+                    fontFamily: {
+                        'slab': ['Roboto Slab', 'Georgia', 'serif'],
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-900 bg-white antialiased">
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm">
+        <nav class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+            <a href="index.html" class="flex items-center gap-3 no-underline text-black">
+                <div class="w-10 h-10 bg-gradient-to-br from-pine to-pine-dark rounded-lg flex items-center justify-center text-white font-bold text-xl">CL</div>
+                <div>
+                    <div class="text-xl font-bold tracking-tight font-slab">Cedrick Logging</div>
+                    <div class="text-xs text-gray-500 uppercase tracking-wider">The Cedrick Thomas Standard</div>
+                </div>
+            </a>
+            <ul class="hidden lg:flex gap-8 list-none">
+                <li><a href="index.html#process" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">Process</a></li>
+                <li><a href="index.html#services" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">Services</a></li>
+                <li><a href="about.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">About Cedrick</a></li>
+                <li><a href="index.html#harvest-estimator" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">Estimate Value</a></li>
+                <li><a href="contact.html" class="bg-accent-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Sustainable Forestry Practices</h1>
+            <p>We are stewards first, loggers second. Our comprehensive approach ensures healthy forests for generations to come.</p>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li><a href="index.html">Home</a></li>
+                <li class="separator">/</li>
+                <li><a href="index.html#services">Services</a></li>
+                <li class="separator">/</li>
+                <li class="current" aria-current="page">Sustainable Forestry</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="section">
+        <div class="container">
+            <!-- Philosophy Section -->
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="text-3xl font-bold font-slab mb-6">The Cedrick Thomas Stewardship Philosophy</h2>
+                <blockquote class="text-xl text-gray-600 italic leading-relaxed border-l-4 border-accent-orange pl-6 text-left">
+                    "Every tree we harvest is a promise to plant three more. Every forest we manage is a legacy we protect for the next generation. Technology gives us the tools to do it better, but the heart of forestry remains unchanged: respect for the land."
+                </blockquote>
+                <p class="mt-4 text-gray-500">— Cedrick Thomas, Founder & CEO</p>
+            </div>
+
+            <!-- Sustainability Stats -->
+            <div class="stats-grid mb-16">
+                <div class="stat-item">
+                    <div class="stat-number">2M+</div>
+                    <div class="stat-label">Trees Planted</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">45K</div>
+                    <div class="stat-label">Tons CO₂ Offset</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">Zero</div>
+                    <div class="stat-label">EPA Violations</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Best Practice Compliance</div>
+                </div>
+            </div>
+
+            <!-- Harvesting Methods -->
+            <h2 class="text-3xl font-bold font-slab mb-8 text-center">Sustainable Harvesting Methods</h2>
+            <div class="grid md:grid-cols-2 gap-8 mb-16">
+                <div class="content-card">
+                    <h3 class="font-bold font-slab text-xl mb-4">🌲 Selective Harvesting</h3>
+                    <p class="text-gray-600 mb-4">
+                        Rather than clearcutting, we practice selective harvesting—removing only mature or damaged trees while preserving the forest's structure and biodiversity. This approach:
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>✓ Maintains continuous forest cover</li>
+                        <li>✓ Protects wildlife habitat corridors</li>
+                        <li>✓ Reduces erosion and soil compaction</li>
+                        <li>✓ Promotes natural regeneration</li>
+                    </ul>
+                </div>
+                <div class="content-card">
+                    <h3 class="font-bold font-slab text-xl mb-4">🛤️ Low-Impact Logging</h3>
+                    <p class="text-gray-600 mb-4">
+                        Our equipment and techniques minimize damage to the forest floor and remaining trees. We employ:
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>✓ Designated skid trails with slash mats</li>
+                        <li>✓ Directional felling to protect residual trees</li>
+                        <li>✓ Seasonal timing to avoid wet soil conditions</li>
+                        <li>✓ GPS-guided harvesting routes</li>
+                    </ul>
+                </div>
+                <div class="content-card">
+                    <h3 class="font-bold font-slab text-xl mb-4">🔄 Shelterwood System</h3>
+                    <p class="text-gray-600 mb-4">
+                        For regenerating shade-tolerant species, we use the shelterwood method—a multi-stage harvest that provides protection for new seedlings:
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>✓ Preparatory cut removes competing vegetation</li>
+                        <li>✓ Seed cut opens canopy for light penetration</li>
+                        <li>✓ Final removal once regeneration established</li>
+                        <li>✓ 5-15 year cycle depending on species</li>
+                    </ul>
+                </div>
+                <div class="content-card">
+                    <h3 class="font-bold font-slab text-xl mb-4">🎯 Precision Planning</h3>
+                    <p class="text-gray-600 mb-4">
+                        LiDAR technology allows us to plan every harvest with unprecedented precision:
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>✓ Identify individual trees for harvest before crew arrives</li>
+                        <li>✓ Map sensitive areas for avoidance buffers</li>
+                        <li>✓ Optimize harvest routes for minimal impact</li>
+                        <li>✓ Pre-calculate volume and logistics</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Biodiversity Section -->
+            <h2 class="text-3xl font-bold font-slab mb-8 text-center">Biodiversity Preservation</h2>
+            <div class="bg-gray-50 rounded-2xl p-8 mb-16">
+                <p class="text-gray-600 mb-6 text-lg">
+                    A healthy forest is more than just trees. We actively manage for biodiversity by protecting the full ecosystem:
+                </p>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-xl p-6 text-center">
+                        <div class="text-4xl mb-4">🦅</div>
+                        <h4 class="font-bold font-slab mb-2">Wildlife Habitat</h4>
+                        <p class="text-gray-600 text-sm">
+                            We retain snags, den trees, and legacy trees for nesting birds, cavity-dwelling mammals, and forest insects.
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 text-center">
+                        <div class="text-4xl mb-4">🌸</div>
+                        <h4 class="font-bold font-slab mb-2">Native Plants</h4>
+                        <p class="text-gray-600 text-sm">
+                            Buffer zones protect wildflowers, ferns, and understory plants that support pollinators and ground-dwelling species.
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 text-center">
+                        <div class="text-4xl mb-4">🐟</div>
+                        <h4 class="font-bold font-slab mb-2">Aquatic Species</h4>
+                        <p class="text-gray-600 text-sm">
+                            Streamside Management Zones (SMZs) of 50-150 feet protect fish habitat and water quality.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Water Quality Protection -->
+            <h2 class="text-3xl font-bold font-slab mb-8 text-center">Water Quality Protection</h2>
+            <div class="content-grid mb-16">
+                <div>
+                    <p class="text-gray-600 mb-6 text-lg">
+                        Forests are nature's water filtration systems. Our practices ensure that logging operations never compromise water quality for downstream users:
+                    </p>
+                    <ul class="feature-list">
+                        <li>
+                            <span class="icon">💧</span>
+                            <div>
+                                <h4>Streamside Management Zones</h4>
+                                <p>No harvesting within 50-150 feet of streams, depending on slope and stream classification.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">🌉</span>
+                            <div>
+                                <h4>Portable Bridges</h4>
+                                <p>Temporary stream crossings that leave no permanent disturbance to stream beds.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">🛣️</span>
+                            <div>
+                                <h4>Road BMPs</h4>
+                                <p>Water bars, culverts, and proper grading prevent runoff and sedimentation.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">🌧️</span>
+                            <div>
+                                <h4>Wet Weather Shutdowns</h4>
+                                <p>Operations halt during saturated soil conditions to prevent compaction and erosion.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <aside>
+                    <div class="content-card" style="background: linear-gradient(135deg, #87CEEB 0%, #5BA3C6 100%); color: white;">
+                        <h4 class="font-bold font-slab text-lg mb-4" style="color: white;">Water Quality Stats</h4>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="text-3xl font-bold font-slab">Zero</div>
+                                <p class="text-sm opacity-80">Clean Water Act violations</p>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-bold font-slab">100%</div>
+                                <p class="text-sm opacity-80">SMZ compliance rate</p>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-bold font-slab">50-150ft</div>
+                                <p class="text-sm opacity-80">Buffer zone widths</p>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- Soil Conservation -->
+            <h2 class="text-3xl font-bold font-slab mb-8 text-center">Soil Conservation Practices</h2>
+            <div class="grid md:grid-cols-2 gap-8 mb-16">
+                <div class="bg-jet-black rounded-2xl p-8 text-white">
+                    <h3 class="font-bold font-slab text-xl mb-4 text-accent-orange">Why Soil Matters</h3>
+                    <p class="text-white/80 mb-4">
+                        Forest soil is a living ecosystem containing billions of microorganisms per gram. It takes 500+ years to create one inch of topsoil. Our practices protect this irreplaceable resource.
+                    </p>
+                    <ul class="space-y-2 text-white/90">
+                        <li>• Stores 2x more carbon than the atmosphere</li>
+                        <li>• Filters rainwater into groundwater</li>
+                        <li>• Provides nutrients for tree growth</li>
+                        <li>• Supports mycorrhizal networks</li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <div class="content-card">
+                        <h4 class="font-bold font-slab mb-2">Slash Mat Protection</h4>
+                        <p class="text-gray-600 text-sm">Tree branches spread on skid trails distribute equipment weight and prevent rutting.</p>
+                    </div>
+                    <div class="content-card">
+                        <h4 class="font-bold font-slab mb-2">Seasonal Timing</h4>
+                        <p class="text-gray-600 text-sm">Harvest during frozen or dry conditions when soil is most resistant to compaction.</p>
+                    </div>
+                    <div class="content-card">
+                        <h4 class="font-bold font-slab mb-2">Designated Routes</h4>
+                        <p class="text-gray-600 text-sm">All equipment travels on pre-planned routes, limiting disturbance to 10-15% of harvest area.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3-for-1 Reforestation -->
+            <h2 class="text-3xl font-bold font-slab mb-8 text-center">3-for-1 Reforestation Program</h2>
+            <div class="bg-gradient-to-r from-pine to-pine-dark rounded-2xl p-8 mb-16 text-white">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold font-slab mb-4">Our Commitment</h3>
+                        <p class="text-white/90 mb-6">
+                            For every tree we harvest, we plant three climate-adapted seedlings. Since launching this program in 2010, we've planted over 2 million trees across the American Southwest.
+                        </p>
+                        <ul class="space-y-2">
+                            <li>✓ Native species matched to site conditions</li>
+                            <li>✓ Climate-adapted genetics for resilience</li>
+                            <li>✓ 5-year survival monitoring</li>
+                            <li>✓ Average 85% survival rate</li>
+                        </ul>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-6xl font-bold font-slab">2M+</div>
+                        <p class="text-xl mt-2">Trees Planted Since 2010</p>
+                        <div class="mt-4 grid grid-cols-3 gap-4 text-sm">
+                            <div>
+                                <div class="text-2xl font-bold">650K</div>
+                                <p class="opacity-80">Ponderosa Pine</p>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold">480K</div>
+                                <p class="opacity-80">Douglas Fir</p>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold">320K</div>
+                                <p class="opacity-80">Mixed Hardwoods</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wildlife Habitat Management -->
+            <h2 class="text-3xl font-bold font-slab mb-8 text-center">Wildlife Habitat Management</h2>
+            <div class="grid md:grid-cols-3 gap-6 mb-16">
+                <div class="content-card text-center">
+                    <div class="text-4xl mb-4">🦉</div>
+                    <h4 class="font-bold font-slab mb-2">Snag Retention</h4>
+                    <p class="text-gray-600 text-sm">We leave 4-6 snags per acre for cavity-nesting species like owls, woodpeckers, and bats.</p>
+                </div>
+                <div class="content-card text-center">
+                    <div class="text-4xl mb-4">🦌</div>
+                    <h4 class="font-bold font-slab mb-2">Wildlife Corridors</h4>
+                    <p class="text-gray-600 text-sm">Harvest units are designed to maintain continuous travel routes for large mammals.</p>
+                </div>
+                <div class="content-card text-center">
+                    <div class="text-4xl mb-4">🐻</div>
+                    <h4 class="font-bold font-slab mb-2">Den Trees</h4>
+                    <p class="text-gray-600 text-sm">Large hollow trees are marked and protected for bear, raccoon, and other den-using species.</p>
+                </div>
+                <div class="content-card text-center">
+                    <div class="text-4xl mb-4">🐦</div>
+                    <h4 class="font-bold font-slab mb-2">Nesting Season Timing</h4>
+                    <p class="text-gray-600 text-sm">We avoid harvest operations near active raptor nests during breeding season.</p>
+                </div>
+                <div class="content-card text-center">
+                    <div class="text-4xl mb-4">🐸</div>
+                    <h4 class="font-bold font-slab mb-2">Wetland Protection</h4>
+                    <p class="text-gray-600 text-sm">Vernal pools, seeps, and wetlands receive extended buffer zones for amphibian habitat.</p>
+                </div>
+                <div class="content-card text-center">
+                    <div class="text-4xl mb-4">🌳</div>
+                    <h4 class="font-bold font-slab mb-2">Legacy Trees</h4>
+                    <p class="text-gray-600 text-sm">We retain the largest and oldest trees as biological legacies for future forest structure.</p>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <h2 class="text-3xl font-bold font-slab mb-8 text-center">Third-Party Certifications</h2>
+            <div class="grid md:grid-cols-3 gap-6 mb-16">
+                <div class="content-card text-center">
+                    <div class="text-5xl mb-4">🌲</div>
+                    <h4 class="font-bold font-slab text-xl mb-2">FSC</h4>
+                    <p class="text-accent-orange font-semibold mb-2">Forest Stewardship Council</p>
+                    <p class="text-gray-600 text-sm">Chain of Custody certified. The world's most recognized standard for responsible forestry.</p>
+                </div>
+                <div class="content-card text-center">
+                    <div class="text-5xl mb-4">🌍</div>
+                    <h4 class="font-bold font-slab text-xl mb-2">PEFC</h4>
+                    <p class="text-accent-orange font-semibold mb-2">Programme for the Endorsement of Forest Certification</p>
+                    <p class="text-gray-600 text-sm">World's largest forest certification system, recognized in 50+ countries.</p>
+                </div>
+                <div class="content-card text-center">
+                    <div class="text-5xl mb-4">🛡️</div>
+                    <h4 class="font-bold font-slab text-xl mb-2">SFI</h4>
+                    <p class="text-accent-orange font-semibold mb-2">Sustainable Forestry Initiative</p>
+                    <p class="text-gray-600 text-sm">North America's leading certification for sustainable forestry practices.</p>
+                </div>
+            </div>
+
+            <!-- Annual Report Highlights -->
+            <div class="cta-banner">
+                <h3>2023 Sustainability Report</h3>
+                <p>Download our annual sustainability report for detailed metrics on our environmental performance.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary">Download Report (PDF)</a>
+                    <a href="contact.html" class="btn-secondary">Request Hard Copy</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <a href="index.html" class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-pine to-pine-dark rounded-lg flex items-center justify-center text-white font-bold">CL</div>
+                        <div>
+                            <div class="text-xl font-bold font-slab">Cedrick Logging</div>
+                            <div class="text-xs text-gray-400 uppercase tracking-wider">The Cedrick Thomas Standard</div>
+                        </div>
+                    </a>
+                    <p class="text-gray-400 max-w-sm">From Seedling to Solution. Pioneering sustainable forestry through precision technology.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-white font-slab">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="gis-lidar.html" class="text-gray-400 hover:text-pine-light transition-colors">GIS/LiDAR Mapping</a></li>
+                        <li><a href="carbon-credits.html" class="text-gray-400 hover:text-pine-light transition-colors">Carbon Credits</a></li>
+                        <li><a href="mass-timber.html" class="text-gray-400 hover:text-pine-light transition-colors">Mass Timber/CLT</a></li>
+                        <li><a href="sustainability.html" class="text-gray-400 hover:text-pine-light transition-colors">Sustainable Forestry</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-white font-slab">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="landowner-resources.html" class="text-gray-400 hover:text-pine-light transition-colors">Landowner Resources</a></li>
+                        <li><a href="buyer-resources.html" class="text-gray-400 hover:text-pine-light transition-colors">Buyer Resources</a></li>
+                        <li><a href="faq.html" class="text-gray-400 hover:text-pine-light transition-colors">FAQ</a></li>
+                        <li><a href="case-studies.html" class="text-gray-400 hover:text-pine-light transition-colors">Case Studies</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-white font-slab">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>📍 6261 N La Cholla Blvd, Tucson, AZ</li>
+                        <li>📞 +1 (520) 427-9815</li>
+                        <li>✉️ info@cedricklogging.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2024 Cedrick Logging. CEO: Cedrick Thomas. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

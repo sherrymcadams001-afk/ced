@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology & Innovation | Precision Forestry | Cedrick Logging</title>
+    <meta name="description" content="Cutting-edge forestry technology including drone LiDAR, GIS platforms, blockchain verification, and AI-powered analytics. Our innovation lab shapes the future of sustainable forestry.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Slab:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pine': { light: '#D4A574', DEFAULT: '#C4956A', dark: '#8B6914' },
+                        'accent-orange': '#FF6B00',
+                        'jet-black': '#1A1A1A',
+                        'charcoal': '#2D2D2D',
+                        'blue-sky': '#87CEEB'
+                    },
+                    fontFamily: {
+                        'slab': ['Roboto Slab', 'Georgia', 'serif'],
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-900 bg-white antialiased">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm">
+        <nav class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+            <a href="index.html" class="flex items-center gap-3 no-underline text-black">
+                <div class="w-10 h-10 bg-gradient-to-br from-pine to-pine-dark rounded-lg flex items-center justify-center text-white font-bold text-xl">CL</div>
+                <div>
+                    <div class="text-xl font-bold tracking-tight font-slab">Cedrick Logging</div>
+                    <div class="text-xs text-gray-500 uppercase tracking-wider">The Cedrick Thomas Standard</div>
+                </div>
+            </a>
+            <ul class="hidden lg:flex gap-8 list-none">
+                <li><a href="index.html#process" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">Process</a></li>
+                <li><a href="index.html#services" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">Services</a></li>
+                <li><a href="about.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">About Cedrick</a></li>
+                <li><a href="contact.html" class="bg-accent-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Technology & Innovation</h1>
+            <p>Leading the forestry industry into the future with precision technology, data analytics, and continuous innovation.</p>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li><a href="index.html">Home</a></li>
+                <li class="separator">/</li>
+                <li class="current" aria-current="page">Technology</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="section">
+        <div class="container">
+            <!-- Tech Philosophy -->
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="text-3xl font-bold font-slab mb-6">Precision Forestry Through Technology</h2>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    Since 2003, Cedrick Logging has been at the forefront of forestry technology adoption. We believe that precision data leads to better decisions, higher yields, and more sustainable outcomes. Our technology investments have revolutionized how we manage forests, verify sustainability, and deliver value to clients.
+                </p>
+            </div>
+
+            <!-- Technology Platforms -->
+            <h2 class="text-3xl font-bold font-slab mb-8 text-center">Our Technology Stack</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+                <div class="content-card">
+                    <div class="text-4xl mb-4">🛰️</div>
+                    <h3 class="font-bold font-slab text-xl mb-3">LiDAR Mapping</h3>
+                    <p class="text-gray-600 mb-4">Drone-mounted LiDAR sensors capture millions of data points per acre, creating precise 3D models of forest structure invisible to traditional methods.</p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>• Sub-meter horizontal accuracy</li>
+                        <li>• 95%+ canopy penetration</li>
+                        <li>• Individual tree detection</li>
+                    </ul>
+                </div>
+                <div class="content-card">
+                    <div class="text-4xl mb-4">📊</div>
+                    <h3 class="font-bold font-slab text-xl mb-3">Forest Analytics Platform</h3>
+                    <p class="text-gray-600 mb-4">Proprietary cloud-based platform combines LiDAR data with satellite imagery, growth models, and market analytics for real-time forest insights.</p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>• Real-time satellite monitoring</li>
+                        <li>• Predictive growth modeling</li>
+                        <li>• Market timing analytics</li>
+                    </ul>
+                </div>
+                <div class="content-card">
+                    <div class="text-4xl mb-4">🔗</div>
+                    <h3 class="font-bold font-slab text-xl mb-3">Blockchain Verification</h3>
+                    <p class="text-gray-600 mb-4">Every transaction in our supply chain is recorded on an immutable blockchain ledger, providing complete traceability from stump to final product.</p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>• Tamper-proof records</li>
+                        <li>• Real-time tracking</li>
+                        <li>• API access for buyers</li>
+                    </ul>
+                </div>
+                <div class="content-card">
+                    <div class="text-4xl mb-4">🤖</div>
+                    <h3 class="font-bold font-slab text-xl mb-3">AI/Machine Learning</h3>
+                    <p class="text-gray-600 mb-4">Machine learning algorithms analyze spectral imagery to detect pest infestations, disease outbreaks, and stress indicators before visible symptoms appear.</p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>• Early disease detection</li>
+                        <li>• Species classification</li>
+                        <li>• Yield prediction</li>
+                    </ul>
+                </div>
+                <div class="content-card">
+                    <div class="text-4xl mb-4">📱</div>
+                    <h3 class="font-bold font-slab text-xl mb-3">Mobile Field Apps</h3>
+                    <p class="text-gray-600 mb-4">iOS and Android apps enable field crews to access maps, record data, and sync with headquarters in real-time, even in remote areas with limited connectivity.</p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>• Offline-capable</li>
+                        <li>• GPS integration</li>
+                        <li>• Photo documentation</li>
+                    </ul>
+                </div>
+                <div class="content-card">
+                    <div class="text-4xl mb-4">🌐</div>
+                    <h3 class="font-bold font-slab text-xl mb-3">Client Portal</h3>
+                    <p class="text-gray-600 mb-4">Secure web portal gives clients 24/7 access to their forest data, documents, analytics, and direct communication with their assigned forester.</p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>• Two-factor authentication</li>
+                        <li>• Document library</li>
+                        <li>• Custom alerts</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Drone Fleet -->
+            <h2 class="text-3xl font-bold font-slab mb-8 text-center">Drone Fleet Specifications</h2>
+            <div class="bg-jet-black rounded-2xl p-8 mb-16 text-white">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="text-5xl mb-4">🚁</div>
+                        <h4 class="font-bold font-slab text-xl mb-2">Survey Drones</h4>
+                        <p class="text-white/70 mb-4">DJI Matrice 300 RTK with integrated LiDAR payloads</p>
+                        <ul class="text-sm text-white/80 space-y-1">
+                            <li>55-minute flight time</li>
+                            <li>15km transmission range</li>
+                            <li>IP45 weather rating</li>
+                        </ul>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-5xl mb-4">📡</div>
+                        <h4 class="font-bold font-slab text-xl mb-2">LiDAR Sensors</h4>
+                        <p class="text-white/70 mb-4">Hesai XT32 and DJI Zenmuse L1 systems</p>
+                        <ul class="text-sm text-white/80 space-y-1">
+                            <li>100,000+ points/second</li>
+                            <li>450m detection range</li>
+                            <li>±2cm accuracy</li>
+                        </ul>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-5xl mb-4">📸</div>
+                        <h4 class="font-bold font-slab text-xl mb-2">Multispectral</h4>
+                        <p class="text-white/70 mb-4">MicaSense RedEdge for vegetation analysis</p>
+                        <ul class="text-sm text-white/80 space-y-1">
+                            <li>5 spectral bands</li>
+                            <li>NDVI/NDRE indices</li>
+                            <li>Stress detection</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-center mt-8 pt-8 border-t border-white/10">
+                    <p class="text-white/60 mb-2">Fleet Size</p>
+                    <p class="text-4xl font-bold font-slab text-accent-orange">12 Survey Drones</p>
+                    <p class="text-white/60 mt-2">Deployed across North America</p>
+                </div>
+            </div>
+
+            <!-- Software Partnerships -->
+            <h2 class="text-3xl font-bold font-slab mb-8 text-center">Software Partnerships</h2>
+            <div class="grid md:grid-cols-4 gap-6 mb-16">
+                <div class="bg-gray-50 rounded-xl p-6 text-center">
+                    <div class="text-3xl mb-3">🗺️</div>
+                    <h4 class="font-bold font-slab">ESRI ArcGIS</h4>
+                    <p class="text-sm text-gray-500">Enterprise GIS platform</p>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6 text-center">
+                    <div class="text-3xl mb-3">🌲</div>
+                    <h4 class="font-bold font-slab">Forest Metrix</h4>
+                    <p class="text-sm text-gray-500">Inventory software</p>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6 text-center">
+                    <div class="text-3xl mb-3">📈</div>
+                    <h4 class="font-bold font-slab">FVS (USFS)</h4>
+                    <p class="text-sm text-gray-500">Growth modeling</p>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6 text-center">
+                    <div class="text-3xl mb-3">☁️</div>
+                    <h4 class="font-bold font-slab">AWS</h4>
+                    <p class="text-sm text-gray-500">Cloud infrastructure</p>
+                </div>
+            </div>
+
+            <!-- R&D Initiatives -->
+            <h2 class="text-3xl font-bold font-slab mb-8 text-center">R&D Initiatives</h2>
+            <div class="grid md:grid-cols-2 gap-8 mb-16">
+                <div class="content-card">
+                    <h3 class="font-bold font-slab text-xl mb-4">🔬 Current Research</h3>
+                    <ul class="space-y-4">
+                        <li class="flex gap-3">
+                            <span class="text-accent-orange">→</span>
+                            <div>
+                                <h4 class="font-bold">Hyperspectral Species ID</h4>
+                                <p class="text-sm text-gray-600">Using 200+ spectral bands to automatically identify tree species from aerial imagery.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-accent-orange">→</span>
+                            <div>
+                                <h4 class="font-bold">Carbon Flux Sensors</h4>
+                                <p class="text-sm text-gray-600">Real-time measurement of carbon sequestration rates using ground-based eddy covariance.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-accent-orange">→</span>
+                            <div>
+                                <h4 class="font-bold">Autonomous Inventory Drones</h4>
+                                <p class="text-sm text-gray-600">AI-powered flight planning that adapts to terrain and forest density in real-time.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content-card">
+                    <h3 class="font-bold font-slab text-xl mb-4">🔮 Future Roadmap</h3>
+                    <ul class="space-y-4">
+                        <li class="flex gap-3">
+                            <span class="text-pine-dark">2025</span>
+                            <div>
+                                <h4 class="font-bold">Satellite Integration</h4>
+                                <p class="text-sm text-gray-600">Direct tasking of commercial satellites for on-demand forest monitoring.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-pine-dark">2025</span>
+                            <div>
+                                <h4 class="font-bold">Digital Twin Forests</h4>
+                                <p class="text-sm text-gray-600">Complete 3D replicas of managed forests for simulation and planning.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-pine-dark">2026</span>
+                            <div>
+                                <h4 class="font-bold">IoT Sensor Networks</h4>
+                                <p class="text-sm text-gray-600">Distributed sensors for soil moisture, fire risk, and wildlife monitoring.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Innovation Lab -->
+            <div class="bg-gradient-to-r from-pine to-pine-dark rounded-2xl p-8 text-white mb-16">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold font-slab mb-4">Innovation Lab</h3>
+                        <p class="text-white/90 mb-6">
+                            Our Tucson-based Innovation Lab serves as the testing ground for emerging forestry technologies. We partner with universities, equipment manufacturers, and technology startups to evaluate and integrate promising innovations.
+                        </p>
+                        <ul class="space-y-2">
+                            <li>✓ 40-acre test forest on-site</li>
+                            <li>✓ Full drone maintenance facility</li>
+                            <li>✓ Data processing cluster</li>
+                            <li>✓ University research partnerships</li>
+                        </ul>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-6xl mb-4">🧪</div>
+                        <p class="text-white/70">Continuous innovation since 2016</p>
+                        <p class="text-4xl font-bold font-slab mt-4">15+ Patents</p>
+                        <p class="text-white/70">Pending and granted</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="cta-banner">
+                <h3>Experience Our Technology</h3>
+                <p>Schedule a demo to see how precision forestry technology can transform your operations.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn-primary">Request Demo</a>
+                    <a href="gis-lidar.html" class="btn-secondary">Learn About LiDAR</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <a href="index.html" class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-pine to-pine-dark rounded-lg flex items-center justify-center text-white font-bold">CL</div>
+                        <div>
+                            <div class="text-xl font-bold font-slab">Cedrick Logging</div>
+                            <div class="text-xs text-gray-400 uppercase tracking-wider">The Cedrick Thomas Standard</div>
+                        </div>
+                    </a>
+                    <p class="text-gray-400 max-w-sm">From Seedling to Solution. Pioneering sustainable forestry through precision technology.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-white font-slab">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="gis-lidar.html" class="text-gray-400 hover:text-pine-light transition-colors">GIS/LiDAR Mapping</a></li>
+                        <li><a href="carbon-credits.html" class="text-gray-400 hover:text-pine-light transition-colors">Carbon Credits</a></li>
+                        <li><a href="mass-timber.html" class="text-gray-400 hover:text-pine-light transition-colors">Mass Timber/CLT</a></li>
+                        <li><a href="sustainability.html" class="text-gray-400 hover:text-pine-light transition-colors">Sustainable Forestry</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-white font-slab">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="landowner-resources.html" class="text-gray-400 hover:text-pine-light transition-colors">Landowner Resources</a></li>
+                        <li><a href="buyer-resources.html" class="text-gray-400 hover:text-pine-light transition-colors">Buyer Resources</a></li>
+                        <li><a href="faq.html" class="text-gray-400 hover:text-pine-light transition-colors">FAQ</a></li>
+                        <li><a href="case-studies.html" class="text-gray-400 hover:text-pine-light transition-colors">Case Studies</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-white font-slab">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>📍 6261 N La Cholla Blvd, Tucson, AZ</li>
+                        <li>📞 +1 (520) 427-9815</li>
+                        <li>✉️ info@cedricklogging.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2024 Cedrick Logging. CEO: Cedrick Thomas. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
