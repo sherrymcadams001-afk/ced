@@ -600,6 +600,12 @@
         });
 
         // Project Scope Calculator Logic
+        // Constants for time calculations
+        const WORK_DAYS_PER_WEEK = 5;
+        const WORK_DAYS_PER_MONTH = 22;
+        const ONE_WEEK_THRESHOLD = 5;
+        const ONE_MONTH_THRESHOLD = 30;
+
         function calculateProjectEstimate(event) {
             if (event) event.preventDefault();
             
@@ -614,29 +620,32 @@
             }
 
             // Base clearing rates (acres per day) by terrain type
+            // Source: Industry averages based on typical equipment productivity
+            // Note: Actual rates vary by vegetation density, soil conditions, and equipment type
             const terrainRates = {
-                'flat': 8,      // Fast clearing on open terrain
-                'rolling': 5,   // Moderate difficulty
-                'dense': 3,     // Heavy vegetation
-                'rocky': 2,     // Difficult terrain
-                'wetland': 2.5  // Special equipment needed
+                'flat': 8,      // Open terrain with light vegetation
+                'rolling': 5,   // Moderate slopes with mixed vegetation
+                'dense': 3,     // Heavy forest or thick brush
+                'rocky': 2,     // Rocky terrain requiring careful operation
+                'wetland': 2.5  // Wet conditions requiring specialized equipment
             };
 
             // Project type complexity multipliers
+            // Based on regulatory requirements and precision needed
             const projectMultipliers = {
-                'oil': 1.2,       // High precision required
-                'highway': 1.0,   // Standard clearing
-                'utility': 1.1,   // Linear clearing challenges
-                'residential': 0.9, // Typically smaller, simpler
-                'commercial': 1.0 // Standard commercial
+                'oil': 1.2,       // Strict environmental compliance, precise pad dimensions
+                'highway': 1.0,   // Standard DOT clearing specifications
+                'utility': 1.1,   // Linear clearing with access constraints
+                'residential': 0.9, // Typically smaller scope, fewer restrictions
+                'commercial': 1.0 // Standard commercial site prep
             };
 
-            // Access factors affect timeline
+            // Access factors affect mobilization and timeline
             const accessFactors = {
-                'excellent': 1.0,
-                'good': 1.1,
-                'moderate': 1.3,
-                'limited': 1.6  // Significant delay for road building
+                'excellent': 1.0,   // Paved road access, easy mobilization
+                'good': 1.1,        // Gravel roads, minor delays
+                'moderate': 1.3,    // Seasonal access, weather dependent
+                'limited': 1.6      // No existing access, road construction needed
             };
 
             // Calculate estimated days
@@ -645,29 +654,30 @@
             const accessFactor = accessFactors[access];
             const estimatedDays = Math.ceil((acres / baseRate) * projectMultiplier * accessFactor);
 
-            // Convert to readable time format
+            // Convert to readable time format using named constants
             let timeEstimate;
-            if (estimatedDays <= 5) {
+            if (estimatedDays <= ONE_WEEK_THRESHOLD) {
                 timeEstimate = estimatedDays + ' days';
-            } else if (estimatedDays <= 30) {
-                const weeks = Math.ceil(estimatedDays / 5);
+            } else if (estimatedDays <= ONE_MONTH_THRESHOLD) {
+                const weeks = Math.ceil(estimatedDays / WORK_DAYS_PER_WEEK);
                 timeEstimate = weeks + ' week' + (weeks > 1 ? 's' : '');
             } else {
-                const months = Math.ceil(estimatedDays / 22);
+                const months = Math.ceil(estimatedDays / WORK_DAYS_PER_MONTH);
                 timeEstimate = months + ' month' + (months > 1 ? 's' : '');
             }
 
-            // Calculate mulch volume (cubic yards per acre, varies by terrain density)
+            // Calculate mulch volume (cubic yards per acre)
+            // Based on typical biomass density for each terrain type
             const mulchRates = {
-                'flat': 15,
-                'rolling': 25,
-                'dense': 45,
-                'rocky': 20,
-                'wetland': 30
+                'flat': 15,     // Light vegetation produces less mulch
+                'rolling': 25,  // Mixed vegetation, moderate volume
+                'dense': 45,    // Heavy forest produces substantial mulch
+                'rocky': 20,    // Mixed, reduced by rock content
+                'wetland': 30   // Dense vegetation typical of wet areas
             };
             const mulchVolume = Math.round(acres * mulchRates[terrain]);
 
-            // Determine equipment tier
+            // Determine equipment tier based on project scale and terrain
             let equipmentTier;
             if (acres <= 20 && terrain === 'flat') {
                 equipmentTier = 'Tier 1 - Standard';
