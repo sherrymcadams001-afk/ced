@@ -1,6 +1,6 @@
-# Cedrick Logging - International Forestry Enterprise
+# Cedrick Logging - Professional Land Clearing Contractor
 
-A premium enterprise web portfolio for **Cedrick Logging** (CEO: Cedrick Thomas), an international forestry leader with operations across North America and accomplished contracts worldwide.
+A premium enterprise web portfolio for **Cedrick Logging** (CEO: Cedrick Thomas), a professional land clearing and site preparation contractor serving the Energy, Infrastructure, and Development sectors across North America.
 
 ## Company Information
 
@@ -15,6 +15,12 @@ A premium enterprise web portfolio for **Cedrick Logging** (CEO: Cedrick Thomas)
 📞 +1 (520) 427-9815  
 ✉️ info@cedricklogging.com
 
+## Core Business Sectors (The "Trident" Strategy)
+
+1. **Energy (Oil & Gas)**: Clearing Well Pads, Pipeline Right-of-Ways (ROW), Seismic lines
+2. **Infrastructure**: Clearing for Highways, Roads, and Utility corridors
+3. **Development**: Clearing for Residential Subdivisions and Commercial Construction
+
 ## Technology Stack
 
 - **Tailwind CSS** - Enterprise-grade utility-first CSS framework
@@ -24,10 +30,10 @@ A premium enterprise web portfolio for **Cedrick Logging** (CEO: Cedrick Thomas)
 ## Design Philosophy
 
 This portfolio implements a "Tech-Stewardship" approach that combines:
-- **Corporate ESG Authority**: Trust indicators, certifications (SFI, PEFC, FSC), carbon tracking
-- **Modern Mass-Timber Aesthetics**: Clean, sophisticated "Tech-Timber" design (White/Pine/Black palette)
-- **Cinematic UX**: Blue sky imagery, horizontal scroll lifecycle, high-end typography
-- **Human Trust**: Cedrick Thomas's personal stewardship narrative
+- **Corporate Authority**: Trust indicators, certifications (OSHA, Zero-Burn, Fully Insured)
+- **Modern Industrial Aesthetics**: Clean, sophisticated "Tech-Timber" design (White/Pine/Black palette)
+- **Cinematic UX**: Blue sky imagery, horizontal scroll workflow, high-end typography
+- **Human Trust**: Cedrick Thomas's personal commitment to responsible clearing
 
 ## Brand Identity
 
@@ -35,7 +41,7 @@ This portfolio implements a "Tech-Stewardship" approach that combines:
 - **Primary**: Stark White (#FFFFFF) & Light Pine Wood Tones (#C4956A)
 - **Typography**: Jet Black (#000000) for body text
 - **Accents**: Safety Orange (#FF6B00) for all CTAs
-- **Psychology**: Blue Sky imagery signals environmental health
+- **Psychology**: Blue Sky imagery signals professional, clean operations
 
 ### Typography
 - **Headlines**: Roboto Slab (Industrial Strength)
@@ -44,64 +50,47 @@ This portfolio implements a "Tech-Stewardship" approach that combines:
 ## Site Architecture
 
 ### A. Kinetic Homepage (Hero Section)
-- Full-width drone video background over forest canopy (blue sky gradient)
-- **Tagline**: "From Seedling to Solution. The Cedrick Thomas Standard."
+- Full-width drone video background over clearing site (blue sky gradient)
+- **Tagline**: "Precision Site Preparation & Land Clearing. The Cedrick Thomas Standard."
 - **Split-Path Navigation**: 
-  - "I Own Land" (Seller Path - Stewardship/Profit focus)
-  - "I Buy Lumber" (Buyer Path - Quality/Mass Timber focus)
+  - "Start a Project" (Project Assessment)
+  - "Our Services" (Service Overview)
 
-### B. Process Section (Vertical Integration)
-- **Horizontal Scroll Lifecycle Visual Flow**
-- Stages: Seedling → Precision Forestry (LiDAR/GIS) → Sustainable Harvest → Sawmill → Mass Timber Product
-- Tech badges highlight GIS/Drone technology
+### B. Process Section (Site Prep Workflow)
+- **Horizontal Scroll Workflow Visual Flow**
+- Stages: Survey/GIS → Precision Clearing → Biomass Mulching → Grubbing & Grading → Final Site Delivery
+- Tech badges highlight GPS and Zero-Burn technology
 
-### C. Stewardship Hub (Sustainability)
-- Live Carbon Calculator widget (CO₂ per board foot)
-- **Narrative**: "We are Stewards first, Loggers second."
-- Certification badges: SFI, PEFC, FSC
+### C. Services Grid
+- **Site Preparation**: Complete vegetation removal, grubbing, and grading
+- **Right-of-Way (ROW)**: Linear clearing for pipelines, power lines, highways
+- **Forestry Mulching**: Sustainable biomass management with zero-burn policies
+- **Civil Earthworks**: Access road construction and drainage integration
+- **Residential Clearing**: Lot clearing for subdivisions and developments
+- **Rig Mats & Access**: Temporary platforms for heavy machinery stability
 
 ### D. The Cedrick Factor (About/Trust)
 - High-resolution portrait placeholder (high-tech safety gear, tablet in hand)
 - **Theme**: "Generational Trust meets Precision Technology"
-- Four value pillars: Precision First, ESG Committed, Mass Timber Ready, Personal Service
+- Sustainability message: "We clear responsibly"
 
-### E. Landowner Harvest Estimator
-- Interactive tool for preliminary timber value estimates
-- Inputs: Acres, Species, Stand Age, Road Access
-- Outputs: Board Feet, Timber Value Range, Carbon Credits, Total Value
+### E. Project Scope Calculator
+- Interactive tool for preliminary project estimates
+- Inputs: Project Type, Acreage, Terrain Type, Site Access
+- Outputs: Estimated Time to Clear, Mulch Volume, Equipment Tier, Project Complexity
 
 ### F. Contact Section
 - Headquarters (Tucson, AZ) and Colorado Branch (Arvada, CO) locations
 - Direct phone: +1 (520) 427-9815
-- International reach banner showcasing global presence
+- Industries served banner: Oil & Gas, Infrastructure, Utilities, Residential, Commercial
 
-## Image/Video Prompts
+## Sustainability Commitment
 
-### Hero Video
-```
-Cinematic 4K drone footage flying smoothly over a vast forest canopy at golden hour. 
-Camera starts high showing endless treetops stretching to the horizon under a brilliant blue sky.
-Slowly descends through the canopy layer, revealing the scale and density of mature timber. 
-Sun rays filter through the trees creating dramatic light shafts.
-Duration: 30-60 seconds, seamless loop.
-```
-
-### Cedrick Thomas Portrait
-```
-Professional corporate portrait of a confident male forester/CEO in his 50s.
-Setting: Modern office with large windows overlooking a forest landscape.
-Attire: High-visibility safety vest over a crisp button-down shirt, hard hat in one hand, 
-tablet showing forest mapping data in the other hand.
-Style: Corporate editorial photography, magazine cover quality.
-```
-
-### GIS Mapping Visualization
-```
-High-tech 3D visualization of forest terrain data on a large monitor.
-Show colorful topographic layers with tree canopy height data in green gradients,
-terrain elevation in blue/brown gradients, and harvest route overlays in orange/yellow.
-Include data panels showing statistics: tree count, board feet estimates, carbon values.
-```
+Cedrick Logging operates with a "Clear Responsibly" philosophy:
+- **Zero-Burn Policies**: No burning of cleared vegetation
+- **Forestry Mulching**: Converts cleared biomass into erosion control ground cover
+- **Timber Repurposing**: Cleared timber used for site access mats
+- **Environmental Compliance**: Full adherence to environmental regulations
 
 ## Features
 
@@ -109,34 +98,28 @@ Include data panels showing statistics: tree count, board feet estimates, carbon
 - **Tech-Timber Palette**: White (#FFFFFF), Pine (#C4956A), Black (#000000)
 - Safety Orange (#FF6B00) CTAs
 - Blue Sky imagery throughout
-- No rustic or muddy greens - clean, modern aesthetic
+- Clean, modern, professional aesthetic
 - Responsive design for all devices
 - Built with Tailwind CSS for enterprise scalability
 
 ### Interactive Tools
-- **Carbon Calculator**: Interactive tool to estimate carbon sequestration value
-- **Harvest Estimator**: Preliminary timber value calculator for landowners
+- **Project Scope Calculator**: Estimate clearing time, mulch volume, equipment needs
 
-### Mass Timber / CLT Ready
-- References to Cross-Laminated Timber (CLT) throughout
-- Mass Timber product integration in lifecycle
-- Future-ready positioning for modern construction markets
+## Industries Served
 
-## International Reach
+- 🛢️ Oil & Gas
+- 🛣️ Infrastructure / Highways
+- ⚡ Utility Corridors
+- 🏘️ Residential Development
+- 🏢 Commercial Construction
 
-Cedrick Logging has accomplished contracts across:
-- 🇺🇸 United States
-- 🇨🇦 Canada
-- 🇩🇪 Germany
-- 🇦🇺 Australia
-- 🇯🇵 Japan
+## Certifications & Compliance
 
-## Certifications Displayed
-- SFI (Sustainable Forestry Initiative) Certified
-- PEFC (Programme for the Endorsement of Forest Certification) Endorsed  
-- FSC (Forest Stewardship Council) Chain of Custody
+- Zero-Burn Certified
+- OSHA Compliant
+- Fully Insured
 
 ## CEO
 
 **Cedrick Thomas** - Cedrick Logging  
-*"From Seedling to Solution. The Cedrick Thomas Standard."*
+*"Precision Site Preparation & Land Clearing. The Cedrick Thomas Standard."*
