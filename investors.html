@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investor Relations | Growth & Financials | Cedrick-Logging.net</title>
+    <meta name="description" content="Explore investment opportunities with Cedrick-Logging.net. Review our financial performance, growth trajectory, and strategic vision for the future of site preparation.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Slab:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pine': { light: '#D4A574', DEFAULT: '#C4956A', dark: '#8B6914' },
+                        'accent-orange': '#FF6B00',
+                        'jet-black': '#1A1A1A',
+                        'charcoal': '#2D2D2D',
+                        'blue-sky': '#87CEEB'
+                    },
+                    fontFamily: {
+                        'slab': ['Roboto Slab', 'Georgia', 'serif'],
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .reveal-element.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .action-btn {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255,107,0,0.4);
+        }
+        .interactive-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .interactive-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        .touch-target {
+            min-width: 44px;
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .growth-bar {
+            height: 8px;
+            background: linear-gradient(90deg, #FF6B00 0%, #C4956A 100%);
+            border-radius: 4px;
+            animation: growBar 1.5s ease forwards;
+        }
+        @keyframes growBar {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-900 bg-white antialiased">
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm" role="banner">
+        <nav class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto" aria-label="Main navigation">
+            <a href="index.html" class="flex items-center gap-3 no-underline text-black touch-target" aria-label="Cedrick-Logging.net Home">
+                <div class="w-10 h-10 bg-gradient-to-br from-pine to-pine-dark rounded-lg flex items-center justify-center text-white font-bold text-xl" aria-hidden="true">CL</div>
+                <div>
+                    <div class="text-xl font-bold tracking-tight font-slab">Cedrick-Logging.net</div>
+                    <div class="text-xs text-gray-500 uppercase tracking-wider">The Cedrick Thomas Standard</div>
+                </div>
+            </a>
+            <ul class="hidden lg:flex gap-8 list-none items-center" role="menubar">
+                <li role="none"><a href="index.html#services" class="text-gray-600 font-medium hover:text-pine-dark transition-colors touch-target" role="menuitem">Services</a></li>
+                <li role="none"><a href="about.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors touch-target" role="menuitem">About Us</a></li>
+                <li role="none"><a href="investors.html" class="text-accent-orange font-medium touch-target" role="menuitem">Investors</a></li>
+                <li role="none"><a href="sustainability.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors touch-target" role="menuitem">Safety</a></li>
+                <li role="none"><a href="careers.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors touch-target" role="menuitem">Careers</a></li>
+                <li role="none"><a href="contact.html" class="action-btn bg-accent-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors touch-target" role="menuitem">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header" aria-labelledby="page-heading">
+        <div class="container">
+            <h1 id="page-heading">Investor Relations</h1>
+            <p>Building value through sustainable growth and operational excellence</p>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li><a href="index.html">Home</a></li>
+                <li class="separator">/</li>
+                <li class="current" aria-current="page">Investors</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Investment Thesis Section -->
+        <section class="section bg-white" aria-labelledby="thesis-heading">
+            <div class="container">
+                <div class="max-w-4xl mx-auto text-center reveal-element">
+                    <h2 id="thesis-heading" class="text-3xl md:text-4xl font-bold font-slab mb-6">Investment Thesis</h2>
+                    <p class="text-xl text-gray-600 mb-8">Cedrick-Logging.net represents a compelling opportunity in the growing site preparation and land clearing market, driven by infrastructure spending, energy development, and residential construction.</p>
+                </div>
+                
+                <!-- Key Metrics Grid -->
+                <div class="grid md:grid-cols-4 gap-6 mt-12">
+                    <div class="interactive-card bg-gradient-to-br from-jet-black to-charcoal rounded-2xl p-6 text-white text-center reveal-element">
+                        <div class="text-4xl font-bold font-slab text-accent-orange mb-2">$45M</div>
+                        <p class="text-white/70 text-sm">Annual Revenue</p>
+                    </div>
+                    <div class="interactive-card bg-gradient-to-br from-jet-black to-charcoal rounded-2xl p-6 text-white text-center reveal-element">
+                        <div class="text-4xl font-bold font-slab text-accent-orange mb-2">32%</div>
+                        <p class="text-white/70 text-sm">YoY Growth</p>
+                    </div>
+                    <div class="interactive-card bg-gradient-to-br from-jet-black to-charcoal rounded-2xl p-6 text-white text-center reveal-element">
+                        <div class="text-4xl font-bold font-slab text-accent-orange mb-2">18%</div>
+                        <p class="text-white/70 text-sm">EBITDA Margin</p>
+                    </div>
+                    <div class="interactive-card bg-gradient-to-br from-jet-black to-charcoal rounded-2xl p-6 text-white text-center reveal-element">
+                        <div class="text-4xl font-bold font-slab text-accent-orange mb-2">$120M</div>
+                        <p class="text-white/70 text-sm">Contract Backlog</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Market Opportunity Section -->
+        <section class="section bg-gray-50" aria-labelledby="market-heading">
+            <div class="container">
+                <div class="section-header reveal-element">
+                    <h2 id="market-heading">Market Opportunity</h2>
+                    <p>Positioned at the intersection of three high-growth sectors</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="content-card reveal-element">
+                        <div class="text-4xl mb-4" aria-hidden="true">⚡</div>
+                        <h3 class="font-bold font-slab text-xl mb-3">Energy Sector</h3>
+                        <p class="text-gray-600 mb-4">$1.2T in planned energy infrastructure investment through 2030, including oil & gas, solar, and wind projects requiring site preparation.</p>
+                        <div class="bg-gray-100 rounded-lg p-4">
+                            <div class="flex justify-between text-sm mb-2">
+                                <span>Market Growth</span>
+                                <span class="font-bold text-accent-orange">+24%</span>
+                            </div>
+                            <div class="growth-bar" style="width: 72%;"></div>
+                        </div>
+                    </div>
+                    <div class="content-card reveal-element">
+                        <div class="text-4xl mb-4" aria-hidden="true">🛣️</div>
+                        <h3 class="font-bold font-slab text-xl mb-3">Infrastructure</h3>
+                        <p class="text-gray-600 mb-4">Federal Infrastructure Bill allocating $550B for highways, bridges, and utilities—all requiring professional site clearing services.</p>
+                        <div class="bg-gray-100 rounded-lg p-4">
+                            <div class="flex justify-between text-sm mb-2">
+                                <span>Market Growth</span>
+                                <span class="font-bold text-accent-orange">+18%</span>
+                            </div>
+                            <div class="growth-bar" style="width: 54%;"></div>
+                        </div>
+                    </div>
+                    <div class="content-card reveal-element">
+                        <div class="text-4xl mb-4" aria-hidden="true">🏗️</div>
+                        <h3 class="font-bold font-slab text-xl mb-3">Development</h3>
+                        <p class="text-gray-600 mb-4">Housing shortage driving 1.5M+ new home starts annually, each requiring lot clearing and site preparation services.</p>
+                        <div class="bg-gray-100 rounded-lg p-4">
+                            <div class="flex justify-between text-sm mb-2">
+                                <span>Market Growth</span>
+                                <span class="font-bold text-accent-orange">+15%</span>
+                            </div>
+                            <div class="growth-bar" style="width: 45%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Competitive Advantages Section -->
+        <section class="section bg-white" aria-labelledby="advantages-heading">
+            <div class="container">
+                <div class="section-header reveal-element">
+                    <h2 id="advantages-heading">Competitive Advantages</h2>
+                    <p>What sets us apart in a fragmented market</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="reveal-element">
+                        <ul class="feature-list">
+                            <li>
+                                <span class="icon" aria-hidden="true">🛰️</span>
+                                <div>
+                                    <h4>Technology Leadership</h4>
+                                    <p>Proprietary LiDAR and GPS-guided systems deliver 30% efficiency gains over competitors.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="icon" aria-hidden="true">🌱</span>
+                                <div>
+                                    <h4>ESG Compliance</h4>
+                                    <p>Zero-burn certification and FSC compliance open doors to ESG-focused clients and premium pricing.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="icon" aria-hidden="true">👥</span>
+                                <div>
+                                    <h4>Experienced Team</h4>
+                                    <p>Average 15+ years industry experience. Low turnover creates operational consistency.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="icon" aria-hidden="true">🔒</span>
+                                <div>
+                                    <h4>Long-term Contracts</h4>
+                                    <p>Multi-year master service agreements with energy majors provide revenue predictability.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-gradient-to-br from-jet-black to-charcoal rounded-2xl p-8 text-white reveal-element">
+                        <h3 class="text-2xl font-bold font-slab mb-6">Financial Highlights</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center py-3 border-b border-white/10">
+                                <span class="text-white/80">Revenue CAGR (5yr)</span>
+                                <span class="font-bold text-accent-orange text-xl">28%</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-white/10">
+                                <span class="text-white/80">Gross Margin</span>
+                                <span class="font-bold text-accent-orange text-xl">42%</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-white/10">
+                                <span class="text-white/80">Client Retention</span>
+                                <span class="font-bold text-accent-orange text-xl">98%</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-white/10">
+                                <span class="text-white/80">Asset Utilization</span>
+                                <span class="font-bold text-accent-orange text-xl">87%</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3">
+                                <span class="text-white/80">Debt-to-Equity</span>
+                                <span class="font-bold text-accent-orange text-xl">0.3x</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Growth Strategy Section -->
+        <section class="section bg-gray-50" aria-labelledby="strategy-heading">
+            <div class="container">
+                <div class="section-header reveal-element">
+                    <h2 id="strategy-heading">Growth Strategy</h2>
+                    <p>Disciplined expansion with clear milestones</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="content-card text-center reveal-element">
+                        <div class="w-16 h-16 bg-accent-orange/10 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-accent-orange">1</div>
+                        <h4 class="font-bold font-slab mb-2">Geographic Expansion</h4>
+                        <p class="text-gray-600 text-sm">Targeting Texas, Nevada, and Southeast markets for 2024-2025 entry.</p>
+                    </div>
+                    <div class="content-card text-center reveal-element">
+                        <div class="w-16 h-16 bg-accent-orange/10 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-accent-orange">2</div>
+                        <h4 class="font-bold font-slab mb-2">Fleet Modernization</h4>
+                        <p class="text-gray-600 text-sm">$8M investment in next-gen equipment with autonomous capabilities.</p>
+                    </div>
+                    <div class="content-card text-center reveal-element">
+                        <div class="w-16 h-16 bg-accent-orange/10 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-accent-orange">3</div>
+                        <h4 class="font-bold font-slab mb-2">Service Expansion</h4>
+                        <p class="text-gray-600 text-sm">Adding environmental remediation and reclamation services.</p>
+                    </div>
+                    <div class="content-card text-center reveal-element">
+                        <div class="w-16 h-16 bg-accent-orange/10 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-accent-orange">4</div>
+                        <h4 class="font-bold font-slab mb-2">Strategic M&A</h4>
+                        <p class="text-gray-600 text-sm">Evaluating regional competitors for tuck-in acquisitions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership Section -->
+        <section class="section bg-white" aria-labelledby="leadership-heading">
+            <div class="container">
+                <div class="section-header reveal-element">
+                    <h2 id="leadership-heading">Executive Leadership</h2>
+                    <p>Experienced team with proven track record</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="team-member reveal-element">
+                        <div class="team-avatar" aria-hidden="true">👷</div>
+                        <h4>Cedrick Thomas</h4>
+                        <p class="title">Founder & CEO</p>
+                        <p>25+ years industry experience. B.S. Forest Resources, University of Arizona. Former U.S. Forest Service.</p>
+                    </div>
+                    <div class="team-member reveal-element">
+                        <div class="team-avatar" aria-hidden="true">👨‍💼</div>
+                        <h4>Marcus Johnson</h4>
+                        <p class="title">Chief Operations Officer</p>
+                        <p>20 years forestry operations. Former Regional Director at Weyerhaeuser. MBA, Arizona State.</p>
+                    </div>
+                    <div class="team-member reveal-element">
+                        <div class="team-avatar" aria-hidden="true">👩‍💼</div>
+                        <h4>Jennifer Walsh</h4>
+                        <p class="title">Chief Financial Officer</p>
+                        <p>CPA with 18 years experience. Former VP Finance at Granite Construction. Stanford MBA.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA Section -->
+        <section class="py-20 bg-gradient-to-br from-black to-charcoal text-white text-center" aria-labelledby="cta-heading">
+            <div class="container reveal-element">
+                <h2 id="cta-heading" class="text-3xl md:text-4xl font-bold font-slab mb-4 text-white">Interested in Learning More?</h2>
+                <p class="text-white/80 mb-8 max-w-2xl mx-auto">Contact our investor relations team to schedule a presentation or request detailed financial information.</p>
+                <a href="mailto:investors@cedrick-logging.net" class="action-btn inline-block bg-accent-orange text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-orange-600 transition-all touch-target">
+                    Contact Investor Relations →
+                </a>
+                <p class="text-white/50 text-sm mt-4">investors@cedrick-logging.net</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white pt-16 pb-8" role="contentinfo">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                <div class="lg:col-span-2">
+                    <a href="index.html" class="flex items-center gap-3 mb-4 touch-target">
+                        <div class="w-10 h-10 bg-gradient-to-br from-pine to-pine-dark rounded-lg flex items-center justify-center text-white font-bold" aria-hidden="true">CL</div>
+                        <div>
+                            <div class="text-xl font-bold font-slab">Cedrick-Logging.net</div>
+                            <div class="text-xs text-gray-400 uppercase tracking-wider">The Cedrick Thomas Standard</div>
+                        </div>
+                    </a>
+                    <p class="text-gray-400 max-w-sm mb-4">Precision Site Preparation & Land Clearing. Pioneering sustainable clearing solutions since 1998.</p>
+                </div>
+                <nav aria-label="Footer services navigation">
+                    <h4 class="font-bold mb-4 text-white font-slab">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Site Preparation</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-pine-light transition-colors touch-target">ROW Clearing</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Forestry Mulching</a></li>
+                    </ul>
+                </nav>
+                <nav aria-label="Footer industries navigation">
+                    <h4 class="font-bold mb-4 text-white font-slab">Industries</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#sectors" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Energy</a></li>
+                        <li><a href="index.html#sectors" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Infrastructure</a></li>
+                        <li><a href="index.html#sectors" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Development</a></li>
+                    </ul>
+                </nav>
+                <nav aria-label="Footer company navigation">
+                    <h4 class="font-bold mb-4 text-white font-slab">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">About Us</a></li>
+                        <li><a href="investors.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Investors</a></li>
+                        <li><a href="careers.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Careers</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2024 Cedrick-Logging.net. CEO: Cedrick Thomas. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // IntersectionObserver for reveal animations
+        (function() {
+            const revealElements = document.querySelectorAll('.reveal-element');
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            revealElements.forEach(function(el) {
+                observer.observe(el);
+            });
+        })();
+    </script>
+</body>
+</html>
