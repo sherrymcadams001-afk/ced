@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sustainable Forestry Practices | Environmental Stewardship | Cedrick Logging</title>
-    <meta name="description" content="Discover our sustainable harvesting methods, biodiversity preservation, water quality protection, and 3-for-1 reforestation program. FSC, SFI, and PEFC certified.">
+    <title>Safety & Sustainability | Environmental Stewardship | Cedrick-Logging.net</title>
+    <meta name="description" content="Discover our safety-first culture and sustainable site preparation methods. Zero-incident operations, zero-burn policies, and environmental protection standards.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,33 +29,68 @@
             }
         }
     </script>
+    <style>
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .reveal-element.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .action-btn {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255,107,0,0.4);
+        }
+        .interactive-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .interactive-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        .touch-target {
+            min-width: 44px;
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
 </head>
 <body class="font-sans text-gray-900 bg-white antialiased">
     <!-- Header Navigation -->
-    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm">
-        <nav class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
-            <a href="index.html" class="flex items-center gap-3 no-underline text-black">
-                <div class="w-10 h-10 bg-gradient-to-br from-pine to-pine-dark rounded-lg flex items-center justify-center text-white font-bold text-xl">CL</div>
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm" role="banner">
+        <nav class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto" aria-label="Main navigation">
+            <a href="index.html" class="flex items-center gap-3 no-underline text-black touch-target" aria-label="Cedrick-Logging.net Home">
+                <div class="w-10 h-10 bg-gradient-to-br from-pine to-pine-dark rounded-lg flex items-center justify-center text-white font-bold text-xl" aria-hidden="true">CL</div>
                 <div>
-                    <div class="text-xl font-bold tracking-tight font-slab">Cedrick Logging</div>
+                    <div class="text-xl font-bold tracking-tight font-slab">Cedrick-Logging.net</div>
                     <div class="text-xs text-gray-500 uppercase tracking-wider">The Cedrick Thomas Standard</div>
                 </div>
             </a>
-            <ul class="hidden lg:flex gap-8 list-none">
-                <li><a href="index.html#process" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">Process</a></li>
-                <li><a href="index.html#services" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">Services</a></li>
-                <li><a href="about.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">About Cedrick</a></li>
-                <li><a href="index.html#harvest-estimator" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">Estimate Value</a></li>
-                <li><a href="contact.html" class="bg-accent-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors">Contact Us</a></li>
+            <ul class="hidden lg:flex gap-8 list-none items-center" role="menubar">
+                <li role="none"><a href="index.html#services" class="text-gray-600 font-medium hover:text-pine-dark transition-colors touch-target" role="menuitem">Services</a></li>
+                <li role="none"><a href="about.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors touch-target" role="menuitem">About Us</a></li>
+                <li role="none"><a href="investors.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors touch-target" role="menuitem">Investors</a></li>
+                <li role="none"><a href="sustainability.html" class="text-accent-orange font-medium touch-target" role="menuitem">Safety</a></li>
+                <li role="none"><a href="careers.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors touch-target" role="menuitem">Careers</a></li>
+                <li role="none"><a href="contact.html" class="action-btn bg-accent-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors touch-target" role="menuitem">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <section class="page-header" aria-labelledby="page-heading">
         <div class="container">
-            <h1>Sustainable Forestry Practices</h1>
-            <p>We are stewards first, loggers second. Our comprehensive approach ensures healthy forests for generations to come.</p>
+            <h1 id="page-heading">Safety & Sustainability</h1>
+            <p>Safety first, sustainability always. Our comprehensive approach ensures zero-incident operations and environmental stewardship.</p>
         </div>
     </section>
 
@@ -65,9 +100,7 @@
             <ol class="breadcrumb-list">
                 <li><a href="index.html">Home</a></li>
                 <li class="separator">/</li>
-                <li><a href="index.html#services">Services</a></li>
-                <li class="separator">/</li>
-                <li class="current" aria-current="page">Sustainable Forestry</li>
+                <li class="current" aria-current="page">Safety & Sustainability</li>
             </ol>
         </div>
     </nav>
@@ -351,85 +384,101 @@
             </div>
 
             <!-- Certifications -->
-            <h2 class="text-3xl font-bold font-slab mb-8 text-center">Third-Party Certifications</h2>
+            <h2 class="text-3xl font-bold font-slab mb-8 text-center reveal-element">Certifications & Compliance</h2>
             <div class="grid md:grid-cols-3 gap-6 mb-16">
-                <div class="content-card text-center">
-                    <div class="text-5xl mb-4">🌲</div>
-                    <h4 class="font-bold font-slab text-xl mb-2">FSC</h4>
-                    <p class="text-accent-orange font-semibold mb-2">Forest Stewardship Council</p>
-                    <p class="text-gray-600 text-sm">Chain of Custody certified. The world's most recognized standard for responsible forestry.</p>
+                <div class="content-card text-center reveal-element">
+                    <div class="text-5xl mb-4" aria-hidden="true">🛡️</div>
+                    <h4 class="font-bold font-slab text-xl mb-2">OSHA</h4>
+                    <p class="text-accent-orange font-semibold mb-2">Occupational Safety & Health</p>
+                    <p class="text-gray-600 text-sm">Full compliance with all federal safety standards. OSHA 30 certified operators.</p>
                 </div>
-                <div class="content-card text-center">
-                    <div class="text-5xl mb-4">🌍</div>
-                    <h4 class="font-bold font-slab text-xl mb-2">PEFC</h4>
-                    <p class="text-accent-orange font-semibold mb-2">Programme for the Endorsement of Forest Certification</p>
-                    <p class="text-gray-600 text-sm">World's largest forest certification system, recognized in 50+ countries.</p>
+                <div class="content-card text-center reveal-element">
+                    <div class="text-5xl mb-4" aria-hidden="true">🌲</div>
+                    <h4 class="font-bold font-slab text-xl mb-2">Zero-Burn</h4>
+                    <p class="text-accent-orange font-semibold mb-2">Environmental Certification</p>
+                    <p class="text-gray-600 text-sm">Certified zero-burn operations. Mulching eliminates fire risk and protects air quality.</p>
                 </div>
-                <div class="content-card text-center">
-                    <div class="text-5xl mb-4">🛡️</div>
-                    <h4 class="font-bold font-slab text-xl mb-2">SFI</h4>
-                    <p class="text-accent-orange font-semibold mb-2">Sustainable Forestry Initiative</p>
-                    <p class="text-gray-600 text-sm">North America's leading certification for sustainable forestry practices.</p>
+                <div class="content-card text-center reveal-element">
+                    <div class="text-5xl mb-4" aria-hidden="true">📋</div>
+                    <h4 class="font-bold font-slab text-xl mb-2">EPA</h4>
+                    <p class="text-accent-orange font-semibold mb-2">Environmental Protection</p>
+                    <p class="text-gray-600 text-sm">Full compliance with Clean Water Act and all environmental regulations.</p>
                 </div>
             </div>
 
-            <!-- Annual Report Highlights -->
-            <div class="cta-banner">
-                <h3>2023 Sustainability Report</h3>
-                <p>Download our annual sustainability report for detailed metrics on our environmental performance.</p>
+            <!-- Annual Report -->
+            <div class="cta-banner reveal-element">
+                <h3>2023 Safety & Sustainability Report</h3>
+                <p>Download our annual report for detailed metrics on safety performance and environmental impact.</p>
                 <div class="cta-buttons">
-                    <a href="#" class="btn-primary">Download Report (PDF)</a>
-                    <a href="contact.html" class="btn-secondary">Request Hard Copy</a>
+                    <a href="contact.html" class="btn-primary touch-target">Request Report</a>
                 </div>
             </div>
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-black text-white pt-16 pb-8">
+    <footer class="bg-black text-white pt-16 pb-8" role="contentinfo">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-                <div>
-                    <a href="index.html" class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 bg-gradient-to-br from-pine to-pine-dark rounded-lg flex items-center justify-center text-white font-bold">CL</div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                <div class="lg:col-span-2">
+                    <a href="index.html" class="flex items-center gap-3 mb-4 touch-target">
+                        <div class="w-10 h-10 bg-gradient-to-br from-pine to-pine-dark rounded-lg flex items-center justify-center text-white font-bold" aria-hidden="true">CL</div>
                         <div>
-                            <div class="text-xl font-bold font-slab">Cedrick Logging</div>
+                            <div class="text-xl font-bold font-slab">Cedrick-Logging.net</div>
                             <div class="text-xs text-gray-400 uppercase tracking-wider">The Cedrick Thomas Standard</div>
                         </div>
                     </a>
-                    <p class="text-gray-400 max-w-sm">From Seedling to Solution. Pioneering sustainable forestry through precision technology.</p>
+                    <p class="text-gray-400 max-w-sm">Precision Site Preparation & Land Clearing. Pioneering sustainable clearing solutions since 1998.</p>
                 </div>
-                <div>
+                <nav aria-label="Footer services navigation">
                     <h4 class="font-bold mb-4 text-white font-slab">Services</h4>
                     <ul class="space-y-2">
-                        <li><a href="gis-lidar.html" class="text-gray-400 hover:text-pine-light transition-colors">GIS/LiDAR Mapping</a></li>
-                        <li><a href="carbon-credits.html" class="text-gray-400 hover:text-pine-light transition-colors">Carbon Credits</a></li>
-                        <li><a href="mass-timber.html" class="text-gray-400 hover:text-pine-light transition-colors">Mass Timber/CLT</a></li>
-                        <li><a href="sustainability.html" class="text-gray-400 hover:text-pine-light transition-colors">Sustainable Forestry</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Site Preparation</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-pine-light transition-colors touch-target">ROW Clearing</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Forestry Mulching</a></li>
                     </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4 text-white font-slab">Resources</h4>
+                </nav>
+                <nav aria-label="Footer industries navigation">
+                    <h4 class="font-bold mb-4 text-white font-slab">Industries</h4>
                     <ul class="space-y-2">
-                        <li><a href="landowner-resources.html" class="text-gray-400 hover:text-pine-light transition-colors">Landowner Resources</a></li>
-                        <li><a href="buyer-resources.html" class="text-gray-400 hover:text-pine-light transition-colors">Buyer Resources</a></li>
-                        <li><a href="faq.html" class="text-gray-400 hover:text-pine-light transition-colors">FAQ</a></li>
-                        <li><a href="case-studies.html" class="text-gray-400 hover:text-pine-light transition-colors">Case Studies</a></li>
+                        <li><a href="index.html#sectors" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Energy</a></li>
+                        <li><a href="index.html#sectors" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Infrastructure</a></li>
+                        <li><a href="index.html#sectors" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Development</a></li>
                     </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4 text-white font-slab">Contact</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li>📍 6261 N La Cholla Blvd, Tucson, AZ</li>
-                        <li>📞 +1 (520) 427-9815</li>
-                        <li>✉️ info@cedricklogging.com</li>
+                </nav>
+                <nav aria-label="Footer company navigation">
+                    <h4 class="font-bold mb-4 text-white font-slab">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">About Us</a></li>
+                        <li><a href="investors.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Investors</a></li>
+                        <li><a href="careers.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Careers</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Contact</a></li>
                     </ul>
-                </div>
+                </nav>
             </div>
             <div class="border-t border-white/10 pt-8 text-center text-gray-500 text-sm">
-                <p>&copy; 2024 Cedrick Logging. CEO: Cedrick Thomas. All rights reserved.</p>
+                <p>&copy; 2024 Cedrick-Logging.net. CEO: Cedrick Thomas. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        // IntersectionObserver for reveal animations
+        (function() {
+            const revealElements = document.querySelectorAll('.reveal-element');
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            revealElements.forEach(function(el) {
+                observer.observe(el);
+            });
+        })();
+    </script>
 </body>
 </html>
