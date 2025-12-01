@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cedrick Logging | Precision Site Preparation & Land Clearing - The Cedrick Thomas Standard</title>
-    <meta name="description" content="Cedrick Logging - Professional land clearing and site preparation contractor serving Energy, Infrastructure, and Development sectors. Sustainable clearing solutions with 25+ years of experience. Headquarters in Tucson, AZ with operations across North America.">
+    <title>Cedrick-Logging.net | Enterprise Site Preparation & Land Clearing Solutions</title>
+    <meta name="description" content="Cedrick-Logging.net - Enterprise-grade land clearing and site preparation serving Energy, Infrastructure, and Development sectors. 25+ years of excellence. The Cedrick Thomas Standard.">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Inter for data density, Rockwell-like slab serif for headlines -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Slab:wght@600;700;800&display=swap" rel="stylesheet">
@@ -39,15 +39,26 @@
         }
     </script>
     <style>
-        /* Custom styles that complement Tailwind */
+        /* Enterprise Design System - Rhythmic Spacing (4px base) */
         :root {
             --color-blue-sky: #87CEEB;
             --color-sky-mid: #5BA3C6;
             --color-jet-black: #1A1A1A;
+            --spacing-unit: 4px;
         }
         html { scroll-behavior: smooth; }
         
-        /* Hero video background */
+        /* Hero Canvas Animation Background */
+        #heroCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        
+        /* Hero gradient overlay */
         .hero-gradient {
             background: linear-gradient(180deg, var(--color-blue-sky) 0%, var(--color-sky-mid) 40%, var(--color-jet-black) 100%);
         }
@@ -63,236 +74,390 @@
         .lifecycle-scroll::-webkit-scrollbar { display: none; }
         .lifecycle-stage { scroll-snap-align: center; }
         
-        /* Animations */
+        /* Entrance Animations */
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        .animate-fadeInUp { animation: fadeInUp 0.8s ease forwards; }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes countUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fadeInUp { animation: fadeInUp 0.8s ease forwards; opacity: 0; }
+        .animate-scaleIn { animation: scaleIn 0.6s ease forwards; opacity: 0; }
+        .animate-slideInLeft { animation: slideInLeft 0.8s ease forwards; opacity: 0; }
+        .animate-slideInRight { animation: slideInRight 0.8s ease forwards; opacity: 0; }
         .delay-1 { animation-delay: 0.1s; }
         .delay-2 { animation-delay: 0.2s; }
         .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+        .delay-5 { animation-delay: 0.5s; }
 
-        /* Image/Video placeholder styling */
-        .media-placeholder {
+        /* Intersection Observer States */
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .reveal-element.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Dynamic Counter Animation */
+        .counter-value {
+            transition: all 0.3s ease;
+        }
+        
+        /* Custom Loader */
+        .page-loader {
+            position: fixed;
+            inset: 0;
+            background: var(--color-jet-black);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        .page-loader.loaded {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .loader-spinner {
+            width: 48px;
+            height: 48px;
+            border: 3px solid rgba(255,107,0,0.3);
+            border-top-color: #FF6B00;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Action Button Hover States */
+        .action-btn {
             position: relative;
             overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .media-placeholder::before {
+        .action-btn::before {
             content: '';
             position: absolute;
-            inset: 0;
-            background: linear-gradient(45deg, rgba(196,149,106,0.1) 25%, transparent 25%, transparent 75%, rgba(196,149,106,0.1) 75%);
-            background-size: 20px 20px;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        .action-btn:hover::before {
+            left: 100%;
+        }
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255,107,0,0.4);
+        }
+        .action-btn:focus {
+            outline: 2px solid #FF6B00;
+            outline-offset: 2px;
+        }
+        .action-btn:active {
+            transform: translateY(0);
+        }
+        
+        /* Card Hover Effects */
+        .interactive-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .interactive-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        /* Focus States for Accessibility */
+        a:focus-visible, button:focus-visible {
+            outline: 2px solid #FF6B00;
+            outline-offset: 2px;
+        }
+        
+        /* Touch Target Compliance (44x44px minimum) */
+        .touch-target {
+            min-width: 44px;
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
     </style>
 </head>
 <body class="font-sans text-gray-900 bg-white antialiased">
-    <!-- Header Navigation -->
-    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm">
-        <nav class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
-            <a href="#" class="flex items-center gap-3 no-underline text-black">
-                <div class="w-10 h-10 bg-gradient-to-br from-pine to-pine-dark rounded-lg flex items-center justify-center text-white font-bold text-xl">CL</div>
+    <!-- Custom Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Header Navigation - Sticky with Backdrop Blur -->
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm" role="banner">
+        <nav class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto" aria-label="Main navigation">
+            <a href="index.html" class="flex items-center gap-3 no-underline text-black touch-target" aria-label="Cedrick-Logging.net Home">
+                <div class="w-10 h-10 bg-gradient-to-br from-pine to-pine-dark rounded-lg flex items-center justify-center text-white font-bold text-xl" aria-hidden="true">CL</div>
                 <div>
-                    <div class="text-xl font-bold tracking-tight font-slab">Cedrick Logging</div>
+                    <div class="text-xl font-bold tracking-tight font-slab">Cedrick-Logging.net</div>
                     <div class="text-xs text-gray-500 uppercase tracking-wider">The Cedrick Thomas Standard</div>
                 </div>
             </a>
-            <ul class="hidden lg:flex gap-8 list-none">
-                <li><a href="#process" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">Process</a></li>
-                <li><a href="#services" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">Services</a></li>
-                <li><a href="about.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">About Cedrick</a></li>
-                <li><a href="#project-calculator" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">Project Calculator</a></li>
-                <li><a href="contact.html" class="bg-accent-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors">Contact Us</a></li>
+            <ul class="hidden lg:flex gap-8 list-none items-center" role="menubar">
+                <li role="none"><a href="#services" class="text-gray-600 font-medium hover:text-pine-dark transition-colors touch-target" role="menuitem">Services</a></li>
+                <li role="none"><a href="about.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors touch-target" role="menuitem">About Us</a></li>
+                <li role="none"><a href="investors.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors touch-target" role="menuitem">Investors</a></li>
+                <li role="none"><a href="sustainability.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors touch-target" role="menuitem">Safety</a></li>
+                <li role="none"><a href="careers.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors touch-target" role="menuitem">Careers</a></li>
+                <li role="none"><a href="contact.html" class="action-btn bg-accent-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors touch-target" role="menuitem">Contact Us</a></li>
             </ul>
-            <button class="lg:hidden flex flex-col gap-1.5 p-2" id="mobileMenuBtn" aria-label="Toggle mobile menu" aria-expanded="false">
-                <span class="w-6 h-0.5 bg-black rounded transition-all"></span>
-                <span class="w-6 h-0.5 bg-black rounded transition-all"></span>
-                <span class="w-6 h-0.5 bg-black rounded transition-all"></span>
+            <button class="lg:hidden flex flex-col gap-1.5 p-2 touch-target" id="mobileMenuBtn" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobileNav">
+                <span class="w-6 h-0.5 bg-black rounded transition-all" aria-hidden="true"></span>
+                <span class="w-6 h-0.5 bg-black rounded transition-all" aria-hidden="true"></span>
+                <span class="w-6 h-0.5 bg-black rounded transition-all" aria-hidden="true"></span>
             </button>
         </nav>
     </header>
 
     <!-- Mobile Navigation -->
     <nav class="hidden fixed inset-0 bg-white/98 z-40 pt-20 text-center" id="mobileNav" aria-label="Mobile navigation">
-        <ul class="list-none p-8 space-y-6">
-            <li><a href="#process" class="text-xl text-gray-900 font-medium mobile-nav-link">Process</a></li>
-            <li><a href="#services" class="text-xl text-gray-900 font-medium mobile-nav-link">Services</a></li>
-            <li><a href="about.html" class="text-xl text-gray-900 font-medium mobile-nav-link">About Cedrick</a></li>
-            <li><a href="#project-calculator" class="text-xl text-gray-900 font-medium mobile-nav-link">Project Calculator</a></li>
-            <li><a href="contact.html" class="text-xl text-accent-orange font-semibold mobile-nav-link">Contact Us</a></li>
+        <ul class="list-none p-8 space-y-6" role="menu">
+            <li role="none"><a href="#services" class="text-xl text-gray-900 font-medium mobile-nav-link touch-target" role="menuitem">Services</a></li>
+            <li role="none"><a href="about.html" class="text-xl text-gray-900 font-medium mobile-nav-link touch-target" role="menuitem">About Us</a></li>
+            <li role="none"><a href="investors.html" class="text-xl text-gray-900 font-medium mobile-nav-link touch-target" role="menuitem">Investors</a></li>
+            <li role="none"><a href="sustainability.html" class="text-xl text-gray-900 font-medium mobile-nav-link touch-target" role="menuitem">Safety</a></li>
+            <li role="none"><a href="careers.html" class="text-xl text-gray-900 font-medium mobile-nav-link touch-target" role="menuitem">Careers</a></li>
+            <li role="none"><a href="contact.html" class="text-xl text-accent-orange font-semibold mobile-nav-link touch-target" role="menuitem">Contact Us</a></li>
         </ul>
     </nav>
 
-    <!-- Hero Section with Drone Video Background -->
-    <!-- 
-    VIDEO PROMPT: Cinematic 4K drone footage flying smoothly over an active land clearing site at golden hour. 
-    Camera starts high showing heavy equipment clearing vegetation on a construction site under a brilliant blue sky.
-    Slowly descends revealing professional crews operating mulchers, excavators, and graders.
-    Sun rays create dramatic light through dust. Include glimpses of modern equipment with GPS systems and workers with tablets/safety gear. 
-    Color grade: warm tones, emphasize blue sky and equipment contrast.
-    Duration: 30-60 seconds, seamless loop.
-    -->
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden hero-gradient" id="home">
+    <!-- Hero Section - Above the Fold Value Delivery (Minimal Scroll Design) -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden hero-gradient" id="home" aria-labelledby="hero-heading">
+        <!-- Animated Canvas Background -->
+        <canvas id="heroCanvas" aria-hidden="true"></canvas>
         <div class="absolute inset-0 z-0">
-            <!-- Video placeholder with gradient background simulating drone footage over construction site with blue sky -->
             <div class="w-full h-full bg-gradient-to-b from-blue-sky via-sky-mid to-jet-black opacity-70"></div>
             <div class="absolute inset-0 bg-gradient-to-b from-blue-sky/30 via-jet-black/40 to-jet-black/85"></div>
         </div>
-        <div class="relative z-10 text-center text-white max-w-4xl px-6 py-8">
-            <span class="inline-block bg-pine/20 border border-pine text-pine-light px-5 py-2 rounded-full text-sm font-medium uppercase tracking-wider mb-6 animate-fadeInUp">🚜 Professional Land Clearing Contractor</span>
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-slab animate-fadeInUp delay-1">Precision Site Preparation & Land Clearing.</h1>
+        
+        <!-- Hero Content - Single Dominant CTA -->
+        <div class="relative z-10 text-center text-white max-w-5xl px-6 py-8">
+            <span class="inline-block bg-pine/20 border border-pine text-pine-light px-5 py-2 rounded-full text-sm font-medium uppercase tracking-wider mb-6 animate-fadeInUp">Enterprise Site Solutions</span>
+            
+            <h1 id="hero-heading" class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-slab animate-fadeInUp delay-1">
+                Precision Site Preparation.<br/>
+                <span class="text-accent-orange">Built for Industry.</span>
+            </h1>
+            
             <p class="text-lg md:text-xl text-white/85 mb-10 max-w-2xl mx-auto animate-fadeInUp delay-2">
                 <strong class="text-white">The Cedrick Thomas Standard.</strong><br>
-                Serving Energy, Infrastructure, and Residential Development sectors with sustainable clearing solutions.<br>
-                Trusted by clients across North America.
+                Serving Energy, Infrastructure, and Development sectors with technology-driven, sustainable site solutions.
             </p>
             
-            <!-- Split-Path Navigation: Immediate Entry Points -->
-            <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto animate-fadeInUp delay-3">
-                <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 text-center cursor-pointer transition-all hover:bg-white/15 hover:border-pine hover:-translate-y-1" id="project-path">
-                    <div class="w-16 h-16 bg-gradient-to-br from-pine to-pine-dark rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">🏗️</div>
-                    <h3 class="text-white text-xl font-bold mb-3 font-slab">Start a Project</h3>
-                    <p class="text-white/70 text-sm mb-6">Get a free project assessment for your land clearing, site preparation, or ROW development needs.</p>
-                    <a href="#project-calculator" class="inline-block bg-accent-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-all hover:-translate-y-0.5">Get My Assessment</a>
+            <!-- Single Dominant CTA (Action Dominance Heuristic) -->
+            <div class="animate-fadeInUp delay-3">
+                <a href="contact.html" class="action-btn inline-block bg-accent-orange text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-orange-600 transition-all touch-target" aria-label="Start your project consultation">
+                    Start Your Project →
+                </a>
+                <p class="text-white/60 text-sm mt-4">Free consultation • Response within 24 hours</p>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce" aria-hidden="true">
+            <svg class="w-6 h-6 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Trust Indicators Bar - Dynamic Counters -->
+    <section class="trust-bar" aria-label="Company statistics">
+        <div class="container">
+            <div class="trust-items">
+                <div class="trust-item reveal-element">
+                    <div class="trust-number counter-value" data-target="25">0</div>
+                    <div class="trust-label">Years Experience</div>
                 </div>
-                <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 text-center cursor-pointer transition-all hover:bg-white/15 hover:border-pine hover:-translate-y-1" id="services-path">
-                    <div class="w-16 h-16 bg-gradient-to-br from-pine to-pine-dark rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">📋</div>
-                    <h3 class="text-white text-xl font-bold mb-3 font-slab">Our Services</h3>
-                    <p class="text-white/70 text-sm mb-6">Explore our full range of land clearing services for oil & gas, highway projects, and residential development.</p>
-                    <a href="#services" class="inline-block bg-accent-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-all hover:-translate-y-0.5">View Services</a>
+                <div class="trust-item reveal-element">
+                    <div class="trust-number counter-value" data-target="150" data-suffix="K">0</div>
+                    <div class="trust-label">Acres Cleared</div>
+                </div>
+                <div class="trust-item reveal-element">
+                    <div class="trust-number counter-value" data-target="98" data-suffix="%">0</div>
+                    <div class="trust-label">Client Retention</div>
+                </div>
+                <div class="trust-item reveal-element">
+                    <div class="trust-number">Zero</div>
+                    <div class="trust-label">Safety Incidents</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Trust Indicators Bar -->
-    <section class="trust-bar">
-        <div class="container">
-            <div class="trust-items">
-                <div class="trust-item">
-                    <div class="trust-number">25+</div>
-                    <div class="trust-label">Years Experience</div>
+    <!-- Trident Sectors - Energy, Infrastructure, Development -->
+    <section class="py-16 bg-white" id="sectors" aria-labelledby="sectors-heading">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="section-header reveal-element">
+                <h2 id="sectors-heading">Industry Expertise</h2>
+                <p>Specialized solutions across three core sectors</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="interactive-card bg-gradient-to-br from-jet-black to-charcoal rounded-2xl p-8 text-white reveal-element">
+                    <div class="w-16 h-16 bg-accent-orange/20 rounded-xl flex items-center justify-center mb-4 text-3xl" aria-hidden="true">⚡</div>
+                    <h3 class="text-xl font-bold font-slab mb-3">Energy</h3>
+                    <p class="text-white/70 text-sm mb-4">Oil & gas well pads, pipeline corridors, transmission lines, and renewable energy installations.</p>
+                    <ul class="text-white/80 text-sm space-y-1">
+                        <li>• Well Pad Preparation</li>
+                        <li>• Pipeline ROW Clearing</li>
+                        <li>• Solar Farm Sites</li>
+                    </ul>
                 </div>
-                <div class="trust-item">
-                    <div class="trust-number">150K</div>
-                    <div class="trust-label">Acres Cleared</div>
+                <div class="interactive-card bg-gradient-to-br from-jet-black to-charcoal rounded-2xl p-8 text-white reveal-element">
+                    <div class="w-16 h-16 bg-accent-orange/20 rounded-xl flex items-center justify-center mb-4 text-3xl" aria-hidden="true">🛣️</div>
+                    <h3 class="text-xl font-bold font-slab mb-3">Infrastructure</h3>
+                    <p class="text-white/70 text-sm mb-4">Highway construction, utility corridors, municipal projects, and civil works site preparation.</p>
+                    <ul class="text-white/80 text-sm space-y-1">
+                        <li>• Highway Expansion</li>
+                        <li>• Utility Corridors</li>
+                        <li>• Municipal Projects</li>
+                    </ul>
                 </div>
-                <div class="trust-item">
-                    <div class="trust-number">98%</div>
-                    <div class="trust-label">Client Retention</div>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-number">Zero</div>
-                    <div class="trust-label">Burn Incidents</div>
+                <div class="interactive-card bg-gradient-to-br from-jet-black to-charcoal rounded-2xl p-8 text-white reveal-element">
+                    <div class="w-16 h-16 bg-accent-orange/20 rounded-xl flex items-center justify-center mb-4 text-3xl" aria-hidden="true">🏗️</div>
+                    <h3 class="text-xl font-bold font-slab mb-3">Development</h3>
+                    <p class="text-white/70 text-sm mb-4">Residential subdivisions, commercial sites, industrial parks, and master-planned communities.</p>
+                    <ul class="text-white/80 text-sm space-y-1">
+                        <li>• Residential Clearing</li>
+                        <li>• Commercial Sites</li>
+                        <li>• Industrial Parks</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- PROCESS SECTION: Site Prep Workflow (Horizontal Scroll) -->
-    <section class="process-section" id="process">
+    <section class="process-section" id="process" aria-labelledby="process-heading">
         <div class="container">
-            <div class="section-header">
-                <h2>The Site Prep Workflow</h2>
+            <div class="section-header reveal-element">
+                <h2 id="process-heading">The Site Prep Workflow</h2>
                 <p>Our precision land clearing process ensures maximum project efficiency at every stage</p>
             </div>
         </div>
-        <div class="lifecycle-scroll">
-            <div class="lifecycle-stage">
-                <span class="stage-number">1</span>
-                <div class="stage-icon">🛰️</div>
+        <div class="lifecycle-scroll" role="list" aria-label="Site preparation workflow stages">
+            <div class="lifecycle-stage reveal-element" role="listitem">
+                <span class="stage-number" aria-hidden="true">1</span>
+                <div class="stage-icon" aria-hidden="true">🛰️</div>
                 <h3>Survey/GIS</h3>
                 <p>Advanced GIS mapping and drone surveys create detailed site plans with topographic data and vegetation assessment.</p>
                 <span class="tech-badge">LiDAR + GIS</span>
             </div>
-            <div class="lifecycle-stage">
-                <span class="stage-number">2</span>
-                <div class="stage-icon">🎯</div>
+            <div class="lifecycle-stage reveal-element" role="listitem">
+                <span class="stage-number" aria-hidden="true">2</span>
+                <div class="stage-icon" aria-hidden="true">🎯</div>
                 <h3>Precision Clearing</h3>
                 <p>GPS-guided equipment removes vegetation with surgical accuracy, minimizing environmental impact and maximizing efficiency.</p>
                 <span class="tech-badge">GPS Guided</span>
             </div>
-            <div class="lifecycle-stage">
-                <span class="stage-number">3</span>
-                <div class="stage-icon">🌿</div>
+            <div class="lifecycle-stage reveal-element" role="listitem">
+                <span class="stage-number" aria-hidden="true">3</span>
+                <div class="stage-icon" aria-hidden="true">🌿</div>
                 <h3>Biomass Mulching</h3>
                 <p>Zero-burn mulching converts cleared vegetation into nutrient-rich ground cover for erosion control.</p>
                 <span class="tech-badge">Zero Burn</span>
             </div>
-            <div class="lifecycle-stage">
-                <span class="stage-number">4</span>
-                <div class="stage-icon">🚜</div>
+            <div class="lifecycle-stage reveal-element" role="listitem">
+                <span class="stage-number" aria-hidden="true">4</span>
+                <div class="stage-icon" aria-hidden="true">🚜</div>
                 <h3>Grubbing & Grading</h3>
                 <p>Complete root removal and precision grading prepare the site for construction foundations.</p>
             </div>
-            <div class="lifecycle-stage">
-                <span class="stage-number">5</span>
-                <div class="stage-icon">✅</div>
+            <div class="lifecycle-stage reveal-element" role="listitem">
+                <span class="stage-number" aria-hidden="true">5</span>
+                <div class="stage-icon" aria-hidden="true">✅</div>
                 <h3>Final Site Delivery</h3>
                 <p>Quality inspection and site handoff with complete documentation ready for your construction team.</p>
                 <span class="tech-badge">Site Ready</span>
             </div>
         </div>
-        <p class="scroll-hint">← Scroll to explore the workflow →</p>
+        <p class="scroll-hint" aria-hidden="true">← Scroll to explore the workflow →</p>
     </section>
 
     <!-- Services Section -->
-    <section class="services section" id="services">
+    <section class="services section" id="services" aria-labelledby="services-heading">
         <div class="container">
-            <div class="section-header">
-                <h2>Comprehensive Land Clearing Services</h2>
-                <p>From initial survey to final site delivery, we provide end-to-end site preparation solutions backed by cutting-edge technology for Energy, Infrastructure, and Development sectors.</p>
+            <div class="section-header reveal-element">
+                <h2 id="services-heading">Comprehensive Site Solutions</h2>
+                <p>End-to-end site preparation services backed by cutting-edge technology for Energy, Infrastructure, and Development sectors.</p>
             </div>
             <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🏗️</div>
+                <article class="service-card interactive-card reveal-element">
+                    <div class="service-icon" aria-hidden="true">🏗️</div>
                     <h3>Site Preparation</h3>
                     <p>Complete removal of vegetation, grubbing (root removal), and grading for construction foundations. From oil well pads to commercial developments.</p>
-                    <a href="contact.html" class="service-link">Get Quote →</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🛤️</div>
+                    <a href="contact.html" class="service-link touch-target">Get Quote →</a>
+                </article>
+                <article class="service-card interactive-card reveal-element">
+                    <div class="service-icon" aria-hidden="true">🛤️</div>
                     <h3>Right-of-Way (ROW)</h3>
                     <p>Linear clearing for pipelines, power lines, highways, and utility corridors. Precision clearing with minimal environmental footprint.</p>
-                    <a href="contact.html" class="service-link">Get Quote →</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🌿</div>
+                    <a href="contact.html" class="service-link touch-target">Get Quote →</a>
+                </article>
+                <article class="service-card interactive-card reveal-element">
+                    <div class="service-icon" aria-hidden="true">🌿</div>
                     <h3>Forestry Mulching</h3>
                     <p>Sustainable biomass management with zero-burn policies. Mulching protects topsoil, prevents erosion, and eliminates fire risk.</p>
-                    <a href="sustainability.html" class="service-link">Our Methods →</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🛣️</div>
+                    <a href="sustainability.html" class="service-link touch-target">Our Methods →</a>
+                </article>
+                <article class="service-card interactive-card reveal-element">
+                    <div class="service-icon" aria-hidden="true">🛣️</div>
                     <h3>Civil Earthworks</h3>
                     <p>Access road construction, graveling, culvert installation, and drainage integration for all-weather site access.</p>
-                    <a href="contact.html" class="service-link">Get Quote →</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🏠</div>
+                    <a href="contact.html" class="service-link touch-target">Get Quote →</a>
+                </article>
+                <article class="service-card interactive-card reveal-element">
+                    <div class="service-icon" aria-hidden="true">🏠</div>
                     <h3>Residential Clearing</h3>
                     <p>Lot clearing for subdivisions and housing developments. From single lots to master-planned communities with full permitting support.</p>
-                    <a href="contact.html" class="service-link">Get Quote →</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🔧</div>
+                    <a href="contact.html" class="service-link touch-target">Get Quote →</a>
+                </article>
+                <article class="service-card interactive-card reveal-element">
+                    <div class="service-icon" aria-hidden="true">🔧</div>
                     <h3>Rig Mats & Access</h3>
                     <p>Manufacturing and installation of temporary platforms for heavy machinery stability. Protects sensitive terrain during operations.</p>
-                    <a href="contact.html" class="service-link">Get Quote →</a>
-                </div>
+                    <a href="contact.html" class="service-link touch-target">Get Quote →</a>
+                </article>
             </div>
         </div>
     </section>
 
     <!-- About Preview Section - Links to About page -->
-    <section class="py-16 bg-white" id="about">
+    <section class="py-16 bg-white" id="about" aria-labelledby="about-heading">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="relative">
+                <div class="relative reveal-element">
                     <div class="bg-gradient-to-br from-pine-light to-pine rounded-3xl p-6">
                         <div class="bg-gradient-to-b from-blue-sky via-sky-mid to-jet-black rounded-2xl min-h-[350px] flex flex-col items-center justify-center text-white text-center p-8">
-                            <div class="text-6xl mb-4">👷</div>
+                            <div class="text-6xl mb-4" aria-hidden="true">👷</div>
                             <p class="font-bold text-xl">Cedrick Thomas</p>
                             <p class="text-sm uppercase tracking-wider opacity-80 mt-2">Founder & CEO</p>
                         </div>
@@ -302,12 +467,12 @@
                         </div>
                     </div>
                 </div>
-                <div>
-                    <h2 class="text-3xl md:text-4xl font-bold font-slab mb-4">The Cedrick Factor</h2>
+                <div class="reveal-element">
+                    <h2 id="about-heading" class="text-3xl md:text-4xl font-bold font-slab mb-4">The Cedrick Factor</h2>
                     <p class="text-xl text-accent-orange font-semibold mb-4">Generational Trust Meets Precision Technology</p>
                     <p class="text-gray-600 mb-4">Cedrick Thomas didn't just build a land clearing company—he revolutionized the industry. With a forestry degree from the University of Arizona and a vision for responsible site preparation, he's spent 25 years proving that advanced technology and environmental stewardship work together.</p>
-                    <p class="text-gray-600 mb-6 italic border-l-4 border-accent-orange pl-4">"We clear responsibly. Every site we prepare is handled with the same care we'd give our own land—zero-burn policies, mulching for erosion control, and repurposing cleared timber for access mats."</p>
-                    <a href="about.html" class="inline-block bg-accent-orange text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-600 transition-all">Meet Our Team →</a>
+                    <blockquote class="text-gray-600 mb-6 italic border-l-4 border-accent-orange pl-4">"We clear responsibly. Every site we prepare is handled with the same care we'd give our own land—zero-burn policies, mulching for erosion control, and sustainable practices."</blockquote>
+                    <a href="about.html" class="action-btn inline-block bg-accent-orange text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-600 transition-all touch-target">Meet Our Team →</a>
                 </div>
             </div>
         </div>
@@ -392,70 +557,70 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="testimonials section" id="testimonials">
+    <section class="testimonials section" id="testimonials" aria-labelledby="testimonials-heading">
         <div class="container">
-            <div class="section-header">
-                <h2>Trusted by Industry Leaders</h2>
+            <div class="section-header reveal-element">
+                <h2 id="testimonials-heading">Trusted by Industry Leaders</h2>
                 <p>Hear from clients who have experienced our precision site preparation approach.</p>
             </div>
             <div class="testimonials-grid">
-                <div class="testimonial-card">
+                <article class="testimonial-card interactive-card reveal-element">
                     <p class="testimonial-text">"Cedrick's team cleared 200 acres for our pipeline ROW in record time. Their zero-burn mulching approach kept us compliant with environmental regulations and ahead of schedule."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">JM</div>
+                        <div class="author-avatar" aria-hidden="true">JM</div>
                         <div>
                             <div class="author-name">James Mitchell</div>
                             <div class="author-title">Project Manager, Energy Corp</div>
                         </div>
                     </div>
-                </div>
-                <div class="testimonial-card">
+                </article>
+                <article class="testimonial-card interactive-card reveal-element">
                     <p class="testimonial-text">"We've used Cedrick Logging for three subdivision projects now. Their GPS-guided clearing is incredibly precise, and the mulch they leave behind eliminated our erosion control costs."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">SR</div>
+                        <div class="author-avatar" aria-hidden="true">SR</div>
                         <div>
                             <div class="author-name">Sarah Rodriguez</div>
                             <div class="author-title">VP Development, Horizon Homes</div>
                         </div>
                     </div>
-                </div>
-                <div class="testimonial-card">
+                </article>
+                <article class="testimonial-card interactive-card reveal-element">
                     <p class="testimonial-text">"The rig mat installation saved our equipment during the wet season. Their team understands oil & gas operations and delivers sites that are truly ready for drilling."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">DK</div>
+                        <div class="author-avatar" aria-hidden="true">DK</div>
                         <div>
                             <div class="author-name">David Kim</div>
                             <div class="author-title">Operations Director, PetroWest</div>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
     </section>
 
     <!-- Contact Preview Section - Links to Contact page -->
-    <section class="py-16 bg-gray-50" id="contact">
+    <section class="py-16 bg-gray-50" id="contact" aria-labelledby="contact-heading">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-8 items-center">
                 <!-- Contact Summary -->
-                <div>
-                    <h2 class="text-3xl md:text-4xl font-bold font-slab mb-4">Get In Touch</h2>
+                <div class="reveal-element">
+                    <h2 id="contact-heading" class="text-3xl md:text-4xl font-bold font-slab mb-4">Get In Touch</h2>
                     <p class="text-gray-600 mb-6">Whether you're planning a pipeline corridor, highway project, or residential subdivision, our experienced team is ready to deliver site-ready results.</p>
                     <div class="space-y-4 mb-6">
-                        <a href="tel:+15204279815" class="flex items-center gap-3 text-gray-700 hover:text-accent-orange transition-colors">
-                            <span class="w-10 h-10 bg-pine rounded-lg flex items-center justify-center text-white">📞</span>
+                        <a href="tel:+15204279815" class="flex items-center gap-3 text-gray-700 hover:text-accent-orange transition-colors touch-target">
+                            <span class="w-10 h-10 bg-pine rounded-lg flex items-center justify-center text-white" aria-hidden="true">📞</span>
                             <span class="font-semibold">+1 (520) 427-9815</span>
                         </a>
-                        <a href="mailto:info@cedricklogging.com" class="flex items-center gap-3 text-gray-700 hover:text-accent-orange transition-colors">
-                            <span class="w-10 h-10 bg-pine rounded-lg flex items-center justify-center text-white">✉️</span>
+                        <a href="mailto:info@cedricklogging.com" class="flex items-center gap-3 text-gray-700 hover:text-accent-orange transition-colors touch-target">
+                            <span class="w-10 h-10 bg-pine rounded-lg flex items-center justify-center text-white" aria-hidden="true">✉️</span>
                             <span>info@cedricklogging.com</span>
                         </a>
                     </div>
-                    <a href="contact.html" class="inline-block bg-accent-orange text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-600 transition-all">Contact Us →</a>
+                    <a href="contact.html" class="action-btn inline-block bg-accent-orange text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-600 transition-all touch-target">Contact Us →</a>
                 </div>
                 
                 <!-- Service Areas -->
-                <div class="bg-gradient-to-br from-jet-black to-charcoal rounded-2xl p-8 text-white">
+                <div class="bg-gradient-to-br from-jet-black to-charcoal rounded-2xl p-8 text-white reveal-element">
                     <h3 class="text-xl font-bold font-slab mb-4">Industries We Serve</h3>
                     <p class="text-white/80 mb-6">Specialized land clearing for the sectors that build America.</p>
                     <div class="flex flex-wrap gap-3">
@@ -470,80 +635,78 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="py-20 bg-gradient-to-br from-black to-charcoal text-white text-center">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold font-slab mb-4 text-white">Ready to Start Your Project?</h2>
+    <!-- CTA Section - Single Dominant Action -->
+    <section class="py-20 bg-gradient-to-br from-black to-charcoal text-white text-center" aria-labelledby="cta-heading">
+        <div class="max-w-4xl mx-auto px-6 reveal-element">
+            <h2 id="cta-heading" class="text-3xl md:text-4xl font-bold font-slab mb-4 text-white">Ready to Start Your Project?</h2>
             <p class="text-white/80 mb-8 max-w-2xl mx-auto">Join our network of satisfied clients in Energy, Infrastructure, and Development who trust The Cedrick Thomas Standard for site preparation excellence.</p>
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="tel:+15204279815" class="bg-accent-orange text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-600 transition-all inline-flex items-center gap-2">
-                    📞 Call +1 (520) 427-9815
-                </a>
-                <a href="mailto:info@cedricklogging.com" class="bg-transparent text-white px-8 py-4 rounded-lg font-semibold border-2 border-white/30 hover:border-white hover:bg-white/10 transition-all">
-                    Send Email
+                <a href="contact.html" class="action-btn bg-accent-orange text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-orange-600 transition-all touch-target">
+                    Start Your Project →
                 </a>
             </div>
+            <p class="text-white/50 text-sm mt-4">Or call us: +1 (520) 427-9815</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black text-white pt-16 pb-8">
+    <footer class="bg-black text-white pt-16 pb-8" role="contentinfo">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
                 <!-- Brand -->
                 <div class="lg:col-span-2">
-                    <a href="#" class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 bg-gradient-to-br from-pine to-pine-dark rounded-lg flex items-center justify-center text-white font-bold">CL</div>
+                    <a href="index.html" class="flex items-center gap-3 mb-4 touch-target">
+                        <div class="w-10 h-10 bg-gradient-to-br from-pine to-pine-dark rounded-lg flex items-center justify-center text-white font-bold" aria-hidden="true">CL</div>
                         <div>
-                            <div class="text-xl font-bold font-slab">Cedrick Logging</div>
+                            <div class="text-xl font-bold font-slab">Cedrick-Logging.net</div>
                             <div class="text-xs text-gray-400 uppercase tracking-wider">The Cedrick Thomas Standard</div>
                         </div>
                     </a>
                     <p class="text-gray-400 max-w-sm mb-4">Precision Site Preparation & Land Clearing. Pioneering sustainable clearing solutions through advanced technology and responsible practices since 1998.</p>
-                    <div class="text-sm text-gray-500">
+                    <address class="text-sm text-gray-500 not-italic">
                         <p>📍 HQ: 6261 N La Cholla Blvd, Tucson, AZ</p>
                         <p>📍 CO: 5404 Ward Ave, Arvada, CO 80002</p>
                         <p class="mt-2">📞 +1 (520) 427-9815</p>
-                    </div>
+                    </address>
                 </div>
                 
                 <!-- Services -->
-                <div>
+                <nav aria-label="Footer services navigation">
                     <h4 class="font-bold mb-4 text-white font-slab">Services</h4>
                     <ul class="space-y-2">
-                        <li><a href="#services" class="text-gray-400 hover:text-pine-light transition-colors">Site Preparation</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-pine-light transition-colors">Right-of-Way Clearing</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-pine-light transition-colors">Forestry Mulching</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-pine-light transition-colors">Civil Earthworks</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Site Preparation</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Right-of-Way Clearing</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Forestry Mulching</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Civil Earthworks</a></li>
                     </ul>
-                </div>
+                </nav>
                 
                 <!-- Industries -->
-                <div>
+                <nav aria-label="Footer industries navigation">
                     <h4 class="font-bold mb-4 text-white font-slab">Industries</h4>
                     <ul class="space-y-2">
-                        <li><a href="contact.html" class="text-gray-400 hover:text-pine-light transition-colors">Oil & Gas</a></li>
-                        <li><a href="contact.html" class="text-gray-400 hover:text-pine-light transition-colors">Infrastructure</a></li>
-                        <li><a href="contact.html" class="text-gray-400 hover:text-pine-light transition-colors">Residential Development</a></li>
-                        <li><a href="contact.html" class="text-gray-400 hover:text-pine-light transition-colors">Commercial Construction</a></li>
+                        <li><a href="#sectors" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Energy</a></li>
+                        <li><a href="#sectors" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Infrastructure</a></li>
+                        <li><a href="#sectors" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Development</a></li>
                     </ul>
-                </div>
+                </nav>
                 
                 <!-- Company -->
-                <div>
+                <nav aria-label="Footer company navigation">
                     <h4 class="font-bold mb-4 text-white font-slab">Company</h4>
                     <ul class="space-y-2">
-                        <li><a href="about.html" class="text-gray-400 hover:text-pine-light transition-colors">About Cedrick Thomas</a></li>
-                        <li><a href="technology.html" class="text-gray-400 hover:text-pine-light transition-colors">Our Technology</a></li>
-                        <li><a href="sustainability.html" class="text-gray-400 hover:text-pine-light transition-colors">Sustainability</a></li>
-                        <li><a href="contact.html" class="text-gray-400 hover:text-pine-light transition-colors">Contact</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">About Us</a></li>
+                        <li><a href="investors.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Investors</a></li>
+                        <li><a href="sustainability.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Safety</a></li>
+                        <li><a href="careers.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Careers</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Contact</a></li>
                     </ul>
-                </div>
+                </nav>
             </div>
             
             <!-- Bottom Bar -->
             <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-gray-500 text-sm">&copy; 2024 Cedrick Logging. CEO: Cedrick Thomas. All rights reserved.</p>
+                <p class="text-gray-500 text-sm">&copy; 2024 Cedrick-Logging.net. CEO: Cedrick Thomas. All rights reserved.</p>
                 <div class="flex flex-wrap gap-3">
                     <span class="bg-white/10 px-3 py-1.5 rounded text-xs text-gray-400">Zero-Burn Certified</span>
                     <span class="bg-white/10 px-3 py-1.5 rounded text-xs text-gray-400">OSHA Compliant</span>
@@ -555,158 +718,353 @@
 
     <!-- JavaScript for Homepage -->
     <script>
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+        // ============================================
+        // Page Loader
+        // ============================================
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('pageLoader');
+            if (loader) {
+                setTimeout(function() {
+                    loader.classList.add('loaded');
+                }, 300);
+            }
+        });
+
+        // ============================================
+        // Canvas Background Animation
+        // ============================================
+        (function initHeroCanvas() {
+            const canvas = document.getElementById('heroCanvas');
+            if (!canvas) return;
+            
+            const ctx = canvas.getContext('2d');
+            let particles = [];
+            const particleCount = 50;
+            
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            
+            function createParticle() {
+                return {
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    size: Math.random() * 2 + 1,
+                    speedX: (Math.random() - 0.5) * 0.5,
+                    speedY: Math.random() * 0.3 + 0.1,
+                    opacity: Math.random() * 0.5 + 0.2
+                };
+            }
+            
+            function initParticles() {
+                particles = [];
+                for (let i = 0; i < particleCount; i++) {
+                    particles.push(createParticle());
+                }
+            }
+            
+            function animateParticles() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                particles.forEach(function(p) {
+                    // Update position
+                    p.x += p.speedX;
+                    p.y += p.speedY;
+                    
+                    // Reset if out of bounds
+                    if (p.y > canvas.height) {
+                        p.y = 0;
+                        p.x = Math.random() * canvas.width;
+                    }
+                    if (p.x < 0 || p.x > canvas.width) {
+                        p.x = Math.random() * canvas.width;
+                    }
+                    
+                    // Draw particle
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                    ctx.fillStyle = 'rgba(255, 255, 255, ' + p.opacity + ')';
+                    ctx.fill();
+                });
+                
+                requestAnimationFrame(animateParticles);
+            }
+            
+            resizeCanvas();
+            initParticles();
+            animateParticles();
+            
+            window.addEventListener('resize', function() {
+                resizeCanvas();
+                initParticles();
+            });
+        })();
+
+        // ============================================
+        // IntersectionObserver for Reveal Animations
+        // ============================================
+        (function initRevealAnimations() {
+            const revealElements = document.querySelectorAll('.reveal-element');
+            
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+            
+            const revealObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                        // Optionally unobserve after reveal
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            revealElements.forEach(function(el) {
+                revealObserver.observe(el);
+            });
+        })();
+
+        // ============================================
+        // Dynamic Counter Animation
+        // ============================================
+        (function initCounters() {
+            const counters = document.querySelectorAll('.counter-value[data-target]');
+            
+            const counterObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = parseInt(counter.dataset.target);
+                        const suffix = counter.dataset.suffix || '';
+                        const duration = 2000;
+                        const increment = target / (duration / 16);
+                        let current = 0;
+                        
+                        function updateCounter() {
+                            current += increment;
+                            if (current < target) {
+                                counter.textContent = Math.floor(current) + suffix;
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                counter.textContent = target + suffix;
+                            }
+                        }
+                        
+                        updateCounter();
+                        counterObserver.unobserve(counter);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            counters.forEach(function(counter) {
+                counterObserver.observe(counter);
+            });
+        })();
+
+        // ============================================
+        // Smooth Scroll Navigation
+        // ============================================
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
+                const target = document.querySelector(href);
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
                     });
                 }
             });
         });
 
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
+        // ============================================
+        // Header Scroll Effect
+        // ============================================
+        (function initHeaderScroll() {
             const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
-            } else {
-                header.style.boxShadow = 'none';
-            }
-        });
-
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileNav = document.getElementById('mobileNav');
-
-        mobileMenuBtn.addEventListener('click', function() {
-            this.classList.toggle('active');
-            mobileNav.classList.toggle('active');
-            const isExpanded = this.classList.contains('active');
-            this.setAttribute('aria-expanded', isExpanded);
-        });
-
-        // Close mobile menu when a link is clicked
-        document.querySelectorAll('.mobile-nav-link').forEach(link => {
-            link.addEventListener('click', function() {
-                mobileMenuBtn.classList.remove('active');
-                mobileNav.classList.remove('active');
-                mobileMenuBtn.setAttribute('aria-expanded', 'false');
-            });
-        });
-
-        // Project Scope Calculator Logic
-        // Constants for time calculations
-        const WORK_DAYS_PER_WEEK = 5;
-        const WORK_DAYS_PER_MONTH = 22;
-        const ONE_WEEK_THRESHOLD = 5;
-        const ONE_MONTH_THRESHOLD = 30;
-
-        function calculateProjectEstimate(event) {
-            if (event) event.preventDefault();
+            let lastScrollY = window.scrollY;
             
-            const projectType = document.getElementById('est-type').value;
-            const acres = parseFloat(document.getElementById('est-acres').value) || 0;
-            const terrain = document.getElementById('est-terrain').value;
-            const access = document.getElementById('est-access').value;
+            window.addEventListener('scroll', function() {
+                const currentScrollY = window.scrollY;
+                
+                if (currentScrollY > 100) {
+                    header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+                    header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+                } else {
+                    header.style.boxShadow = 'none';
+                    header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                }
+                
+                lastScrollY = currentScrollY;
+            });
+        })();
 
-            if (!projectType || acres <= 0 || !terrain || !access) {
-                alert('Please fill in all fields to get an estimate.');
-                return;
+        // ============================================
+        // Mobile Menu Toggle
+        // ============================================
+        (function initMobileMenu() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileNav = document.getElementById('mobileNav');
+            
+            if (!mobileMenuBtn || !mobileNav) return;
+
+            mobileMenuBtn.addEventListener('click', function() {
+                this.classList.toggle('active');
+                mobileNav.classList.toggle('active');
+                const isExpanded = this.classList.contains('active');
+                this.setAttribute('aria-expanded', isExpanded.toString());
+                
+                // Prevent body scroll when menu is open
+                document.body.style.overflow = isExpanded ? 'hidden' : '';
+            });
+
+            // Close mobile menu when a link is clicked
+            document.querySelectorAll('.mobile-nav-link').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    mobileMenuBtn.classList.remove('active');
+                    mobileNav.classList.remove('active');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                });
+            });
+        })();
+
+        // ============================================
+        // Project Scope Calculator
+        // ============================================
+        (function initCalculator() {
+            const form = document.getElementById('estimatorForm');
+            if (!form) return;
+            
+            const WORK_DAYS_PER_WEEK = 5;
+            const WORK_DAYS_PER_MONTH = 22;
+            const ONE_WEEK_THRESHOLD = 5;
+            const ONE_MONTH_THRESHOLD = 30;
+
+            function calculateProjectEstimate(event) {
+                if (event) event.preventDefault();
+                
+                const projectType = document.getElementById('est-type').value;
+                const acres = parseFloat(document.getElementById('est-acres').value) || 0;
+                const terrain = document.getElementById('est-terrain').value;
+                const access = document.getElementById('est-access').value;
+
+                if (!projectType || acres <= 0 || !terrain || !access) {
+                    alert('Please fill in all fields to get an estimate.');
+                    return;
+                }
+
+                // Base clearing rates (acres per day)
+                const terrainRates = {
+                    'flat': 8,
+                    'rolling': 5,
+                    'dense': 3,
+                    'rocky': 2,
+                    'wetland': 2.5
+                };
+
+                // Project type multipliers
+                const projectMultipliers = {
+                    'oil': 1.2,
+                    'highway': 1.0,
+                    'utility': 1.1,
+                    'residential': 0.9,
+                    'commercial': 1.0
+                };
+
+                // Access factors
+                const accessFactors = {
+                    'excellent': 1.0,
+                    'good': 1.1,
+                    'moderate': 1.3,
+                    'limited': 1.6
+                };
+
+                const baseRate = terrainRates[terrain];
+                const projectMultiplier = projectMultipliers[projectType];
+                const accessFactor = accessFactors[access];
+                const estimatedDays = Math.ceil((acres / baseRate) * projectMultiplier * accessFactor);
+
+                // Time format
+                let timeEstimate;
+                if (estimatedDays <= ONE_WEEK_THRESHOLD) {
+                    timeEstimate = estimatedDays + ' days';
+                } else if (estimatedDays <= ONE_MONTH_THRESHOLD) {
+                    const weeks = Math.ceil(estimatedDays / WORK_DAYS_PER_WEEK);
+                    timeEstimate = weeks + ' week' + (weeks > 1 ? 's' : '');
+                } else {
+                    const months = Math.ceil(estimatedDays / WORK_DAYS_PER_MONTH);
+                    timeEstimate = months + ' month' + (months > 1 ? 's' : '');
+                }
+
+                // Mulch volume
+                const mulchRates = {
+                    'flat': 15,
+                    'rolling': 25,
+                    'dense': 45,
+                    'rocky': 20,
+                    'wetland': 30
+                };
+                const mulchVolume = Math.round(acres * mulchRates[terrain]);
+
+                // Equipment tier
+                let equipmentTier;
+                if (acres <= 20 && terrain === 'flat') {
+                    equipmentTier = 'Tier 1 - Standard';
+                } else if (acres <= 100 || terrain === 'rolling' || terrain === 'wetland') {
+                    equipmentTier = 'Tier 2 - Heavy Duty';
+                } else {
+                    equipmentTier = 'Tier 3 - Industrial';
+                }
+
+                // Complexity
+                let complexity;
+                const complexityScore = projectMultiplier * accessFactor * (terrain === 'rocky' || terrain === 'dense' ? 1.3 : 1);
+                if (complexityScore < 1.1) {
+                    complexity = 'Low';
+                } else if (complexityScore < 1.4) {
+                    complexity = 'Medium';
+                } else {
+                    complexity = 'High';
+                }
+
+                // Update display
+                document.getElementById('est-time').textContent = timeEstimate;
+                document.getElementById('est-mulch').textContent = mulchVolume.toLocaleString() + ' cu. yards';
+                document.getElementById('est-equipment').textContent = equipmentTier;
+                document.getElementById('est-complexity').textContent = complexity;
             }
 
-            // Base clearing rates (acres per day) by terrain type
-            // Source: Industry averages based on typical equipment productivity
-            // Note: Actual rates vary by vegetation density, soil conditions, and equipment type
-            const terrainRates = {
-                'flat': 8,      // Open terrain with light vegetation
-                'rolling': 5,   // Moderate slopes with mixed vegetation
-                'dense': 3,     // Heavy forest or thick brush
-                'rocky': 2,     // Rocky terrain requiring careful operation
-                'wetland': 2.5  // Wet conditions requiring specialized equipment
-            };
+            form.addEventListener('submit', calculateProjectEstimate);
+        })();
 
-            // Project type complexity multipliers
-            // Based on regulatory requirements and precision needed
-            const projectMultipliers = {
-                'oil': 1.2,       // Strict environmental compliance, precise pad dimensions
-                'highway': 1.0,   // Standard DOT clearing specifications
-                'utility': 1.1,   // Linear clearing with access constraints
-                'residential': 0.9, // Typically smaller scope, fewer restrictions
-                'commercial': 1.0 // Standard commercial site prep
-            };
-
-            // Access factors affect mobilization and timeline
-            const accessFactors = {
-                'excellent': 1.0,   // Paved road access, easy mobilization
-                'good': 1.1,        // Gravel roads, minor delays
-                'moderate': 1.3,    // Seasonal access, weather dependent
-                'limited': 1.6      // No existing access, road construction needed
-            };
-
-            // Calculate estimated days
-            const baseRate = terrainRates[terrain];
-            const projectMultiplier = projectMultipliers[projectType];
-            const accessFactor = accessFactors[access];
-            const estimatedDays = Math.ceil((acres / baseRate) * projectMultiplier * accessFactor);
-
-            // Convert to readable time format using named constants
-            let timeEstimate;
-            if (estimatedDays <= ONE_WEEK_THRESHOLD) {
-                timeEstimate = estimatedDays + ' days';
-            } else if (estimatedDays <= ONE_MONTH_THRESHOLD) {
-                const weeks = Math.ceil(estimatedDays / WORK_DAYS_PER_WEEK);
-                timeEstimate = weeks + ' week' + (weeks > 1 ? 's' : '');
-            } else {
-                const months = Math.ceil(estimatedDays / WORK_DAYS_PER_MONTH);
-                timeEstimate = months + ' month' + (months > 1 ? 's' : '');
+        // ============================================
+        // Keyboard Navigation Support
+        // ============================================
+        document.addEventListener('keydown', function(e) {
+            // ESC key closes mobile menu
+            if (e.key === 'Escape') {
+                const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+                const mobileNav = document.getElementById('mobileNav');
+                if (mobileNav && mobileNav.classList.contains('active')) {
+                    mobileMenuBtn.classList.remove('active');
+                    mobileNav.classList.remove('active');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                }
             }
-
-            // Calculate mulch volume (cubic yards per acre)
-            // Based on typical biomass density for each terrain type
-            const mulchRates = {
-                'flat': 15,     // Light vegetation produces less mulch
-                'rolling': 25,  // Mixed vegetation, moderate volume
-                'dense': 45,    // Heavy forest produces substantial mulch
-                'rocky': 20,    // Mixed, reduced by rock content
-                'wetland': 30   // Dense vegetation typical of wet areas
-            };
-            const mulchVolume = Math.round(acres * mulchRates[terrain]);
-
-            // Determine equipment tier based on project scale and terrain
-            let equipmentTier;
-            if (acres <= 20 && terrain === 'flat') {
-                equipmentTier = 'Tier 1 - Standard';
-            } else if (acres <= 100 || terrain === 'rolling' || terrain === 'wetland') {
-                equipmentTier = 'Tier 2 - Heavy Duty';
-            } else {
-                equipmentTier = 'Tier 3 - Industrial';
-            }
-
-            // Determine project complexity
-            let complexity;
-            const complexityScore = projectMultiplier * accessFactor * (terrain === 'rocky' || terrain === 'dense' ? 1.3 : 1);
-            if (complexityScore < 1.1) {
-                complexity = 'Low';
-            } else if (complexityScore < 1.4) {
-                complexity = 'Medium';
-            } else {
-                complexity = 'High';
-            }
-
-            // Display results
-            document.getElementById('est-time').textContent = timeEstimate;
-            document.getElementById('est-mulch').textContent = mulchVolume.toLocaleString() + ' cu. yards';
-            document.getElementById('est-equipment').textContent = equipmentTier;
-            document.getElementById('est-complexity').textContent = complexity;
-        }
-
-        // Project Scope Calculator form submission handler
-        document.getElementById('estimatorForm').addEventListener('submit', calculateProjectEstimate);
+        });
     </script>
 </body>
 </html>

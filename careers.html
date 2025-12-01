@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers | Join Our Team | Cedrick-Logging.net</title>
+    <meta name="description" content="Build your career with Cedrick-Logging.net. Explore opportunities in site preparation, equipment operation, project management, and technology innovation.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Slab:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pine': { light: '#D4A574', DEFAULT: '#C4956A', dark: '#8B6914' },
+                        'accent-orange': '#FF6B00',
+                        'jet-black': '#1A1A1A',
+                        'charcoal': '#2D2D2D',
+                        'blue-sky': '#87CEEB'
+                    },
+                    fontFamily: {
+                        'slab': ['Roboto Slab', 'Georgia', 'serif'],
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .reveal-element.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .action-btn {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255,107,0,0.4);
+        }
+        .interactive-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .interactive-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        .touch-target {
+            min-width: 44px;
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .job-card {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .job-card:hover {
+            border-color: #FF6B00;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-900 bg-white antialiased">
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm" role="banner">
+        <nav class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto" aria-label="Main navigation">
+            <a href="index.html" class="flex items-center gap-3 no-underline text-black touch-target" aria-label="Cedrick-Logging.net Home">
+                <div class="w-10 h-10 bg-gradient-to-br from-pine to-pine-dark rounded-lg flex items-center justify-center text-white font-bold text-xl" aria-hidden="true">CL</div>
+                <div>
+                    <div class="text-xl font-bold tracking-tight font-slab">Cedrick-Logging.net</div>
+                    <div class="text-xs text-gray-500 uppercase tracking-wider">The Cedrick Thomas Standard</div>
+                </div>
+            </a>
+            <ul class="hidden lg:flex gap-8 list-none items-center" role="menubar">
+                <li role="none"><a href="index.html#services" class="text-gray-600 font-medium hover:text-pine-dark transition-colors touch-target" role="menuitem">Services</a></li>
+                <li role="none"><a href="about.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors touch-target" role="menuitem">About Us</a></li>
+                <li role="none"><a href="investors.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors touch-target" role="menuitem">Investors</a></li>
+                <li role="none"><a href="sustainability.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors touch-target" role="menuitem">Safety</a></li>
+                <li role="none"><a href="careers.html" class="text-accent-orange font-medium touch-target" role="menuitem">Careers</a></li>
+                <li role="none"><a href="contact.html" class="action-btn bg-accent-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors touch-target" role="menuitem">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header" aria-labelledby="page-heading">
+        <div class="container">
+            <h1 id="page-heading">Build Your Career</h1>
+            <p>Join a team that's shaping the future of site preparation</p>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li><a href="index.html">Home</a></li>
+                <li class="separator">/</li>
+                <li class="current" aria-current="page">Careers</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Why Join Us Section -->
+        <section class="section bg-white" aria-labelledby="why-heading">
+            <div class="container">
+                <div class="max-w-4xl mx-auto text-center reveal-element">
+                    <h2 id="why-heading" class="text-3xl md:text-4xl font-bold font-slab mb-6">Why Cedrick-Logging.net?</h2>
+                    <p class="text-xl text-gray-600 mb-8">We're not just clearing land—we're building careers, advancing technology, and creating a sustainable future. When you join our team, you become part of something bigger.</p>
+                </div>
+                
+                <!-- Culture Values Grid -->
+                <div class="grid md:grid-cols-4 gap-6 mt-12">
+                    <div class="interactive-card text-center p-6 bg-gray-50 rounded-2xl reveal-element">
+                        <div class="text-4xl mb-4" aria-hidden="true">🚀</div>
+                        <h3 class="font-bold font-slab mb-2">Growth</h3>
+                        <p class="text-gray-600 text-sm">Continuous learning and advancement opportunities for every team member.</p>
+                    </div>
+                    <div class="interactive-card text-center p-6 bg-gray-50 rounded-2xl reveal-element">
+                        <div class="text-4xl mb-4" aria-hidden="true">🛡️</div>
+                        <h3 class="font-bold font-slab mb-2">Safety</h3>
+                        <p class="text-gray-600 text-sm">Zero-incident culture with comprehensive training and equipment.</p>
+                    </div>
+                    <div class="interactive-card text-center p-6 bg-gray-50 rounded-2xl reveal-element">
+                        <div class="text-4xl mb-4" aria-hidden="true">🌱</div>
+                        <h3 class="font-bold font-slab mb-2">Sustainability</h3>
+                        <p class="text-gray-600 text-sm">Work that makes a positive environmental impact every day.</p>
+                    </div>
+                    <div class="interactive-card text-center p-6 bg-gray-50 rounded-2xl reveal-element">
+                        <div class="text-4xl mb-4" aria-hidden="true">🤝</div>
+                        <h3 class="font-bold font-slab mb-2">Community</h3>
+                        <p class="text-gray-600 text-sm">Family-oriented culture with team events and community involvement.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="section bg-gradient-to-br from-jet-black to-charcoal text-white" aria-labelledby="benefits-heading">
+            <div class="container">
+                <div class="section-header reveal-element" style="color: white;">
+                    <h2 id="benefits-heading" style="color: white;">Benefits & Perks</h2>
+                    <p style="color: rgba(255,255,255,0.8);">We invest in our people</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="reveal-element">
+                        <h3 class="text-xl font-bold font-slab mb-4 text-accent-orange">Health & Wellness</h3>
+                        <ul class="space-y-3 text-white/80">
+                            <li>✓ Comprehensive medical, dental, vision</li>
+                            <li>✓ HSA with company contribution</li>
+                            <li>✓ Mental health support program</li>
+                            <li>✓ Gym membership reimbursement</li>
+                        </ul>
+                    </div>
+                    <div class="reveal-element">
+                        <h3 class="text-xl font-bold font-slab mb-4 text-accent-orange">Financial</h3>
+                        <ul class="space-y-3 text-white/80">
+                            <li>✓ Competitive base salary</li>
+                            <li>✓ Performance bonuses</li>
+                            <li>✓ 401(k) with 6% match</li>
+                            <li>✓ Profit sharing program</li>
+                        </ul>
+                    </div>
+                    <div class="reveal-element">
+                        <h3 class="text-xl font-bold font-slab mb-4 text-accent-orange">Work-Life</h3>
+                        <ul class="space-y-3 text-white/80">
+                            <li>✓ Flexible scheduling</li>
+                            <li>✓ Paid time off (3+ weeks)</li>
+                            <li>✓ Paid parental leave</li>
+                            <li>✓ Remote work options (office roles)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Open Positions Section -->
+        <section class="section bg-white" aria-labelledby="positions-heading">
+            <div class="container">
+                <div class="section-header reveal-element">
+                    <h2 id="positions-heading">Open Positions</h2>
+                    <p>Join a team of 85+ professionals across two locations</p>
+                </div>
+                
+                <!-- Job Listings -->
+                <div class="space-y-6 max-w-4xl mx-auto">
+                    <!-- Job Card 1 -->
+                    <article class="job-card bg-white border border-gray-200 rounded-2xl p-6 reveal-element">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                            <div>
+                                <div class="flex items-center gap-3 mb-2">
+                                    <span class="bg-accent-orange/10 text-accent-orange text-xs font-bold px-3 py-1 rounded-full">FIELD</span>
+                                    <span class="bg-pine/10 text-pine-dark text-xs font-bold px-3 py-1 rounded-full">TUCSON, AZ</span>
+                                </div>
+                                <h3 class="text-xl font-bold font-slab mb-1">Heavy Equipment Operator</h3>
+                                <p class="text-gray-600 text-sm">Operate mulchers, excavators, and graders on site preparation projects. CDL preferred.</p>
+                            </div>
+                            <a href="contact.html" class="action-btn inline-block bg-accent-orange text-white px-6 py-3 rounded-lg font-semibold text-center touch-target whitespace-nowrap">Apply Now →</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Job Card 2 -->
+                    <article class="job-card bg-white border border-gray-200 rounded-2xl p-6 reveal-element">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                            <div>
+                                <div class="flex items-center gap-3 mb-2">
+                                    <span class="bg-accent-orange/10 text-accent-orange text-xs font-bold px-3 py-1 rounded-full">FIELD</span>
+                                    <span class="bg-pine/10 text-pine-dark text-xs font-bold px-3 py-1 rounded-full">ARVADA, CO</span>
+                                </div>
+                                <h3 class="text-xl font-bold font-slab mb-1">Site Foreman</h3>
+                                <p class="text-gray-600 text-sm">Lead crews on site preparation projects. 5+ years experience required. OSHA 30 certification.</p>
+                            </div>
+                            <a href="contact.html" class="action-btn inline-block bg-accent-orange text-white px-6 py-3 rounded-lg font-semibold text-center touch-target whitespace-nowrap">Apply Now →</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Job Card 3 -->
+                    <article class="job-card bg-white border border-gray-200 rounded-2xl p-6 reveal-element">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                            <div>
+                                <div class="flex items-center gap-3 mb-2">
+                                    <span class="bg-blue-sky/30 text-sky-mid text-xs font-bold px-3 py-1 rounded-full">OFFICE</span>
+                                    <span class="bg-pine/10 text-pine-dark text-xs font-bold px-3 py-1 rounded-full">TUCSON, AZ</span>
+                                </div>
+                                <h3 class="text-xl font-bold font-slab mb-1">GIS/LiDAR Specialist</h3>
+                                <p class="text-gray-600 text-sm">Process drone survey data, create site maps, and support precision clearing operations. B.S. in GIS or related field.</p>
+                            </div>
+                            <a href="contact.html" class="action-btn inline-block bg-accent-orange text-white px-6 py-3 rounded-lg font-semibold text-center touch-target whitespace-nowrap">Apply Now →</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Job Card 4 -->
+                    <article class="job-card bg-white border border-gray-200 rounded-2xl p-6 reveal-element">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                            <div>
+                                <div class="flex items-center gap-3 mb-2">
+                                    <span class="bg-blue-sky/30 text-sky-mid text-xs font-bold px-3 py-1 rounded-full">OFFICE</span>
+                                    <span class="bg-gray-100 text-gray-600 text-xs font-bold px-3 py-1 rounded-full">REMOTE</span>
+                                </div>
+                                <h3 class="text-xl font-bold font-slab mb-1">Project Manager</h3>
+                                <p class="text-gray-600 text-sm">Manage multiple site preparation projects. PMP certification preferred. Travel 25%.</p>
+                            </div>
+                            <a href="contact.html" class="action-btn inline-block bg-accent-orange text-white px-6 py-3 rounded-lg font-semibold text-center touch-target whitespace-nowrap">Apply Now →</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Job Card 5 -->
+                    <article class="job-card bg-white border border-gray-200 rounded-2xl p-6 reveal-element">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                            <div>
+                                <div class="flex items-center gap-3 mb-2">
+                                    <span class="bg-accent-orange/10 text-accent-orange text-xs font-bold px-3 py-1 rounded-full">FIELD</span>
+                                    <span class="bg-pine/10 text-pine-dark text-xs font-bold px-3 py-1 rounded-full">MULTIPLE LOCATIONS</span>
+                                </div>
+                                <h3 class="text-xl font-bold font-slab mb-1">Drone Pilot</h3>
+                                <p class="text-gray-600 text-sm">Conduct aerial surveys for site assessment. FAA Part 107 required. LiDAR experience a plus.</p>
+                            </div>
+                            <a href="contact.html" class="action-btn inline-block bg-accent-orange text-white px-6 py-3 rounded-lg font-semibold text-center touch-target whitespace-nowrap">Apply Now →</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Job Card 6 -->
+                    <article class="job-card bg-white border border-gray-200 rounded-2xl p-6 reveal-element">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                            <div>
+                                <div class="flex items-center gap-3 mb-2">
+                                    <span class="bg-accent-orange/10 text-accent-orange text-xs font-bold px-3 py-1 rounded-full">FIELD</span>
+                                    <span class="bg-pine/10 text-pine-dark text-xs font-bold px-3 py-1 rounded-full">TUCSON, AZ</span>
+                                </div>
+                                <h3 class="text-xl font-bold font-slab mb-1">Equipment Mechanic</h3>
+                                <p class="text-gray-600 text-sm">Maintain and repair heavy equipment fleet. Diesel mechanic certification required.</p>
+                            </div>
+                            <a href="contact.html" class="action-btn inline-block bg-accent-orange text-white px-6 py-3 rounded-lg font-semibold text-center touch-target whitespace-nowrap">Apply Now →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Internship Program Section -->
+        <section class="section bg-gray-50" aria-labelledby="internship-heading">
+            <div class="container">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="reveal-element">
+                        <h2 id="internship-heading" class="text-3xl font-bold font-slab mb-4">Summer Internship Program</h2>
+                        <p class="text-gray-600 mb-6">Our 12-week internship provides hands-on experience in site preparation, environmental management, and technology operations. Open to students pursuing degrees in forestry, environmental science, civil engineering, or related fields.</p>
+                        <ul class="space-y-3 text-gray-700 mb-6">
+                            <li class="flex items-start gap-3">
+                                <span class="text-accent-orange" aria-hidden="true">✓</span>
+                                <span>Paid internship ($18-22/hour)</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-accent-orange" aria-hidden="true">✓</span>
+                                <span>Housing assistance available</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-accent-orange" aria-hidden="true">✓</span>
+                                <span>Mentorship from industry professionals</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-accent-orange" aria-hidden="true">✓</span>
+                                <span>Full-time conversion opportunity</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="action-btn inline-block bg-accent-orange text-white px-8 py-4 rounded-lg font-semibold touch-target">Apply for Internship →</a>
+                    </div>
+                    <div class="bg-gradient-to-br from-pine-light to-pine rounded-2xl p-8 text-white reveal-element">
+                        <h3 class="text-2xl font-bold font-slab mb-4">Youth Conservation Corps</h3>
+                        <p class="text-white/90 mb-4">We also partner with local schools through our Youth Conservation Corps program, introducing high school students to careers in sustainable site management.</p>
+                        <div class="grid grid-cols-2 gap-4 mt-6">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold font-slab">500+</div>
+                                <p class="text-sm text-white/70">Students Trained</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold font-slab">85%</div>
+                                <p class="text-sm text-white/70">Conversion Rate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Application CTA Section -->
+        <section class="py-20 bg-gradient-to-br from-black to-charcoal text-white text-center" aria-labelledby="cta-heading">
+            <div class="container reveal-element">
+                <h2 id="cta-heading" class="text-3xl md:text-4xl font-bold font-slab mb-4 text-white">Don't See Your Role?</h2>
+                <p class="text-white/80 mb-8 max-w-2xl mx-auto">We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.</p>
+                <a href="mailto:careers@cedricklogging.com" class="action-btn inline-block bg-accent-orange text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-orange-600 transition-all touch-target">
+                    Submit Your Resume →
+                </a>
+                <p class="text-white/50 text-sm mt-4">careers@cedricklogging.com</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white pt-16 pb-8" role="contentinfo">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                <div class="lg:col-span-2">
+                    <a href="index.html" class="flex items-center gap-3 mb-4 touch-target">
+                        <div class="w-10 h-10 bg-gradient-to-br from-pine to-pine-dark rounded-lg flex items-center justify-center text-white font-bold" aria-hidden="true">CL</div>
+                        <div>
+                            <div class="text-xl font-bold font-slab">Cedrick-Logging.net</div>
+                            <div class="text-xs text-gray-400 uppercase tracking-wider">The Cedrick Thomas Standard</div>
+                        </div>
+                    </a>
+                    <p class="text-gray-400 max-w-sm mb-4">Precision Site Preparation & Land Clearing. Pioneering sustainable clearing solutions since 1998.</p>
+                </div>
+                <nav aria-label="Footer services navigation">
+                    <h4 class="font-bold mb-4 text-white font-slab">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Site Preparation</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-pine-light transition-colors touch-target">ROW Clearing</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Forestry Mulching</a></li>
+                    </ul>
+                </nav>
+                <nav aria-label="Footer industries navigation">
+                    <h4 class="font-bold mb-4 text-white font-slab">Industries</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#sectors" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Energy</a></li>
+                        <li><a href="index.html#sectors" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Infrastructure</a></li>
+                        <li><a href="index.html#sectors" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Development</a></li>
+                    </ul>
+                </nav>
+                <nav aria-label="Footer company navigation">
+                    <h4 class="font-bold mb-4 text-white font-slab">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">About Us</a></li>
+                        <li><a href="investors.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Investors</a></li>
+                        <li><a href="careers.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Careers</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2024 Cedrick-Logging.net. CEO: Cedrick Thomas. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // IntersectionObserver for reveal animations
+        (function() {
+            const revealElements = document.querySelectorAll('.reveal-element');
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            revealElements.forEach(function(el) {
+                observer.observe(el);
+            });
+        })();
+    </script>
+</body>
+</html>

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Request a Quote | Cedrick Logging</title>
-    <meta name="description" content="Contact Cedrick Logging for forestry services, timber sales, carbon credits, or Mass Timber products. Request a quote, schedule a consultation, or visit our offices.">
+    <title>Contact Us | Request a Quote | Cedrick-Logging.net</title>
+    <meta name="description" content="Contact Cedrick-Logging.net for site preparation services, land clearing, or project quotes. Schedule a consultation or visit our offices.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,32 +29,73 @@
             }
         }
     </script>
+    <style>
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .reveal-element.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .action-btn {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255,107,0,0.4);
+        }
+        .interactive-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .interactive-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        .touch-target {
+            min-width: 44px;
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* Form Focus States */
+        .form-input:focus {
+            outline: 2px solid #FF6B00;
+            outline-offset: 2px;
+        }
+    </style>
 </head>
 <body class="font-sans text-gray-900 bg-white antialiased">
     <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm">
-        <nav class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
-            <a href="index.html" class="flex items-center gap-3 no-underline text-black">
-                <div class="w-10 h-10 bg-gradient-to-br from-pine to-pine-dark rounded-lg flex items-center justify-center text-white font-bold text-xl">CL</div>
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm" role="banner">
+        <nav class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto" aria-label="Main navigation">
+            <a href="index.html" class="flex items-center gap-3 no-underline text-black touch-target" aria-label="Cedrick-Logging.net Home">
+                <div class="w-10 h-10 bg-gradient-to-br from-pine to-pine-dark rounded-lg flex items-center justify-center text-white font-bold text-xl" aria-hidden="true">CL</div>
                 <div>
-                    <div class="text-xl font-bold tracking-tight font-slab">Cedrick Logging</div>
+                    <div class="text-xl font-bold tracking-tight font-slab">Cedrick-Logging.net</div>
                     <div class="text-xs text-gray-500 uppercase tracking-wider">The Cedrick Thomas Standard</div>
                 </div>
             </a>
-            <ul class="hidden lg:flex gap-8 list-none">
-                <li><a href="index.html#process" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">Process</a></li>
-                <li><a href="index.html#services" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">Services</a></li>
-                <li><a href="about.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">About Cedrick</a></li>
-                <li><a href="contact.html" class="bg-accent-orange text-white px-6 py-3 rounded-lg font-semibold">Contact Us</a></li>
+            <ul class="hidden lg:flex gap-8 list-none items-center" role="menubar">
+                <li role="none"><a href="index.html#services" class="text-gray-600 font-medium hover:text-pine-dark transition-colors touch-target" role="menuitem">Services</a></li>
+                <li role="none"><a href="about.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors touch-target" role="menuitem">About Us</a></li>
+                <li role="none"><a href="investors.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors touch-target" role="menuitem">Investors</a></li>
+                <li role="none"><a href="sustainability.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors touch-target" role="menuitem">Safety</a></li>
+                <li role="none"><a href="careers.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors touch-target" role="menuitem">Careers</a></li>
+                <li role="none"><a href="contact.html" class="action-btn bg-accent-orange text-white px-6 py-3 rounded-lg font-semibold touch-target" role="menuitem">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <section class="page-header" aria-labelledby="page-heading">
         <div class="container">
-            <h1>Contact Us</h1>
-            <p>Ready to maximize your forest's potential? Our team is here to help landowners and buyers achieve their goals.</p>
+            <h1 id="page-heading">Contact Us</h1>
+            <p>Ready to start your project? Our team is here to help.</p>
         </div>
     </section>
 
@@ -318,81 +359,71 @@
             </div>
 
             <!-- Partnership Inquiry -->
-            <div class="bg-jet-black rounded-2xl p-8 text-white mb-16">
+            <div class="bg-jet-black rounded-2xl p-8 text-white mb-16 reveal-element">
                 <div class="grid md:grid-cols-2 gap-8 items-center">
                     <div>
                         <h3 class="text-2xl font-bold font-slab mb-4">Partnership Opportunities</h3>
                         <p class="text-white/80 mb-4">
-                            We're always looking for partnerships with mills, contractors, technology providers, and sustainability organizations. If you're interested in collaborating with Cedrick Logging, we'd love to hear from you.
+                            We're always looking for partnerships with contractors, technology providers, and industry partners. If you're interested in collaborating with Cedrick-Logging.net, we'd love to hear from you.
                         </p>
                         <ul class="space-y-2 text-white/90">
-                            <li>✓ Mill partnerships and supply agreements</li>
+                            <li>✓ General contractor partnerships</li>
                             <li>✓ Technology integration partnerships</li>
-                            <li>✓ Sustainability certification bodies</li>
+                            <li>✓ Equipment supplier relationships</li>
                             <li>✓ Research and academic collaborations</li>
                         </ul>
                     </div>
                     <div class="text-center">
                         <p class="text-white/70 mb-4">For partnership inquiries:</p>
-                        <a href="mailto:partnerships@cedricklogging.com" class="text-accent-orange font-bold text-xl hover:underline">partnerships@cedricklogging.com</a>
+                        <a href="mailto:partnerships@cedrick-logging.net" class="text-accent-orange font-bold text-xl hover:underline">partnerships@cedrick-logging.net</a>
                     </div>
                 </div>
-            </div>
-
-            <!-- Live Chat Placeholder -->
-            <div class="content-card text-center mb-16">
-                <div class="text-4xl mb-4">💬</div>
-                <h3 class="font-bold font-slab text-xl mb-2">Live Chat Coming Soon</h3>
-                <p class="text-gray-600 max-w-lg mx-auto">
-                    We're implementing live chat support to provide instant answers during business hours. In the meantime, please use our contact forms or call us directly.
-                </p>
             </div>
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-black text-white pt-16 pb-8">
+    <footer class="bg-black text-white pt-16 pb-8" role="contentinfo">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-                <div>
-                    <a href="index.html" class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 bg-gradient-to-br from-pine to-pine-dark rounded-lg flex items-center justify-center text-white font-bold">CL</div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                <div class="lg:col-span-2">
+                    <a href="index.html" class="flex items-center gap-3 mb-4 touch-target">
+                        <div class="w-10 h-10 bg-gradient-to-br from-pine to-pine-dark rounded-lg flex items-center justify-center text-white font-bold" aria-hidden="true">CL</div>
                         <div>
-                            <div class="text-xl font-bold font-slab">Cedrick Logging</div>
+                            <div class="text-xl font-bold font-slab">Cedrick-Logging.net</div>
                             <div class="text-xs text-gray-400 uppercase tracking-wider">The Cedrick Thomas Standard</div>
                         </div>
                     </a>
-                    <p class="text-gray-400 max-w-sm">From Seedling to Solution. Pioneering sustainable forestry through precision technology.</p>
+                    <p class="text-gray-400 max-w-sm">Precision Site Preparation & Land Clearing. Pioneering sustainable clearing solutions since 1998.</p>
                 </div>
-                <div>
+                <nav aria-label="Footer services navigation">
                     <h4 class="font-bold mb-4 text-white font-slab">Services</h4>
                     <ul class="space-y-2">
-                        <li><a href="gis-lidar.html" class="text-gray-400 hover:text-pine-light transition-colors">GIS/LiDAR Mapping</a></li>
-                        <li><a href="carbon-credits.html" class="text-gray-400 hover:text-pine-light transition-colors">Carbon Credits</a></li>
-                        <li><a href="mass-timber.html" class="text-gray-400 hover:text-pine-light transition-colors">Mass Timber/CLT</a></li>
-                        <li><a href="sustainability.html" class="text-gray-400 hover:text-pine-light transition-colors">Sustainable Forestry</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Site Preparation</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-pine-light transition-colors touch-target">ROW Clearing</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Forestry Mulching</a></li>
                     </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4 text-white font-slab">Resources</h4>
+                </nav>
+                <nav aria-label="Footer industries navigation">
+                    <h4 class="font-bold mb-4 text-white font-slab">Industries</h4>
                     <ul class="space-y-2">
-                        <li><a href="landowner-resources.html" class="text-gray-400 hover:text-pine-light transition-colors">Landowner Resources</a></li>
-                        <li><a href="buyer-resources.html" class="text-gray-400 hover:text-pine-light transition-colors">Buyer Resources</a></li>
-                        <li><a href="faq.html" class="text-gray-400 hover:text-pine-light transition-colors">FAQ</a></li>
-                        <li><a href="case-studies.html" class="text-gray-400 hover:text-pine-light transition-colors">Case Studies</a></li>
+                        <li><a href="index.html#sectors" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Energy</a></li>
+                        <li><a href="index.html#sectors" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Infrastructure</a></li>
+                        <li><a href="index.html#sectors" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Development</a></li>
                     </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4 text-white font-slab">Contact</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li>📍 6261 N La Cholla Blvd, Tucson, AZ</li>
-                        <li>📞 +1 (520) 427-9815</li>
-                        <li>✉️ info@cedricklogging.com</li>
+                </nav>
+                <nav aria-label="Footer company navigation">
+                    <h4 class="font-bold mb-4 text-white font-slab">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">About Us</a></li>
+                        <li><a href="investors.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Investors</a></li>
+                        <li><a href="careers.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Careers</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Contact</a></li>
                     </ul>
-                </div>
+                </nav>
             </div>
             <div class="border-t border-white/10 pt-8 text-center text-gray-500 text-sm">
-                <p>&copy; 2024 Cedrick Logging. CEO: Cedrick Thomas. All rights reserved.</p>
+                <p>&copy; 2024 Cedrick-Logging.net. CEO: Cedrick Thomas. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -410,6 +441,22 @@
             alert('Thank you for your quote request! Our sales team will respond within 24 hours.');
             this.reset();
         });
+
+        // IntersectionObserver for reveal animations
+        (function() {
+            const revealElements = document.querySelectorAll('.reveal-element');
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            revealElements.forEach(function(el) {
+                observer.observe(el);
+            });
+        })();
     </script>
 </body>
 </html>
