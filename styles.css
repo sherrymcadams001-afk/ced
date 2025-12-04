@@ -9,49 +9,49 @@
    Enterprise Lux: Desaturated Primaries + Semantic Constraint
    ==================================== */
 :root {
-    /* Colors - Desaturated Primaries (Reduced Retinal Fatigue) */
-    --pine-light: #D4A574;
-    --pine: #B8997A;
-    --pine-dark: #7A6B4E;
-    --accent-orange: #E8722A;
-    --accent-glow: rgba(232, 114, 42, 0.15);
-    --jet-black: #0A0A0B;
-    --charcoal: #18181B;
-    --slate: #27272A;
-    --blue-sky: #7DD3FC;
-    --white: #FAFAFA;
+    /* Colors - Enterprise Forestry Palette */
+    --pine-light: #52796F;
+    --pine: #2F4F4F;
+    --pine-dark: #1B4332;
+    --accent-orange: #F59E0B;
+    --accent-glow: rgba(245, 158, 11, 0.15);
+    --jet-black: #0F172A;
+    --charcoal: #1E293B;
+    --slate: #334155;
+    --blue-sky: #4A5568;
+    --white: #FFFFFF;
     
     /* Atmospheric Grays (Luma Elevation Stack) */
-    --gray-50: #FAFAFA;
-    --gray-100: #F4F4F5;
-    --gray-200: #E4E4E7;
-    --gray-300: #D4D4D8;
-    --gray-400: #A1A1AA;
-    --gray-500: #71717A;
-    --gray-600: #52525B;
-    --gray-700: #3F3F46;
-    --gray-800: #27272A;
-    --gray-900: #18181B;
+    --gray-50: #F8FAFC;
+    --gray-100: #F1F5F9;
+    --gray-200: #E2E8F0;
+    --gray-300: #CBD5E1;
+    --gray-400: #94A3B8;
+    --gray-500: #64748B;
+    --gray-600: #475569;
+    --gray-700: #334155;
+    --gray-800: #1E293B;
+    --gray-900: #0F172A;
     
     /* Semantic Status Colors Only */
-    --status-success: #22C55E;
+    --status-success: #10B981;
     --status-warning: #F59E0B;
     --status-error: #EF4444;
     --status-info: #3B82F6;
     
-    /* Atmospheric Depth (Soft Shadows) */
+    /* Atmospheric Depth (Soft Shadows) - Enterprise Green Tint */
     --shadow-ambient: 0 0 0 1px rgba(0, 0, 0, 0.03);
     --shadow-soft: 
-        0 2px 4px rgba(99, 102, 241, 0.04),
-        0 4px 12px rgba(99, 102, 241, 0.06);
+        0 2px 4px rgba(27, 67, 50, 0.04),
+        0 4px 12px rgba(27, 67, 50, 0.06);
     --shadow-elevated: 
-        0 4px 6px rgba(99, 102, 241, 0.05),
-        0 12px 24px rgba(99, 102, 241, 0.08),
-        0 24px 48px rgba(99, 102, 241, 0.06);
+        0 4px 6px rgba(27, 67, 50, 0.05),
+        0 12px 24px rgba(27, 67, 50, 0.08),
+        0 24px 48px rgba(27, 67, 50, 0.06);
     --shadow-float: 
-        0 8px 16px rgba(99, 102, 241, 0.06),
-        0 24px 48px rgba(99, 102, 241, 0.1),
-        0 48px 80px rgba(99, 102, 241, 0.08);
+        0 8px 16px rgba(27, 67, 50, 0.06),
+        0 24px 48px rgba(27, 67, 50, 0.1),
+        0 48px 80px rgba(27, 67, 50, 0.08);
     
     /* The 1px Glow - Activity Signal */
     --glow-active: inset 0 1px 0 rgba(255, 255, 255, 0.12);
