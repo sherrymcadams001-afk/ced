@@ -1,6 +1,6 @@
-# Cedrick Logging - Professional Land Clearing Contractor
+# Cedrick Logging - Sustainable Timber Harvesting & Forest Management
 
-A premium enterprise web portfolio for **Cedrick Logging** (CEO: Cedrick Thomas), a professional land clearing and site preparation contractor serving the Energy, Infrastructure, and Development sectors across North America.
+A professional web portfolio for **Cedrick Logging** (CEO: Cedrick Thomas), a sustainable timber harvesting company serving commercial timber, forest management, and landowner markets across North America.
 
 ## Company Information
 
@@ -15,25 +15,25 @@ A premium enterprise web portfolio for **Cedrick Logging** (CEO: Cedrick Thomas)
 📞 +1 (520) 427-9815  
 ✉️ info@cedricklogging.com
 
-## Core Business Sectors (The "Trident" Strategy)
+## Core Market Sectors
 
-1. **Energy (Oil & Gas)**: Clearing Well Pads, Pipeline Right-of-Ways (ROW), Seismic lines
-2. **Infrastructure**: Clearing for Highways, Roads, and Utility corridors
-3. **Development**: Clearing for Residential Subdivisions and Commercial Construction
+1. **Commercial Timber**: Selective harvesting, clear-cut operations, salvage logging for lumber mills and pulp producers
+2. **Forest Management**: Forest thinning, fuel reduction, habitat restoration, and wildfire prevention
+3. **Public & Private Lands**: Federal contracts, TIMO/REIT partnerships, and private landowner services
 
 ## Technology Stack
 
-- **Tailwind CSS** - Enterprise-grade utility-first CSS framework
+- **Tailwind CSS** - Utility-first CSS framework
 - **Google Fonts** - Inter (body) + Roboto Slab (headers)
 - **Vanilla JavaScript** - Interactive calculators and forms
 
 ## Design Philosophy
 
 This portfolio implements a "Tech-Stewardship" approach that combines:
-- **Corporate Authority**: Trust indicators, certifications (OSHA, Zero-Burn, Fully Insured)
+- **Corporate Authority**: Trust indicators, certifications (FSC, SFI, OSHA)
 - **Modern Industrial Aesthetics**: Clean, sophisticated "Tech-Timber" design (White/Pine/Black palette)
 - **Cinematic UX**: Blue sky imagery, horizontal scroll workflow, high-end typography
-- **Human Trust**: Cedrick Thomas's personal commitment to responsible clearing
+- **Human Trust**: Cedrick Thomas's personal commitment to sustainable forestry
 
 ## Brand Identity
 
@@ -50,47 +50,47 @@ This portfolio implements a "Tech-Stewardship" approach that combines:
 ## Site Architecture
 
 ### A. Kinetic Homepage (Hero Section)
-- Full-width drone video background over clearing site (blue sky gradient)
-- **Tagline**: "Precision Site Preparation & Land Clearing. The Cedrick Thomas Standard."
+- Full-width gradient background with animated particles
+- **Tagline**: "Sustainable Timber Harvesting. Built for the Future. The Cedrick Thomas Standard."
 - **Split-Path Navigation**: 
-  - "Start a Project" (Project Assessment)
+  - "Start Your Project" (Contact/Consultation)
   - "Our Services" (Service Overview)
 
-### B. Process Section (Site Prep Workflow)
+### B. Process Section (Timber Harvesting Workflow)
 - **Horizontal Scroll Workflow Visual Flow**
-- Stages: Survey/GIS → Precision Clearing → Biomass Mulching → Grubbing & Grading → Final Site Delivery
-- Tech badges highlight GPS and Zero-Burn technology
+- Stages: Timber Cruise → Selective Felling → Skidding & Yarding → Processing & Scaling → Reforestation
+- Tech badges highlight LiDAR, GPS-guided harvesting, and 3-for-1 replanting
 
 ### C. Services Grid
-- **Site Preparation**: Complete vegetation removal, grubbing, and grading
-- **Right-of-Way (ROW)**: Linear clearing for pipelines, power lines, highways
-- **Forestry Mulching**: Sustainable biomass management with zero-burn policies
-- **Civil Earthworks**: Access road construction and drainage integration
-- **Residential Clearing**: Lot clearing for subdivisions and developments
-- **Rig Mats & Access**: Temporary platforms for heavy machinery stability
+- **Timber Harvesting**: Selective and clear-cut operations optimized for timber value
+- **Forest Thinning**: Strategic thinning to improve stand health and reduce wildfire risk
+- **Salvage Logging**: Rapid-response salvage for fire-damaged or beetle-killed timber
+- **Road Construction**: Forest road building, maintenance, and decommissioning
+- **Reforestation**: Site prep and replanting with 3-for-1 seedling program
+- **Timber Cruising**: LiDAR-enhanced forest inventory and volume estimation
 
 ### D. The Cedrick Factor (About/Trust)
 - High-resolution portrait placeholder (high-tech safety gear, tablet in hand)
-- **Theme**: "Generational Trust meets Precision Technology"
-- Sustainability message: "We clear responsibly"
+- **Theme**: "Third-Generation Forestry Meets Modern Technology"
+- Sustainability message: "We harvest responsibly"
 
-### E. Project Scope Calculator
-- Interactive tool for preliminary project estimates
-- Inputs: Project Type, Acreage, Terrain Type, Site Access
-- Outputs: Estimated Time to Clear, Mulch Volume, Equipment Tier, Project Complexity
+### E. Harvest Volume Estimator
+- Interactive tool for preliminary harvest estimates
+- Inputs: Harvest Type, Forested Acreage, Terrain Type, Forest Road Access
+- Outputs: Estimated Duration, Timber Volume (MBF), Equipment Requirements, Operation Complexity
 
 ### F. Contact Section
 - Headquarters (Tucson, AZ) and Colorado Branch (Arvada, CO) locations
 - Direct phone: +1 (520) 427-9815
-- Industries served banner: Oil & Gas, Infrastructure, Utilities, Residential, Commercial
+- Markets served: Lumber Mills, Pulp & Paper, TIMOs & REITs, Private Landowners, Federal Forests
 
 ## Sustainability Commitment
 
-Cedrick Logging operates with a "Clear Responsibly" philosophy:
-- **Zero-Burn Policies**: No burning of cleared vegetation
-- **Forestry Mulching**: Converts cleared biomass into erosion control ground cover
-- **Timber Repurposing**: Cleared timber used for site access mats
-- **Environmental Compliance**: Full adherence to environmental regulations
+Cedrick Logging operates with a "Harvest Responsibly" philosophy:
+- **3-for-1 Reforestation**: Three seedlings planted for every tree harvested
+- **Selective Harvesting**: GPS-guided precision minimizes residual stand damage
+- **FSC/SFI Certification**: Full compliance with sustainable forestry standards
+- **Environmental Compliance**: Streamside buffers, erosion control, wildlife habitat protection
 
 ## Features
 
@@ -100,26 +100,27 @@ Cedrick Logging operates with a "Clear Responsibly" philosophy:
 - Blue Sky imagery throughout
 - Clean, modern, professional aesthetic
 - Responsive design for all devices
-- Built with Tailwind CSS for enterprise scalability
+- Built with Tailwind CSS
 
 ### Interactive Tools
-- **Project Scope Calculator**: Estimate clearing time, mulch volume, equipment needs
+- **Harvest Volume Estimator**: Estimate harvest duration, timber volume, equipment needs
 
-## Industries Served
+## Markets Served
 
-- 🛢️ Oil & Gas
-- 🛣️ Infrastructure / Highways
-- ⚡ Utility Corridors
-- 🏘️ Residential Development
-- 🏢 Commercial Construction
+- 🪵 Lumber Mills & Sawmills
+- 📜 Pulp & Paper Industry
+- 🏛️ TIMOs & REITs
+- 🌲 Private Landowners
+- 🏞️ Federal & State Forests
 
 ## Certifications & Compliance
 
-- Zero-Burn Certified
+- FSC Chain of Custody Certified
+- SFI Certified
 - OSHA Compliant
 - Fully Insured
 
 ## CEO
 
 **Cedrick Thomas** - Cedrick Logging  
-*"Precision Site Preparation & Land Clearing. The Cedrick Thomas Standard."*
+*"Sustainable Timber Harvesting. Built for the Future. The Cedrick Thomas Standard."*

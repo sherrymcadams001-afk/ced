@@ -35,10 +35,17 @@
     <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm">
         <nav class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
             <a href="index.html" class="flex items-center gap-3 no-underline text-black">
-                <div class="w-10 h-10 bg-gradient-to-br from-pine to-pine-dark rounded-lg flex items-center justify-center text-white font-bold text-xl">CL</div>
+                <svg class="w-10 h-10" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect width="40" height="40" rx="8" fill="url(#logo-gradient)"/>
+                    <path d="M20 6L24 14L20 12L16 14L20 6Z" fill="#2D5016"/>
+                    <path d="M20 11L26 22L20 19L14 22L20 11Z" fill="#3D6B1E"/>
+                    <path d="M20 17L28 32L20 28L12 32L20 17Z" fill="#4A7F24"/>
+                    <rect x="18" y="30" width="4" height="4" rx="1" fill="#8B6914"/>
+                    <defs><linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#C4956A"/><stop offset="1" stop-color="#8B6914"/></linearGradient></defs>
+                </svg>
                 <div>
                     <div class="text-xl font-bold tracking-tight font-slab">Cedrick Logging</div>
-                    <div class="text-xs text-gray-500 uppercase tracking-wider">The Cedrick Thomas Standard</div>
+                    <div class="text-xs text-gray-500 uppercase tracking-wider">Sustainable Forestry Leadership</div>
                 </div>
             </a>
             <ul class="hidden lg:flex gap-8 list-none">
@@ -189,42 +196,78 @@
             <h2 class="text-3xl font-bold font-slab mb-8 text-center">Dashboard Features</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
                 <div class="content-card">
-                    <div class="text-3xl mb-4">📊</div>
+                    <div class="icon-badge mb-4" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M4 19h16" stroke-width="1.6" stroke-linecap="round"/>
+                            <path d="M8 19V9" stroke-width="1.6" stroke-linecap="round"/>
+                            <path d="M12 19V5" stroke-width="1.6" stroke-linecap="round"/>
+                            <path d="M16 19v-6" stroke-width="1.6" stroke-linecap="round"/>
+                        </svg>
+                    </div>
                     <h3 class="font-bold font-slab text-lg mb-2">Real-Time Monitoring</h3>
                     <p class="text-gray-600 text-sm">
                         Satellite imagery updates every 10 days to track canopy changes, disturbances, and growth patterns across your entire property.
                     </p>
                 </div>
                 <div class="content-card">
-                    <div class="text-3xl mb-4">📈</div>
+                    <div class="icon-badge mb-4" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M4 15l5-5 4 4 7-9" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15 5h6v6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
                     <h3 class="font-bold font-slab text-lg mb-2">Growth Projections</h3>
                     <p class="text-gray-600 text-sm">
                         Proprietary models predict volume growth 5, 10, and 20 years into the future based on species, site index, and climate factors.
                     </p>
                 </div>
                 <div class="content-card">
-                    <div class="text-3xl mb-4">💹</div>
+                    <div class="icon-badge mb-4" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M5 19V7" stroke-width="1.6" stroke-linecap="round"/>
+                            <path d="M10 19V5" stroke-width="1.6" stroke-linecap="round"/>
+                            <path d="M15 19V9" stroke-width="1.6" stroke-linecap="round"/>
+                            <path d="M20 19V11" stroke-width="1.6" stroke-linecap="round"/>
+                            <path d="M3 19h18" stroke-width="1.6" stroke-linecap="round"/>
+                        </svg>
+                    </div>
                     <h3 class="font-bold font-slab text-lg mb-2">Market Analytics</h3>
                     <p class="text-gray-600 text-sm">
                         Track regional timber prices, identify optimal harvest timing, and compare your returns to market benchmarks.
                     </p>
                 </div>
                 <div class="content-card">
-                    <div class="text-3xl mb-4">🌡️</div>
+                    <div class="icon-badge mb-4" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M12 15a3 3 0 11-3 3V6a3 3 0 016 0v12" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 9v10" stroke-width="1.6" stroke-linecap="round"/>
+                        </svg>
+                    </div>
                     <h3 class="font-bold font-slab text-lg mb-2">Health Indicators</h3>
                     <p class="text-gray-600 text-sm">
                         Early detection of pest infestations, disease outbreaks, and drought stress through spectral analysis and machine learning.
                     </p>
                 </div>
                 <div class="content-card">
-                    <div class="text-3xl mb-4">💰</div>
+                    <div class="icon-badge mb-4" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <circle cx="12" cy="12" r="7" stroke-width="1.6"/>
+                            <path d="M10 10.5c0-.9 1-1.5 2-1.5s2 .6 2 1.5-1 1.5-2 1.5-2 .6-2 1.5 1 1.5 2 1.5 2-.6 2-1.5" stroke-width="1.6" stroke-linecap="round"/>
+                            <path d="M12 7.5v9" stroke-width="1.6" stroke-linecap="round"/>
+                        </svg>
+                    </div>
                     <h3 class="font-bold font-slab text-lg mb-2">ROI Tracking</h3>
                     <p class="text-gray-600 text-sm">
                         Monitor your investment performance over time, including timber appreciation, carbon credit income, and management costs.
                     </p>
                 </div>
                 <div class="content-card">
-                    <div class="text-3xl mb-4">📱</div>
+                    <div class="icon-badge mb-4" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <rect x="7" y="4" width="10" height="16" rx="2" stroke-width="1.6"/>
+                            <circle cx="12" cy="17" r="1" fill="currentColor"/>
+                        </svg>
+                    </div>
                     <h3 class="font-bold font-slab text-lg mb-2">Mobile App</h3>
                     <p class="text-gray-600 text-sm">
                         Access your forest data on the go with our iOS and Android apps. Field mapping, photo documentation, and offline access.
@@ -294,28 +337,28 @@
                     </p>
                     <ul class="feature-list">
                         <li>
-                            <span class="icon">🔐</span>
+                            <span class="icon"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg></span>
                             <div>
                                 <h4>Secure Login</h4>
                                 <p>Two-factor authentication protects your data. Role-based access for family members or advisors.</p>
                             </div>
                         </li>
                         <li>
-                            <span class="icon">📄</span>
+                            <span class="icon"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></span>
                             <div>
                                 <h4>Document Library</h4>
                                 <p>All contracts, survey reports, and certifications stored in one place.</p>
                             </div>
                         </li>
                         <li>
-                            <span class="icon">📧</span>
+                            <span class="icon"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></span>
                             <div>
                                 <h4>Alert Notifications</h4>
                                 <p>Email and SMS alerts for health issues, market opportunities, or scheduled activities.</p>
                             </div>
                         </li>
                         <li>
-                            <span class="icon">💬</span>
+                            <span class="icon"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg></span>
                             <div>
                                 <h4>Direct Messaging</h4>
                                 <p>Communicate directly with your assigned forester through the portal.</p>
@@ -334,14 +377,27 @@
                         <h4 class="font-bold font-slab text-lg mb-4">Mobile Apps</h4>
                         <div class="space-y-3">
                             <a href="#" class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                                <span class="text-2xl">📱</span>
+                                <span class="icon-badge icon-badge--sm" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <rect x="8" y="5" width="8" height="14" rx="2" stroke-width="1.6"/>
+                                        <circle cx="12" cy="16.5" r="0.9" fill="currentColor"/>
+                                    </svg>
+                                </span>
                                 <div>
                                     <p class="font-semibold text-sm">iOS App</p>
                                     <p class="text-xs text-gray-500">Download on App Store</p>
                                 </div>
                             </a>
                             <a href="#" class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                                <span class="text-2xl">🤖</span>
+                                <span class="icon-badge icon-badge--sm" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <rect x="6" y="9" width="12" height="8" rx="2" stroke-width="1.6"/>
+                                        <path d="M9 9V6m6 3V6" stroke-width="1.6" stroke-linecap="round"/>
+                                        <path d="M8 17v2m8-2v2" stroke-width="1.6" stroke-linecap="round"/>
+                                        <circle cx="10" cy="13" r="1" fill="currentColor"/>
+                                        <circle cx="14" cy="13" r="1" fill="currentColor"/>
+                                    </svg>
+                                </span>
                                 <div>
                                     <p class="font-semibold text-sm">Android App</p>
                                     <p class="text-xs text-gray-500">Get on Google Play</p>
@@ -370,10 +426,17 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                 <div>
                     <a href="index.html" class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 bg-gradient-to-br from-pine to-pine-dark rounded-lg flex items-center justify-center text-white font-bold">CL</div>
+                        <svg class="w-10 h-10" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect width="40" height="40" rx="8" fill="url(#footer-logo-gradient)"/>
+                            <path d="M20 6L24 14L20 12L16 14L20 6Z" fill="#2D5016"/>
+                            <path d="M20 11L26 22L20 19L14 22L20 11Z" fill="#3D6B1E"/>
+                            <path d="M20 17L28 32L20 28L12 32L20 17Z" fill="#4A7F24"/>
+                            <rect x="18" y="30" width="4" height="4" rx="1" fill="#8B6914"/>
+                            <defs><linearGradient id="footer-logo-gradient" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#C4956A"/><stop offset="1" stop-color="#8B6914"/></linearGradient></defs>
+                        </svg>
                         <div>
                             <div class="text-xl font-bold font-slab">Cedrick Logging</div>
-                            <div class="text-xs text-gray-400 uppercase tracking-wider">The Cedrick Thomas Standard</div>
+                            <div class="text-xs text-gray-400 uppercase tracking-wider">Sustainable Forestry Leadership</div>
                         </div>
                     </a>
                     <p class="text-gray-400 max-w-sm">From Seedling to Solution. Pioneering sustainable forestry through precision technology.</p>
@@ -399,14 +462,36 @@
                 <div>
                     <h4 class="font-bold mb-4 text-white font-slab">Contact</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li>📍 6261 N La Cholla Blvd, Tucson, AZ</li>
-                        <li>📞 +1 (520) 427-9815</li>
-                        <li>✉️ info@cedricklogging.com</li>
+                        <li class="flex items-center gap-3">
+                            <span class="contact-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 21s6-4.35 6-9.25A6 6 0 006 11.75C6 16.65 12 21 12 21z"/>
+                                    <circle cx="12" cy="11" r="2.5" stroke-width="1.5"/>
+                                </svg>
+                            </span>
+                            <span>6261 N La Cholla Blvd, Tucson, AZ</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="contact-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                </svg>
+                            </span>
+                            <span>+1 (520) 427-9580</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="contact-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                            </span>
+                            <span>info@cedricklogging.com</span>
+                        </li>
                     </ul>
                 </div>
             </div>
             <div class="border-t border-white/10 pt-8 text-center text-gray-500 text-sm">
-                <p>&copy; 2024 Cedrick Logging. CEO: Cedrick Thomas. All rights reserved.</p>
+                <p>&copy; 2025 Cedrick Logging. All rights reserved.</p>
             </div>
         </div>
     </footer>

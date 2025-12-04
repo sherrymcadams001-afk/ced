@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investor Relations | Growth & Financials | Cedrick-Logging.net</title>
-    <meta name="description" content="Explore investment opportunities with Cedrick-Logging.net. Review our financial performance, growth trajectory, and strategic vision for the future of site preparation.">
+    <title>Investor Relations | Growth & Financials | Cedrick Logging</title>
+    <meta name="description" content="Explore investment opportunities with Cedrick Logging. Review our financial performance, growth trajectory, and strategic vision for the future of sustainable forestry.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -60,17 +60,16 @@
             min-height: 44px;
             display: inline-flex;
             align-items: center;
-            justify-content: center;
         }
         .growth-bar {
             height: 8px;
             background: linear-gradient(90deg, #FF6B00 0%, #C4956A 100%);
             border-radius: 4px;
-            animation: growBar 1.5s ease forwards;
+            width: 0;
+            transition: width 1.5s ease;
         }
-        @keyframes growBar {
-            from { width: 0; }
-            to { width: 100%; }
+        .growth-bar.animate {
+            /* Width set via data-width attribute and JavaScript */
         }
     </style>
 </head>
@@ -78,15 +77,22 @@
     <!-- Header Navigation -->
     <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm" role="banner">
         <nav class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto" aria-label="Main navigation">
-            <a href="index.html" class="flex items-center gap-3 no-underline text-black touch-target" aria-label="Cedrick-Logging.net Home">
-                <div class="w-10 h-10 bg-gradient-to-br from-pine to-pine-dark rounded-lg flex items-center justify-center text-white font-bold text-xl" aria-hidden="true">CL</div>
+            <a href="index.html" class="flex items-center gap-3 no-underline text-black touch-target" aria-label="Cedrick Logging Home">
+                <svg class="w-10 h-10" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect width="40" height="40" rx="8" fill="url(#logo-gradient)"/>
+                    <path d="M20 6L24 14L20 12L16 14L20 6Z" fill="#2D5016"/>
+                    <path d="M20 11L26 22L20 19L14 22L20 11Z" fill="#3D6B1E"/>
+                    <path d="M20 17L28 32L20 28L12 32L20 17Z" fill="#4A7F24"/>
+                    <rect x="18" y="30" width="4" height="4" rx="1" fill="#8B6914"/>
+                    <defs><linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#C4956A"/><stop offset="1" stop-color="#8B6914"/></linearGradient></defs>
+                </svg>
                 <div>
-                    <div class="text-xl font-bold tracking-tight font-slab">Cedrick-Logging.net</div>
-                    <div class="text-xs text-gray-500 uppercase tracking-wider">The Cedrick Thomas Standard</div>
+                    <div class="text-xl font-bold tracking-tight font-slab">Cedrick Logging</div>
+                    <div class="text-xs text-gray-500 uppercase tracking-wider">Sustainable Forestry Leadership</div>
                 </div>
             </a>
             <ul class="hidden lg:flex gap-8 list-none items-center" role="menubar">
-                <li role="none"><a href="index.html#services" class="text-gray-600 font-medium hover:text-pine-dark transition-colors touch-target" role="menuitem">Services</a></li>
+                <li role="none"><a href="services.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors touch-target" role="menuitem">Services</a></li>
                 <li role="none"><a href="about.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors touch-target" role="menuitem">About Us</a></li>
                 <li role="none"><a href="investors.html" class="text-accent-orange font-medium touch-target" role="menuitem">Investors</a></li>
                 <li role="none"><a href="sustainability.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors touch-target" role="menuitem">Safety</a></li>
@@ -122,7 +128,7 @@
             <div class="container">
                 <div class="max-w-4xl mx-auto text-center reveal-element">
                     <h2 id="thesis-heading" class="text-3xl md:text-4xl font-bold font-slab mb-6">Investment Thesis</h2>
-                    <p class="text-xl text-gray-600 mb-8">Cedrick-Logging.net represents a compelling opportunity in the growing site preparation and land clearing market, driven by infrastructure spending, energy development, and residential construction.</p>
+                    <p class="text-xl text-gray-600 mb-8">Cedrick Logging represents a compelling opportunity in the $20B+ U.S. timber harvesting market, driven by sustainable forestry demand, mass timber construction growth, and increasing timber prices.</p>
                 </div>
                 
                 <!-- Key Metrics Grid -->
@@ -152,43 +158,43 @@
             <div class="container">
                 <div class="section-header reveal-element">
                     <h2 id="market-heading">Market Opportunity</h2>
-                    <p>Positioned at the intersection of three high-growth sectors</p>
+                    <p>Positioned at the intersection of three high-growth forestry segments</p>
                 </div>
                 <div class="grid md:grid-cols-3 gap-8">
                     <div class="content-card reveal-element">
-                        <div class="text-4xl mb-4" aria-hidden="true">⚡</div>
-                        <h3 class="font-bold font-slab text-xl mb-3">Energy Sector</h3>
-                        <p class="text-gray-600 mb-4">$1.2T in planned energy infrastructure investment through 2030, including oil & gas, solar, and wind projects requiring site preparation.</p>
-                        <div class="bg-gray-100 rounded-lg p-4">
-                            <div class="flex justify-between text-sm mb-2">
-                                <span>Market Growth</span>
-                                <span class="font-bold text-accent-orange">+24%</span>
-                            </div>
-                            <div class="growth-bar" style="width: 72%;"></div>
-                        </div>
-                    </div>
-                    <div class="content-card reveal-element">
-                        <div class="text-4xl mb-4" aria-hidden="true">🛣️</div>
-                        <h3 class="font-bold font-slab text-xl mb-3">Infrastructure</h3>
-                        <p class="text-gray-600 mb-4">Federal Infrastructure Bill allocating $550B for highways, bridges, and utilities—all requiring professional site clearing services.</p>
+                        <div class="text-4xl mb-4" aria-hidden="true">🪵</div>
+                        <h3 class="font-bold font-slab text-xl mb-3">Commercial Timber</h3>
+                        <p class="text-gray-600 mb-4">U.S. lumber demand projected at 50B+ board feet annually through 2030, driven by housing starts and construction recovery.</p>
                         <div class="bg-gray-100 rounded-lg p-4">
                             <div class="flex justify-between text-sm mb-2">
                                 <span>Market Growth</span>
                                 <span class="font-bold text-accent-orange">+18%</span>
                             </div>
-                            <div class="growth-bar" style="width: 54%;"></div>
+                            <div class="growth-bar" data-width="72"></div>
                         </div>
                     </div>
                     <div class="content-card reveal-element">
-                        <div class="text-4xl mb-4" aria-hidden="true">🏗️</div>
-                        <h3 class="font-bold font-slab text-xl mb-3">Development</h3>
-                        <p class="text-gray-600 mb-4">Housing shortage driving 1.5M+ new home starts annually, each requiring lot clearing and site preparation services.</p>
+                        <div class="text-4xl mb-4" aria-hidden="true">🏛️</div>
+                        <h3 class="font-bold font-slab text-xl mb-3">Mass Timber</h3>
+                        <p class="text-gray-600 mb-4">Cross-laminated timber (CLT) market growing 15%+ annually as sustainable construction alternatives gain adoption.</p>
+                        <div class="bg-gray-100 rounded-lg p-4">
+                            <div class="flex justify-between text-sm mb-2">
+                                <span>Market Growth</span>
+                                <span class="font-bold text-accent-orange">+22%</span>
+                            </div>
+                            <div class="growth-bar" data-width="66"></div>
+                        </div>
+                    </div>
+                    <div class="content-card reveal-element">
+                        <div class="text-4xl mb-4" aria-hidden="true">🌲</div>
+                        <h3 class="font-bold font-slab text-xl mb-3">Forest Management</h3>
+                        <p class="text-gray-600 mb-4">$2B+ in annual federal/state forest management contracts for fuel reduction, wildfire prevention, and habitat restoration.</p>
                         <div class="bg-gray-100 rounded-lg p-4">
                             <div class="flex justify-between text-sm mb-2">
                                 <span>Market Growth</span>
                                 <span class="font-bold text-accent-orange">+15%</span>
                             </div>
-                            <div class="growth-bar" style="width: 45%;"></div>
+                            <div class="growth-bar" data-width="54"></div>
                         </div>
                     </div>
                 </div>
@@ -209,28 +215,28 @@
                                 <span class="icon" aria-hidden="true">🛰️</span>
                                 <div>
                                     <h4>Technology Leadership</h4>
-                                    <p>Proprietary LiDAR and GPS-guided systems deliver 30% efficiency gains over competitors.</p>
+                                    <p>LiDAR timber cruising and GPS-guided harvesting deliver 30% efficiency gains and superior timber recovery.</p>
                                 </div>
                             </li>
                             <li>
                                 <span class="icon" aria-hidden="true">🌱</span>
                                 <div>
-                                    <h4>ESG Compliance</h4>
-                                    <p>Zero-burn certification and environmental compliance open doors to ESG-focused clients and premium pricing.</p>
+                                    <h4>Sustainable Forestry</h4>
+                                    <p>FSC/SFI certification compliance and 3-for-1 reforestation program attracts ESG-focused TIMOs and REITs.</p>
                                 </div>
                             </li>
                             <li>
                                 <span class="icon" aria-hidden="true">👥</span>
                                 <div>
                                     <h4>Experienced Team</h4>
-                                    <p>Average 15+ years industry experience. Low turnover creates operational consistency.</p>
+                                    <p>Average 15+ years forestry experience. Low turnover creates operational consistency and safety excellence.</p>
                                 </div>
                             </li>
                             <li>
                                 <span class="icon" aria-hidden="true">🔒</span>
                                 <div>
                                     <h4>Long-term Contracts</h4>
-                                    <p>Multi-year master service agreements with energy majors provide revenue predictability.</p>
+                                    <p>Multi-year master service agreements with TIMOs, REITs, and federal agencies provide revenue predictability.</p>
                                 </div>
                             </li>
                         </ul>
@@ -238,6 +244,10 @@
                     <div class="bg-gradient-to-br from-jet-black to-charcoal rounded-2xl p-8 text-white reveal-element">
                         <h3 class="text-2xl font-bold font-slab mb-6">Financial Highlights</h3>
                         <div class="space-y-4">
+                            <div class="flex justify-between items-center py-3 border-b border-white/10">
+                                <span class="text-white/80">Annual Revenue</span>
+                                <span class="font-bold text-accent-orange text-xl">$12 Million</span>
+                            </div>
                             <div class="flex justify-between items-center py-3 border-b border-white/10">
                                 <span class="text-white/80">Revenue CAGR (5yr)</span>
                                 <span class="font-bold text-accent-orange text-xl">28%</span>
@@ -296,35 +306,7 @@
             </div>
         </section>
 
-        <!-- Leadership Section -->
-        <section class="section bg-white" aria-labelledby="leadership-heading">
-            <div class="container">
-                <div class="section-header reveal-element">
-                    <h2 id="leadership-heading">Executive Leadership</h2>
-                    <p>Experienced team with proven track record</p>
-                </div>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="team-member reveal-element">
-                        <div class="team-avatar" aria-hidden="true">👷</div>
-                        <h4>Cedrick Thomas</h4>
-                        <p class="title">Founder & CEO</p>
-                        <p>25+ years industry experience. B.S. Forest Resources, University of Arizona. Former U.S. Forest Service.</p>
-                    </div>
-                    <div class="team-member reveal-element">
-                        <div class="team-avatar" aria-hidden="true">👨‍💼</div>
-                        <h4>Marcus Johnson</h4>
-                        <p class="title">Chief Operations Officer</p>
-                        <p>20 years forestry operations. Former Regional Director at Weyerhaeuser. MBA, Arizona State.</p>
-                    </div>
-                    <div class="team-member reveal-element">
-                        <div class="team-avatar" aria-hidden="true">👩‍💼</div>
-                        <h4>Jennifer Walsh</h4>
-                        <p class="title">Chief Financial Officer</p>
-                        <p>CPA with 18 years experience. Former VP Finance at Granite Construction. Stanford MBA.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+
 
         <!-- Contact CTA Section -->
         <section class="py-20 bg-gradient-to-br from-black to-charcoal text-white text-center" aria-labelledby="cta-heading">
@@ -345,28 +327,35 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
                 <div class="lg:col-span-2">
                     <a href="index.html" class="flex items-center gap-3 mb-4 touch-target">
-                        <div class="w-10 h-10 bg-gradient-to-br from-pine to-pine-dark rounded-lg flex items-center justify-center text-white font-bold" aria-hidden="true">CL</div>
+                        <svg class="w-10 h-10" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect width="40" height="40" rx="8" fill="url(#footer-logo-gradient)"/>
+                            <path d="M20 6L24 14L20 12L16 14L20 6Z" fill="#2D5016"/>
+                            <path d="M20 11L26 22L20 19L14 22L20 11Z" fill="#3D6B1E"/>
+                            <path d="M20 17L28 32L20 28L12 32L20 17Z" fill="#4A7F24"/>
+                            <rect x="18" y="30" width="4" height="4" rx="1" fill="#8B6914"/>
+                            <defs><linearGradient id="footer-logo-gradient" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#C4956A"/><stop offset="1" stop-color="#8B6914"/></linearGradient></defs>
+                        </svg>
                         <div>
-                            <div class="text-xl font-bold font-slab">Cedrick-Logging.net</div>
-                            <div class="text-xs text-gray-400 uppercase tracking-wider">The Cedrick Thomas Standard</div>
+                            <div class="text-xl font-bold font-slab">Cedrick Logging</div>
+                            <div class="text-xs text-gray-400 uppercase tracking-wider">Sustainable Forestry Leadership</div>
                         </div>
                     </a>
-                    <p class="text-gray-400 max-w-sm mb-4">Precision Site Preparation & Land Clearing. Pioneering sustainable clearing solutions since 1998.</p>
+                    <p class="text-gray-400 max-w-sm mb-4">Sustainable Timber Harvesting & Forest Management. Pioneering responsible logging practices since 1952.</p>
                 </div>
                 <nav aria-label="Footer services navigation">
                     <h4 class="font-bold mb-4 text-white font-slab">Services</h4>
                     <ul class="space-y-2">
-                        <li><a href="index.html#services" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Site Preparation</a></li>
-                        <li><a href="index.html#services" class="text-gray-400 hover:text-pine-light transition-colors touch-target">ROW Clearing</a></li>
-                        <li><a href="index.html#services" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Forestry Mulching</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Timber Harvesting</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Forest Thinning</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Salvage Logging</a></li>
                     </ul>
                 </nav>
-                <nav aria-label="Footer industries navigation">
-                    <h4 class="font-bold mb-4 text-white font-slab">Industries</h4>
+                <nav aria-label="Footer markets navigation">
+                    <h4 class="font-bold mb-4 text-white font-slab">Markets</h4>
                     <ul class="space-y-2">
-                        <li><a href="index.html#sectors" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Energy</a></li>
-                        <li><a href="index.html#sectors" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Infrastructure</a></li>
-                        <li><a href="index.html#sectors" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Development</a></li>
+                        <li><a href="index.html#sectors" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Commercial Timber</a></li>
+                        <li><a href="index.html#sectors" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Forest Management</a></li>
+                        <li><a href="index.html#sectors" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Public & Private Lands</a></li>
                     </ul>
                 </nav>
                 <nav aria-label="Footer company navigation">
@@ -379,8 +368,13 @@
                     </ul>
                 </nav>
             </div>
-            <div class="border-t border-white/10 pt-8 text-center text-gray-500 text-sm">
-                <p>&copy; 2024 Cedrick-Logging.net. CEO: Cedrick Thomas. All rights reserved.</p>
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">&copy; 2025 Cedrick Logging. All rights reserved.</p>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-white/10 px-3 py-1.5 rounded text-xs text-gray-400">FSC Certified</span>
+                    <span class="bg-white/10 px-3 py-1.5 rounded text-xs text-gray-400">OSHA Compliant</span>
+                    <span class="bg-white/10 px-3 py-1.5 rounded text-xs text-gray-400">Fully Insured</span>
+                </div>
             </div>
         </div>
     </footer>
@@ -399,6 +393,24 @@
             }, { threshold: 0.1 });
             revealElements.forEach(function(el) {
                 observer.observe(el);
+            });
+        })();
+
+        // Growth bar animation using data-width attribute
+        (function() {
+            const growthBars = document.querySelectorAll('.growth-bar[data-width]');
+            const barObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        const bar = entry.target;
+                        const width = bar.dataset.width;
+                        bar.style.width = width + '%';
+                        barObserver.unobserve(bar);
+                    }
+                });
+            }, { threshold: 0.1 });
+            growthBars.forEach(function(bar) {
+                barObserver.observe(bar);
             });
         })();
     </script>

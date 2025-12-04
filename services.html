@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forestry Services | Timber Harvesting & Management | Cedrick Logging</title>
+    <meta name="description" content="Comprehensive forestry services including timber harvesting, forest thinning, salvage logging, and reforestation. Sustainable solutions for landowners and industry.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Slab:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pine': { light: '#D4A574', DEFAULT: '#C4956A', dark: '#8B6914' },
+                        'accent-orange': '#FF6B00',
+                        'jet-black': '#1A1A1A',
+                        'charcoal': '#2D2D2D',
+                        'blue-sky': '#87CEEB'
+                    },
+                    fontFamily: {
+                        'slab': ['Roboto Slab', 'Georgia', 'serif'],
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .reveal-element.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .action-btn {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255,107,0,0.4);
+        }
+        .interactive-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .interactive-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        .touch-target {
+            min-width: 44px;
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-900 bg-white antialiased">
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm" role="banner">
+        <nav class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto" aria-label="Main navigation">
+            <a href="index.html" class="flex items-center gap-3 no-underline text-black touch-target" aria-label="Cedrick Logging Home">
+                <svg class="w-10 h-10" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect width="40" height="40" rx="8" fill="url(#logo-gradient)"/>
+                    <path d="M20 6L24 14L20 12L16 14L20 6Z" fill="#2D5016"/>
+                    <path d="M20 11L26 22L20 19L14 22L20 11Z" fill="#3D6B1E"/>
+                    <path d="M20 17L28 32L20 28L12 32L20 17Z" fill="#4A7F24"/>
+                    <rect x="18" y="30" width="4" height="4" rx="1" fill="#8B6914"/>
+                    <defs><linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#C4956A"/><stop offset="1" stop-color="#8B6914"/></linearGradient></defs>
+                </svg>
+                <div>
+                    <div class="text-xl font-bold tracking-tight font-slab">Cedrick Logging</div>
+                    <div class="text-xs text-gray-500 uppercase tracking-wider">Sustainable Forestry Leadership</div>
+                </div>
+            </a>
+            <ul class="hidden lg:flex gap-8 list-none items-center" role="menubar">
+                <li role="none"><a href="services.html" class="text-accent-orange font-medium touch-target" role="menuitem">Services</a></li>
+                <li role="none"><a href="about.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors touch-target" role="menuitem">About Us</a></li>
+                <li role="none"><a href="investors.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors touch-target" role="menuitem">Investors</a></li>
+                <li role="none"><a href="sustainability.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors touch-target" role="menuitem">Safety</a></li>
+                <li role="none"><a href="careers.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors touch-target" role="menuitem">Careers</a></li>
+                <li role="none"><a href="contact.html" class="action-btn bg-accent-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors touch-target" role="menuitem">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header" aria-labelledby="page-heading">
+        <div class="container">
+            <h1 id="page-heading">Our Services</h1>
+            <p>Precision forestry solutions for every stage of the timber lifecycle</p>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li><a href="index.html">Home</a></li>
+                <li class="separator">/</li>
+                <li class="current" aria-current="page">Services</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Services Section (Moved from Index) -->
+        <section class="services section" id="services" aria-labelledby="services-heading">
+            <div class="container">
+                <div class="section-header reveal-element">
+                    <h2 id="services-heading">Comprehensive Forestry Services</h2>
+                    <p>Full-cycle timber harvesting and forest management backed by cutting-edge technology and sustainable practices.</p>
+                </div>
+                <div class="services-grid">
+                    <article class="service-card interactive-card reveal-element">
+                        <div class="service-icon" aria-hidden="true">
+                            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.6"/>
+                                <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.4" opacity="0.7"/>
+                                <circle cx="12" cy="12" r="1.8" fill="currentColor"/>
+                                <path d="M12 4v2M12 18v2M4 12h2M18 12h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.6"/>
+                            </svg>
+                        </div>
+                        <h3>Timber Harvesting</h3>
+                        <p>Selective and clear-cut harvesting operations optimized for timber value, forest health, and environmental compliance.</p>
+                        <a href="contact.html" class="service-link touch-target">Get Quote →</a>
+                    </article>
+                    <article class="service-card interactive-card reveal-element">
+                        <div class="service-icon" aria-hidden="true">
+                            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 3l4 6h-2.4l3 5h-2.3l1.5 5h-7.6l1.5-5H7.4l3-5H8L12 3z" fill="currentColor"/>
+                                <rect x="11" y="18" width="2" height="4" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3>Forest Thinning</h3>
+                        <p>Strategic thinning operations to improve stand health, reduce wildfire risk, and accelerate growth of remaining trees.</p>
+                        <a href="contact.html" class="service-link touch-target">Get Quote →</a>
+                    </article>
+                    <article class="service-card interactive-card reveal-element">
+                        <div class="service-icon" aria-hidden="true">
+                            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 4l8 14H4l8-14z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                                <path d="M12 9v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                <circle cx="12" cy="17" r="1" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3>Salvage Logging</h3>
+                        <p>Rapid-response salvage operations for fire-damaged, beetle-killed, or windthrown timber before value deterioration.</p>
+                        <a href="contact.html" class="service-link touch-target">Get Quote →</a>
+                    </article>
+                    <article class="service-card interactive-card reveal-element">
+                        <div class="service-icon" aria-hidden="true">
+                            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 4h6l3 16H6L9 4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                                <path d="M12 4v4m0 4v4m0 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3>Road Construction</h3>
+                        <p>Forest road building, maintenance, and decommissioning. Engineered access roads with proper drainage and erosion control.</p>
+                        <a href="contact.html" class="service-link touch-target">Get Quote →</a>
+                    </article>
+                    <article class="service-card interactive-card reveal-element">
+                        <div class="service-icon" aria-hidden="true">
+                            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 20v-6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+                                <path d="M12 14c0-3.5 3-6 7-6 0 4-2.5 6-7 6z" fill="currentColor" opacity="0.75"/>
+                                <path d="M12 14c0-3.5-3-6-7-6 0 4 2.5 6 7 6z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3>Reforestation</h3>
+                        <p>Complete site prep and replanting services. Our 3-for-1 seedling program ensures sustainable forest regeneration.</p>
+                        <a href="sustainability.html" class="service-link touch-target">Learn More →</a>
+                    </article>
+                    <article class="service-card interactive-card reveal-element">
+                        <div class="service-icon" aria-hidden="true">
+                            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="10" y="10" width="4" height="4" rx="1" fill="currentColor" opacity="0.9"/>
+                                <path d="M8 6l3 3-2 2-3-3L8 6zM16 14l3 3-2 2-3-3 2-2z" fill="currentColor"/>
+                                <path d="M15 6l3-3 3 3-3 3-3-3zM6 15l-3 3 3 3 3-3-3-3z" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Timber Cruising</h3>
+                        <p>LiDAR-enhanced forest inventory and timber cruising for accurate volume estimation and harvest planning.</p>
+                        <a href="gis-lidar.html" class="service-link touch-target">Technology →</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Harvest Volume Estimator Tool -->
+    <section class="harvest-estimator section" id="project-calculator">
+        <div class="container">
+            <div class="section-header">
+                <h2>Harvest Volume Estimator</h2>
+                <p>Get a preliminary estimate for your timber harvest. Our foresters will provide a detailed timber cruise after an initial site visit.</p>
+            </div>
+            <div class="estimator-grid">
+                <form class="estimator-form" id="estimatorForm" novalidate>
+                    <h3 style="margin-bottom: 1.5rem;">Enter Your Timber Details</h3>
+                    <div class="form-group">
+                        <label for="est-type">Harvest Type</label>
+                        <select id="est-type" required>
+                            <option value="">Select harvest type</option>
+                            <option value="selective">Selective Harvest</option>
+                            <option value="thinning">Forest Thinning</option>
+                            <option value="clearcut">Clear-Cut Harvest</option>
+                            <option value="salvage">Salvage Logging</option>
+                            <option value="fuel">Fuel Reduction</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="est-acres">Total Forested Acreage</label>
+                        <input type="number" id="est-acres" placeholder="e.g., 50" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="est-terrain">Terrain Type</label>
+                        <select id="est-terrain" required>
+                            <option value="">Select terrain type</option>
+                            <option value="flat">Flat / Gentle Slopes</option>
+                            <option value="rolling">Rolling Hills</option>
+                            <option value="steep">Steep Terrain</option>
+                            <option value="rocky">Rocky / Mountainous</option>
+                            <option value="wetland">Riparian / Wetland Adjacent</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="est-access">Forest Road Access</label>
+                        <select id="est-access" required>
+                            <option value="">Select access type</option>
+                            <option value="excellent">Excellent (Existing logging roads)</option>
+                            <option value="good">Good (Gravel forest roads)</option>
+                            <option value="moderate">Moderate (Roads need improvement)</option>
+                            <option value="limited">Limited (New road construction needed)</option>
+                        </select>
+                    </div>
+                    <button class="calculate-btn" id="estimateBtn" type="submit">Get Harvest Estimate</button>
+                </form>
+                <div class="estimator-result" id="estimator-result">
+                    <div class="result-header">
+                        <h3>Your Harvest Estimate</h3>
+                        <p>Based on regional averages and your inputs</p>
+                    </div>
+                    <div class="estimate-breakdown">
+                        <div class="estimate-row">
+                            <span class="estimate-label">Estimated Harvest Duration</span>
+                            <span class="estimate-value" id="est-time">--</span>
+                        </div>
+                        <div class="estimate-row">
+                            <span class="estimate-label">Est. Timber Volume</span>
+                            <span class="estimate-value" id="est-mulch">--</span>
+                        </div>
+                        <div class="estimate-row">
+                            <span class="estimate-label">Equipment Requirements</span>
+                            <span class="estimate-value" id="est-equipment">--</span>
+                        </div>
+                        <div class="estimate-row">
+                            <span class="estimate-label">Operation Complexity</span>
+                            <span class="estimate-value" id="est-complexity">--</span>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.875rem; margin-top: 1.5rem; opacity: 0.8;">* Estimates are preliminary. A professional timber cruise will provide accurate volume data.</p>
+                    <a href="contact.html" class="btn-primary" style="margin-top: 1rem; display: inline-block; background: var(--accent-orange); border-color: var(--accent-orange);">Schedule Timber Cruise</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white pt-16 pb-8" role="contentinfo">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                <div class="lg:col-span-2">
+                    <a href="index.html" class="flex items-center gap-3 mb-4 touch-target">
+                        <svg class="w-10 h-10" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect width="40" height="40" rx="8" fill="url(#footer-logo-gradient)"/>
+                            <path d="M20 6L24 14L20 12L16 14L20 6Z" fill="#2D5016"/>
+                            <path d="M20 11L26 22L20 19L14 22L20 11Z" fill="#3D6B1E"/>
+                            <path d="M20 17L28 32L20 28L12 32L20 17Z" fill="#4A7F24"/>
+                            <rect x="18" y="30" width="4" height="4" rx="1" fill="#8B6914"/>
+                            <defs><linearGradient id="footer-logo-gradient" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#C4956A"/><stop offset="1" stop-color="#8B6914"/></linearGradient></defs>
+                        </svg>
+                        <div>
+                            <div class="text-xl font-bold font-slab">Cedrick Logging</div>
+                            <div class="text-xs text-gray-400 uppercase tracking-wider">Sustainable Forestry Leadership</div>
+                        </div>
+                    </a>
+                    <p class="text-gray-400 max-w-sm mb-4">Sustainable Timber Harvesting & Forest Management. Pioneering responsible logging practices since 1952.</p>
+                </div>
+                <nav aria-label="Footer services navigation">
+                    <h4 class="font-bold mb-4 text-white font-slab">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Timber Harvesting</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Forest Thinning</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Salvage Logging</a></li>
+                    </ul>
+                </nav>
+                <nav aria-label="Footer markets navigation">
+                    <h4 class="font-bold mb-4 text-white font-slab">Markets</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#sectors" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Commercial Timber</a></li>
+                        <li><a href="index.html#sectors" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Forest Management</a></li>
+                        <li><a href="index.html#sectors" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Public & Private Lands</a></li>
+                    </ul>
+                </nav>
+                <nav aria-label="Footer company navigation">
+                    <h4 class="font-bold mb-4 text-white font-slab">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">About Us</a></li>
+                        <li><a href="investors.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Investors</a></li>
+                        <li><a href="careers.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Careers</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">&copy; 2025 Cedrick Logging. All rights reserved.</p>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-white/10 px-3 py-1.5 rounded text-xs text-gray-400">FSC Certified</span>
+                    <span class="bg-white/10 px-3 py-1.5 rounded text-xs text-gray-400">OSHA Compliant</span>
+                    <span class="bg-white/10 px-3 py-1.5 rounded text-xs text-gray-400">Fully Insured</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // IntersectionObserver for reveal animations
+        (function() {
+            const revealElements = document.querySelectorAll('.reveal-element');
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            revealElements.forEach(function(el) {
+                observer.observe(el);
+            });
+        })();
+
+        // ============================================
+        // Project Scope Calculator
+        // ============================================
+        (function initCalculator() {
+            const form = document.getElementById('estimatorForm');
+            if (!form) return;
+            
+            const WORK_DAYS_PER_WEEK = 5;
+            const WORK_DAYS_PER_MONTH = 22;
+            const ONE_WEEK_THRESHOLD = 5;
+            const ONE_MONTH_THRESHOLD = 30;
+
+            function calculateProjectEstimate(event) {
+                if (event) event.preventDefault();
+                
+                const projectType = document.getElementById('est-type').value;
+                const acres = parseFloat(document.getElementById('est-acres').value) || 0;
+                const terrain = document.getElementById('est-terrain').value;
+                const access = document.getElementById('est-access').value;
+
+                if (!projectType || acres <= 0 || !terrain || !access) {
+                    alert('Please fill in all fields to get an estimate.');
+                    return;
+                }
+
+                // Base harvesting rates (acres per day)
+                const terrainRates = {
+                    'flat': 8,
+                    'rolling': 5,
+                    'steep': 3,
+                    'rocky': 2,
+                    'wetland': 2.5
+                };
+
+                // Harvest type multipliers
+                const projectMultipliers = {
+                    'selective': 0.7,
+                    'thinning': 1.0,
+                    'clearcut': 1.3,
+                    'salvage': 1.1,
+                    'fuel': 0.9
+                };
+
+                // Access factors
+                const accessFactors = {
+                    'excellent': 1.0,
+                    'good': 1.1,
+                    'moderate': 1.3,
+                    'limited': 1.6
+                };
+
+                const baseRate = terrainRates[terrain];
+                const projectMultiplier = projectMultipliers[projectType];
+                const accessFactor = accessFactors[access];
+                const estimatedDays = Math.ceil((acres / baseRate) * projectMultiplier * accessFactor);
+
+                // Time format
+                let timeEstimate;
+                if (estimatedDays <= ONE_WEEK_THRESHOLD) {
+                    timeEstimate = estimatedDays + ' days';
+                } else if (estimatedDays <= ONE_MONTH_THRESHOLD) {
+                    const weeks = Math.ceil(estimatedDays / WORK_DAYS_PER_WEEK);
+                    timeEstimate = weeks + ' week' + (weeks > 1 ? 's' : '');
+                } else {
+                    const months = Math.ceil(estimatedDays / WORK_DAYS_PER_MONTH);
+                    timeEstimate = months + ' month' + (months > 1 ? 's' : '');
+                }
+
+                // Timber volume estimates (MBF per acre by terrain)
+                const timberRates = {
+                    'flat': 15,
+                    'rolling': 20,
+                    'steep': 25,
+                    'rocky': 12,
+                    'wetland': 18
+                };
+                const timberVolume = Math.round(acres * timberRates[terrain]);
+
+                // Equipment tier
+                let equipmentTier;
+                if (acres <= 20 && terrain === 'flat') {
+                    equipmentTier = 'Small Crew (2-3 operators)';
+                } else if (acres <= 100 || terrain === 'rolling' || terrain === 'wetland') {
+                    equipmentTier = 'Standard Crew (4-6 operators)';
+                } else {
+                    equipmentTier = 'Full Crew (8+ operators)';
+                }
+
+                // Complexity
+                let complexity;
+                const complexityScore = projectMultiplier * accessFactor * (terrain === 'rocky' || terrain === 'steep' ? 1.3 : 1);
+                if (complexityScore < 1.1) {
+                    complexity = 'Low';
+                } else if (complexityScore < 1.4) {
+                    complexity = 'Medium';
+                } else {
+                    complexity = 'High';
+                }
+
+                // Update display
+                document.getElementById('est-time').textContent = timeEstimate;
+                document.getElementById('est-mulch').textContent = timberVolume.toLocaleString() + ' MBF (est.)';
+                document.getElementById('est-equipment').textContent = equipmentTier;
+                document.getElementById('est-complexity').textContent = complexity;
+            }
+
+            form.addEventListener('submit', calculateProjectEstimate);
+        })();
+    </script>
+</body>
+</html>
