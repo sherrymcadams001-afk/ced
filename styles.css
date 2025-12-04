@@ -7,7 +7,11 @@
    CSS Custom Properties (Design Tokens)
    ==================================== */
 :root {
-    /* Colors - Tech-Timber Palette */
+    /* ====================================
+       Enterprise Lux Palette & Physics
+       ==================================== */
+    
+    /* Colors - Tech-Timber Palette (Refined) */
     --pine-light: #D4A574;
     --pine: #C4956A;
     --pine-dark: #8B6914;
@@ -16,6 +20,17 @@
     --charcoal: #2D2D2D;
     --blue-sky: #87CEEB;
     --white: #FFFFFF;
+    
+    /* Surgical Accents */
+    --slate-500: #64748b;
+    --indigo-500: #6366f1;
+    --lux-bg: #FAFAFA;
+    --lux-surface: rgba(255, 255, 255, 0.85);
+    --lux-glass: rgba(255, 255, 255, 0.6);
+    --lux-border: rgba(0, 0, 0, 0.06);
+    --lux-rim: rgba(255, 255, 255, 0.9);
+
+    /* Grays */
     --gray-50: #F9FAFB;
     --gray-100: #F3F4F6;
     --gray-200: #E5E7EB;
@@ -29,7 +44,7 @@
     
     /* Typography */
     --font-slab: 'Roboto Slab', Georgia, serif;
-    --font-sans: 'Inter', system-ui, sans-serif;
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
     
     /* Spacing */
     --spacing-xs: 0.25rem;
@@ -40,24 +55,46 @@
     --spacing-2xl: 3rem;
     --spacing-3xl: 4rem;
     
-    /* Border Radius */
+    /* Geometric Organicism (Squircles) */
     --radius-sm: 0.375rem;
-    --radius-md: 0.5rem;
-    --radius-lg: 0.75rem;
-    --radius-xl: 1rem;
-    --radius-2xl: 1.5rem;
+    --radius-md: 0.625rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+    --radius-2xl: 2rem;
     --radius-full: 9999px;
+    --radius-squircle: 20px;
     
-    /* Shadows */
+    /* Deep Flat Shadows */
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
     
-    /* Transitions */
-    --transition-fast: 150ms ease;
-    --transition-normal: 300ms ease;
-    --transition-slow: 500ms ease;
+    --shadow-lux-sm: 
+        0 2px 4px -1px rgba(20, 20, 30, 0.04), 
+        0 0 0 1px var(--lux-border),
+        inset 0 1px 0 0 var(--lux-rim);
+        
+    --shadow-lux-md: 
+        0 12px 24px -8px rgba(20, 20, 30, 0.08), 
+        0 4px 8px -4px rgba(20, 20, 30, 0.04),
+        0 0 0 1px var(--lux-border),
+        inset 0 1px 0 0 var(--lux-rim);
+        
+    --shadow-lux-lg: 
+        0 24px 48px -12px rgba(20, 20, 30, 0.12), 
+        0 0 0 1px var(--lux-border),
+        inset 0 1px 0 0 var(--lux-rim);
+        
+    --shadow-glow: 0 0 30px -5px rgba(255, 107, 0, 0.3);
+    
+    /* Kinetic Physics Transitions */
+    --ease-jet: cubic-bezier(0.2, 0.8, 0.2, 1);
+    --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+    
+    --transition-fast: 150ms var(--ease-jet);
+    --transition-normal: 300ms var(--ease-jet);
+    --transition-slow: 500ms var(--ease-jet);
     
     /* Container */
     --container-max: 1280px;
@@ -2073,3 +2110,95 @@ body {
         border: 2px solid currentColor;
     }
 }
+
+/* ====================================
+   ENTERPRISE LUX - DESIGN SYSTEM OVERRIDES
+   ==================================== */
+
+/* 1. Architecture of Silence & Deep Flat Base */
+body {
+    background-color: var(--lux-bg);
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+    font-feature-settings: "tnum"; /* Tabular figures */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 2. Kinetic Physics (Jet Gliding) */
+a, button, .btn, .action-btn, .card, .service-card, .feature-box, input, select, .interactive-card {
+    transition: all 0.4s var(--ease-jet) !important;
+}
+
+/* 3. Deep Flat Cards (Atmospheric Depth) */
+.card, .service-card, .feature-box, .estimator-result, .bg-white {
+    background: var(--lux-surface);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: var(--radius-squircle);
+    box-shadow: var(--shadow-lux-md);
+    border: 1px solid rgba(255,255,255,0.6);
+}
+
+/* 4. Micro-lift & Glow (Sensory Feedback) */
+.action-btn:hover, .btn-primary:hover, .service-card:hover, .feature-box:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: var(--shadow-lux-lg), var(--shadow-glow);
+    border-color: rgba(255, 107, 0, 0.3);
+}
+
+/* 5. Surgical Accents & Inputs */
+input, select, textarea {
+    background: rgba(255,255,255,0.5);
+    border: 1px solid var(--lux-border);
+    border-radius: var(--radius-md);
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+    padding: 0.75rem 1rem;
+    font-family: var(--font-sans);
+}
+
+input:focus, select:focus, textarea:focus {
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(196, 149, 106, 0.15), var(--shadow-lux-sm);
+    border-color: var(--pine);
+    outline: none;
+}
+
+/* 6. Fluid Typography */
+h1, h2, h3, h4, h5, h6, a {
+    transition: font-weight 0.3s var(--ease-jet), color 0.3s var(--ease-jet);
+}
+
+a:hover {
+    font-weight: 500;
+}
+
+/* 7. Optical Truth (Visual Centering) */
+.btn, button {
+    padding-bottom: calc(0.5em + 1px); /* Optical vertical center adjustment */
+}
+
+/* 8. Progressive Disclosure (Ghost Interface) */
+/* Example: Only show certain actions on hover if applicable */
+.card-actions {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s var(--ease-jet);
+}
+.card:hover .card-actions {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 9. Header Glassmorphism */
+header {
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border-bottom: 1px solid rgba(0,0,0,0.05) !important;
+}
+
+/* 10. Footer Depth */
+footer {
+    background: #050505 !important; /* Luma Elevation Base */
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
