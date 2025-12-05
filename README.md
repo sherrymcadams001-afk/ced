@@ -4,15 +4,17 @@ A professional web portfolio for **Cedrick Logging** (CEO: Cedrick Thomas), a su
 
 ## Company Information
 
-### Headquarters
-**La Cholla Corporate Center**  
-📍 6261 N La Cholla Blvd, Tucson, AZ 85741
+### Headquarters (Logistics & Admin)
+📍 4775 S Butterfield Dr, Tucson, AZ 85714
+
+### Northern Processing Facility
+📍 4820 Forest Service Rd 300, Happy Jack, AZ 86024
 
 ### Colorado Branch
 📍 5404 Ward Ave, Arvada, CO 80002
 
 ### Contact
-📞 +1 (520) 427-9815  
+📞 +1 (520) 427-9580  
 ✉️ info@cedricklogging.com
 
 ## Core Market Sectors
