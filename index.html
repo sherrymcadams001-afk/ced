@@ -18,19 +18,19 @@
         tailwind.config = {
             theme: {
                 extend: {
-                                                            colors: {
+                    colors: {
                         'pine': {
-                            light: '#2D6A4F',
-                            DEFAULT: '#1B4332',
-                            dark: '#081C15'
+                            light: '#D4A574',
+                            DEFAULT: '#C4956A',
+                            dark: '#8B6914'
                         },
-                        'accent-orange': '#D97706',
-                        'jet-black': '#020617',
-                        'charcoal': '#1E293B',
-                        'slate': '#2F4F4F',
-                        'blue-sky': '#0EA5E9',
-                        'sky-mid': '#38BDF8'
-                    },fontFamily: {
+                        'accent-orange': '#FF6B00',
+                        'jet-black': '#1A1A1A',
+                        'charcoal': '#2D2D2D',
+                        'blue-sky': '#87CEEB',
+                        'sky-mid': '#5BA3C6'
+                    },
+                    fontFamily: {
                         'slab': ['Roboto Slab', 'Georgia', 'serif'],
                         'sans': ['Inter', 'system-ui', 'sans-serif']
                     }
@@ -39,20 +39,12 @@
         }
     </script>
     <style>
-        /* ====================================
-           Enterprise Lux: Physics of High-Performance UI
-           ==================================== */
+        /* Design System - Rhythmic Spacing (4px base) */
         :root {
-            --color-blue-sky: #7DD3FC;
+            --color-blue-sky: #87CEEB;
             --color-sky-mid: #5BA3C6;
-            --color-jet-black: #0A0A0B;
+            --color-jet-black: #1A1A1A;
             --spacing-unit: 4px;
-            
-            /* Kinetic Physics - Jet Gliding */
-            --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
-            --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
-            --ease-spring-soft: cubic-bezier(0.25, 1, 0.5, 1);
-            --duration-glide: 650ms;
         }
         html { scroll-behavior: smooth; }
         
@@ -66,13 +58,9 @@
             z-index: 0;
         }
         
-        /* Hero gradient overlay - Atmospheric Depth */
+        /* Hero gradient overlay */
         .hero-gradient {
-            background: linear-gradient(180deg, 
-                var(--color-blue-sky) 0%, 
-                var(--color-sky-mid) 35%, 
-                #3D7A99 60%,
-                var(--color-jet-black) 100%);
+            background: linear-gradient(180deg, var(--color-blue-sky) 0%, var(--color-sky-mid) 40%, var(--color-jet-black) 100%);
         }
         
         /* Lifecycle horizontal scroll */
@@ -86,56 +74,55 @@
         .lifecycle-scroll::-webkit-scrollbar { display: none; }
         .lifecycle-stage { scroll-snap-align: center; }
         
-        /* Kinetic Entrance Animations - Spring Physics */
+        /* Entrance Animations */
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(40px) scale(0.98); }
-            to { opacity: 1; transform: translateY(0) scale(1); }
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         @keyframes scaleIn {
-            from { opacity: 0; transform: scale(0.92); }
+            from { opacity: 0; transform: scale(0.9); }
             to { opacity: 1; transform: scale(1); }
         }
         @keyframes slideInLeft {
-            from { opacity: 0; transform: translateX(-60px); }
+            from { opacity: 0; transform: translateX(-50px); }
             to { opacity: 1; transform: translateX(0); }
         }
         @keyframes slideInRight {
-            from { opacity: 0; transform: translateX(60px); }
+            from { opacity: 0; transform: translateX(50px); }
             to { opacity: 1; transform: translateX(0); }
         }
         @keyframes countUp {
-            from { opacity: 0; transform: translateY(15px) scale(0.95); }
-            to { opacity: 1; transform: translateY(0) scale(1); }
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         
-        .animate-fadeInUp { animation: fadeInUp 0.9s var(--ease-spring-soft) forwards; opacity: 0; }
-        .animate-scaleIn { animation: scaleIn 0.7s var(--ease-spring) forwards; opacity: 0; }
-        .animate-slideInLeft { animation: slideInLeft 0.9s var(--ease-out-expo) forwards; opacity: 0; }
-        .animate-slideInRight { animation: slideInRight 0.9s var(--ease-out-expo) forwards; opacity: 0; }
+        .animate-fadeInUp { animation: fadeInUp 0.8s ease forwards; opacity: 0; }
+        .animate-scaleIn { animation: scaleIn 0.6s ease forwards; opacity: 0; }
+        .animate-slideInLeft { animation: slideInLeft 0.8s ease forwards; opacity: 0; }
+        .animate-slideInRight { animation: slideInRight 0.8s ease forwards; opacity: 0; }
         .delay-1 { animation-delay: 0.1s; }
         .delay-2 { animation-delay: 0.2s; }
         .delay-3 { animation-delay: 0.3s; }
         .delay-4 { animation-delay: 0.4s; }
         .delay-5 { animation-delay: 0.5s; }
 
-        /* Intersection Observer - Kinetic Flow */
+        /* Intersection Observer States */
         .reveal-element {
             opacity: 0;
-            transform: translateY(40px) scale(0.98);
-            transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-spring-soft);
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
         }
         .reveal-element.revealed {
             opacity: 1;
-            transform: translateY(0) scale(1);
+            transform: translateY(0);
         }
         
         /* Dynamic Counter Animation */
         .counter-value {
-            transition: all 0.4s var(--ease-spring-soft);
-            font-variant-numeric: tabular-nums;
+            transition: all 0.3s ease;
         }
         
-        /* Custom Loader - Atmospheric */
+        /* Custom Loader */
         .page-loader {
             position: fixed;
             inset: 0;
@@ -144,31 +131,29 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: opacity 0.6s var(--ease-out-expo), visibility 0.6s;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
         }
         .page-loader.loaded {
             opacity: 0;
             visibility: hidden;
         }
         .loader-spinner {
-            width: 52px;
-            height: 52px;
-            border: 3px solid rgba(232,114,42,0.2);
-            border-top-color: #E8722A;
+            width: 48px;
+            height: 48px;
+            border: 3px solid rgba(255,107,0,0.3);
+            border-top-color: #FF6B00;
             border-radius: 50%;
-            animation: spin 0.9s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+            animation: spin 1s linear infinite;
         }
         @keyframes spin {
             to { transform: rotate(360deg); }
         }
         
-        /* Action Button - Kinetic Physics + Micro-lift */
+        /* Action Button Hover States */
         .action-btn {
             position: relative;
             overflow: hidden;
-            transition: 
-                transform 0.35s var(--ease-spring),
-                box-shadow 0.25s var(--ease-out-expo);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .action-btn::before {
             content: '';
@@ -177,51 +162,37 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
-            transition: left 0.6s var(--ease-out-expo);
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
         }
         .action-btn:hover::before {
             left: 100%;
         }
         .action-btn:hover {
-            transform: translateY(-3px) scale(1.01);
-            box-shadow: 
-                0 12px 32px rgba(232,114,42,0.35),
-                inset 0 1px 0 rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255,107,0,0.4);
         }
-        .action-btn:focus-visible {
-            outline: none;
-            box-shadow: 
-                0 0 0 2px #fff,
-                0 0 0 4px #E8722A,
-                0 0 20px rgba(232,114,42,0.4);
+        .action-btn:focus {
+            outline: 2px solid #FF6B00;
+            outline-offset: 2px;
         }
         .action-btn:active {
-            transform: translateY(-1px) scale(0.99);
+            transform: translateY(0);
         }
         
-        /* Card Hover - Kinetic Physics */
+        /* Card Hover Effects */
         .interactive-card {
-            transition: 
-                transform 0.65s var(--ease-spring-soft),
-                box-shadow 0.35s var(--ease-out-expo),
-                border-color 0.25s var(--ease-out-expo);
-            will-change: transform;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
         }
         .interactive-card:hover {
-            transform: translateY(-10px) scale(1.01);
-            box-shadow: 
-                0 24px 48px rgba(99, 102, 241, 0.08),
-                0 12px 24px rgba(0,0,0,0.12);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
         }
         
-        /* Breathing Focus Ring */
+        /* Focus States for Accessibility */
         a:focus-visible, button:focus-visible {
-            outline: none;
-            box-shadow: 
-                0 0 0 2px #fff,
-                0 0 0 4px #E8722A,
-                0 0 20px rgba(232,114,42,0.3);
+            outline: 2px solid #FF6B00;
+            outline-offset: 2px;
         }
         
         /* Touch Target Compliance (44x44px minimum) */
@@ -231,25 +202,9 @@
             display: inline-flex;
             align-items: center;
         }
-        
-        /* Fluid Typography - Variable Weight Hover */
-        .fluid-weight {
-            transition: font-weight 0.35s var(--ease-out-expo);
-        }
-        .fluid-weight:hover {
-            font-weight: 500;
-        }
-        
-        /* Gradient Text Utility */
-        .gradient-text {
-            background: linear-gradient(135deg, #E8722A 0%, #D4A574 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
     </style>
 </head>
-<body class="font-sans text-gray-900 bg-gray-50 antialiased">
+<body class="font-sans text-gray-900 bg-white antialiased">
     <!-- Custom Page Loader -->
     <div class="page-loader" id="pageLoader">
         <div class="loader-spinner"></div>
@@ -318,7 +273,7 @@
                 <span class="text-accent-orange">Built for the Future.</span>
             </h1>
             
-            <p class="text-lg md:text-xl text-white/95 mb-10 max-w-2xl mx-auto animate-fadeInUp delay-2">
+            <p class="text-lg md:text-xl text-white/85 mb-10 max-w-2xl mx-auto animate-fadeInUp delay-2">
                 <strong class="text-white">Sustainable Forestry Leadership.</strong><br>
                 Precision forestry operations delivering sustainable timber solutions with GPS-guided harvesting, selective cutting, and certified reforestation programs.
             </p>
@@ -328,13 +283,13 @@
                 <a href="contact.html" class="action-btn inline-block bg-accent-orange text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-orange-600 transition-all touch-target" aria-label="Start your project consultation">
                     Start Your Project →
                 </a>
-                <p class="text-white/80 text-sm mt-4">Free consultation • Response within 24 hours</p>
+                <p class="text-white/60 text-sm mt-4">Free consultation • Response within 24 hours</p>
             </div>
         </div>
         
         <!-- Scroll Indicator -->
         <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce" aria-hidden="true">
-            <svg class="w-6 h-6 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-6 h-6 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
             </svg>
         </div>
@@ -382,8 +337,8 @@
                         </svg>
                     </div>
                     <h3 class="text-xl font-bold font-slab mb-3">Commercial Timber</h3>
-                    <p class="text-white/90 text-sm mb-4">Sustainable timber harvesting for lumber mills, pulp & paper, and wood products manufacturing.</p>
-                    <ul class="text-white/95 text-sm space-y-1">
+                    <p class="text-white/70 text-sm mb-4">Sustainable timber harvesting for lumber mills, pulp & paper, and wood products manufacturing.</p>
+                    <ul class="text-white/80 text-sm space-y-1">
                         <li>• Selective Harvesting</li>
                         <li>• Clear-Cut Operations</li>
                         <li>• Salvage Logging</li>
@@ -397,8 +352,8 @@
                         </svg>
                     </div>
                     <h3 class="text-xl font-bold font-slab mb-3">Forest Management</h3>
-                    <p class="text-white/90 text-sm mb-4">Comprehensive forest stewardship including thinning, wildfire prevention, and habitat restoration.</p>
-                    <ul class="text-white/95 text-sm space-y-1">
+                    <p class="text-white/70 text-sm mb-4">Comprehensive forest stewardship including thinning, wildfire prevention, and habitat restoration.</p>
+                    <ul class="text-white/80 text-sm space-y-1">
                         <li>• Forest Thinning</li>
                         <li>• Fuel Reduction</li>
                         <li>• Habitat Restoration</li>
@@ -412,8 +367,8 @@
                         </svg>
                     </div>
                     <h3 class="text-xl font-bold font-slab mb-3">Public & Private Lands</h3>
-                    <p class="text-white/90 text-sm mb-4">Contract logging for federal forests, state lands, TIMOs, REITs, and private landowners.</p>
-                    <ul class="text-white/95 text-sm space-y-1">
+                    <p class="text-white/70 text-sm mb-4">Contract logging for federal forests, state lands, TIMOs, REITs, and private landowners.</p>
+                    <ul class="text-white/80 text-sm space-y-1">
                         <li>• Federal Contracts</li>
                         <li>• TIMO/REIT Partners</li>
                         <li>• Private Landowners</li>
@@ -612,7 +567,7 @@
                 <!-- Markets Served -->
                 <div class="bg-gradient-to-br from-jet-black to-charcoal rounded-2xl p-8 text-white reveal-element">
                     <h3 class="text-xl font-bold font-slab mb-4">Markets We Serve</h3>
-                    <p class="text-white/90 mb-6">Sustainable forestry solutions for the timber industry.</p>
+                    <p class="text-white/80 mb-6">Sustainable forestry solutions for the timber industry.</p>
                     <div class="flex flex-wrap gap-3">
                         <span class="bg-white/20 px-3 py-1.5 rounded-full text-sm flex items-center gap-2">
                             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -656,13 +611,13 @@
     <section class="py-20 bg-gradient-to-br from-black to-charcoal text-white text-center" aria-labelledby="cta-heading">
         <div class="max-w-4xl mx-auto px-6 reveal-element">
             <h2 id="cta-heading" class="text-3xl md:text-4xl font-bold font-slab mb-4 text-white">Ready to Start Your Timber Project?</h2>
-            <p class="text-white/90 mb-8 max-w-2xl mx-auto">Join our network of satisfied clients—lumber mills, TIMOs, REITs, and private landowners—who trust our Sustainable Forestry Leadership for lasting results.</p>
+            <p class="text-white/80 mb-8 max-w-2xl mx-auto">Join our network of satisfied clients—lumber mills, TIMOs, REITs, and private landowners—who trust our Sustainable Forestry Leadership for lasting results.</p>
             <div class="flex flex-wrap justify-center gap-4">
                 <a href="contact.html" class="action-btn bg-accent-orange text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-orange-600 transition-all touch-target">
                     Start Your Project →
                 </a>
             </div>
-            <p class="text-white/75 text-sm mt-4">Or call us: +1 (520) 427-9580</p>
+            <p class="text-white/50 text-sm mt-4">Or call us: +1 (520) 427-9580</p>
         </div>
     </section>
 
@@ -695,16 +650,7 @@
                                     <circle cx="12" cy="11" r="2.5" stroke-width="1.5"/>
                                 </svg>
                             </span>
-                            <span>HQ: 4775 S Butterfield Dr, Tucson, AZ 85714</span>
-                        </p>
-                            <p class="flex items-center gap-2">
-                                <span class="contact-icon" aria-hidden="true">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 21s6-4.35 6-9.25A6 6 0 006 11.75C6 16.65 12 21 12 21z"/>
-                                    <circle cx="12" cy="11" r="2.5" stroke-width="1.5"/>
-                                </svg>
-                            </span>
-                            <span>Northern: 4820 Forest Service Rd 300, Happy Jack, AZ 86024</span>
+                            <span>HQ: 6261 N La Cholla Blvd, Tucson, AZ</span>
                         </p>
                             <p class="flex items-center gap-2">
                                 <span class="contact-icon" aria-hidden="true">
@@ -730,10 +676,10 @@
                 <nav aria-label="Footer services navigation">
                     <h4 class="font-bold mb-4 text-white font-slab">Services</h4>
                     <ul class="space-y-2">
-                        <li><a href="services.html" class="text-gray-400 hover:text-pine transition-colors touch-target">Timber Harvesting</a></li>
-                        <li><a href="services.html" class="text-gray-400 hover:text-pine transition-colors touch-target">Forest Thinning</a></li>
-                        <li><a href="services.html" class="text-gray-400 hover:text-pine transition-colors touch-target">Salvage Logging</a></li>
-                        <li><a href="services.html" class="text-gray-400 hover:text-pine transition-colors touch-target">Reforestation</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Timber Harvesting</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Forest Thinning</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Salvage Logging</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Reforestation</a></li>
                     </ul>
                 </nav>
                 
@@ -741,9 +687,9 @@
                 <nav aria-label="Footer markets navigation">
                     <h4 class="font-bold mb-4 text-white font-slab">Markets</h4>
                     <ul class="space-y-2">
-                        <li><a href="#sectors" class="text-gray-400 hover:text-pine transition-colors touch-target">Commercial Timber</a></li>
-                        <li><a href="#sectors" class="text-gray-400 hover:text-pine transition-colors touch-target">Forest Management</a></li>
-                        <li><a href="#sectors" class="text-gray-400 hover:text-pine transition-colors touch-target">Public & Private Lands</a></li>
+                        <li><a href="#sectors" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Commercial Timber</a></li>
+                        <li><a href="#sectors" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Forest Management</a></li>
+                        <li><a href="#sectors" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Public & Private Lands</a></li>
                     </ul>
                 </nav>
                 
@@ -751,11 +697,11 @@
                 <nav aria-label="Footer company navigation">
                     <h4 class="font-bold mb-4 text-white font-slab">Company</h4>
                     <ul class="space-y-2">
-                        <li><a href="about.html" class="text-gray-400 hover:text-pine transition-colors touch-target">About Us</a></li>
-                        <li><a href="investors.html" class="text-gray-400 hover:text-pine transition-colors touch-target">Investors</a></li>
-                        <li><a href="sustainability.html" class="text-gray-400 hover:text-pine transition-colors touch-target">Safety</a></li>
-                        <li><a href="careers.html" class="text-gray-400 hover:text-pine transition-colors touch-target">Careers</a></li>
-                        <li><a href="contact.html" class="text-gray-400 hover:text-pine transition-colors touch-target">Contact</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">About Us</a></li>
+                        <li><a href="investors.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Investors</a></li>
+                        <li><a href="sustainability.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Safety</a></li>
+                        <li><a href="careers.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Careers</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-pine-light transition-colors touch-target">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -1022,6 +968,3 @@
     </script>
 </body>
 </html>
-
-
-

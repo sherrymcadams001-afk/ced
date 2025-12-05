@@ -14,19 +14,14 @@
         tailwind.config = {
             theme: {
                 extend: {
-                                        colors: {
-                        'pine': {
-                            light: '#2D6A4F',
-                            DEFAULT: '#1B4332',
-                            dark: '#081C15'
-                        },
-                        'accent-orange': '#D97706',
-                        'jet-black': '#020617',
-                        'charcoal': '#1E293B',
-                        'slate': '#2F4F4F',
-                        'blue-sky': '#0EA5E9',
-                        'sky-mid': '#38BDF8'
-                    },fontFamily: {
+                    colors: {
+                        'pine': { light: '#D4A574', DEFAULT: '#C4956A', dark: '#8B6914' },
+                        'accent-orange': '#FF6B00',
+                        'jet-black': '#1A1A1A',
+                        'charcoal': '#2D2D2D',
+                        'blue-sky': '#87CEEB'
+                    },
+                    fontFamily: {
                         'slab': ['Roboto Slab', 'Georgia', 'serif'],
                         'sans': ['Inter', 'system-ui', 'sans-serif']
                     }
@@ -109,7 +104,7 @@
                     <div class="bg-charcoal rounded-xl p-4 text-center">
                         <p class="text-gray-400 text-xs uppercase mb-1">Est. Board Feet</p>
                         <p class="text-3xl font-bold text-accent-orange font-slab">4.2M</p>
-                        <p class="text-xs text-green-400">â†‘ 8.3% YoY</p>
+                        <p class="text-xs text-green-400">↑ 8.3% YoY</p>
                     </div>
                     <div class="bg-charcoal rounded-xl p-4 text-center">
                         <p class="text-gray-400 text-xs uppercase mb-1">Carbon Credits</p>
@@ -119,7 +114,7 @@
                     <div class="bg-charcoal rounded-xl p-4 text-center">
                         <p class="text-gray-400 text-xs uppercase mb-1">Est. Value</p>
                         <p class="text-3xl font-bold text-green-400 font-slab">$1.47M</p>
-                        <p class="text-xs text-green-400">â†‘ 12% YoY</p>
+                        <p class="text-xs text-green-400">↑ 12% YoY</p>
                     </div>
                 </div>
 
@@ -297,7 +292,7 @@
                             <td>Forest Inventory</td>
                             <td>Drone LiDAR Survey</td>
                             <td>Annual (optional quarterly)</td>
-                            <td>Â±5% volume</td>
+                            <td>±5% volume</td>
                         </tr>
                         <tr>
                             <td>Canopy Cover</td>
@@ -309,19 +304,19 @@
                             <td>Growth Models</td>
                             <td>FVS + Proprietary</td>
                             <td>Continuous</td>
-                            <td>Â±8% at 10 years</td>
+                            <td>±8% at 10 years</td>
                         </tr>
                         <tr>
                             <td>Timber Prices</td>
                             <td>Regional Mills + Indices</td>
                             <td>Weekly</td>
-                            <td>Â±3% of market</td>
+                            <td>±3% of market</td>
                         </tr>
                         <tr>
                             <td>Carbon Sequestration</td>
                             <td>LiDAR + Allometry</td>
                             <td>Annual</td>
-                            <td>Â±10% of actual</td>
+                            <td>±10% of actual</td>
                         </tr>
                         <tr>
                             <td>Health Alerts</td>
@@ -449,19 +444,19 @@
                 <div>
                     <h4 class="font-bold mb-4 text-white font-slab">Services</h4>
                     <ul class="space-y-2">
-                        <li><a href="gis-lidar.html" class="text-gray-400 hover:text-pine transition-colors">GIS/LiDAR Mapping</a></li>
-                        <li><a href="carbon-credits.html" class="text-gray-400 hover:text-pine transition-colors">Carbon Credits</a></li>
-                        <li><a href="mass-timber.html" class="text-gray-400 hover:text-pine transition-colors">Mass Timber/CLT</a></li>
-                        <li><a href="sustainability.html" class="text-gray-400 hover:text-pine transition-colors">Sustainable Forestry</a></li>
+                        <li><a href="gis-lidar.html" class="text-gray-400 hover:text-pine-light transition-colors">GIS/LiDAR Mapping</a></li>
+                        <li><a href="carbon-credits.html" class="text-gray-400 hover:text-pine-light transition-colors">Carbon Credits</a></li>
+                        <li><a href="mass-timber.html" class="text-gray-400 hover:text-pine-light transition-colors">Mass Timber/CLT</a></li>
+                        <li><a href="sustainability.html" class="text-gray-400 hover:text-pine-light transition-colors">Sustainable Forestry</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="font-bold mb-4 text-white font-slab">Resources</h4>
                     <ul class="space-y-2">
-                        <li><a href="landowner-resources.html" class="text-gray-400 hover:text-pine transition-colors">Landowner Resources</a></li>
-                        <li><a href="buyer-resources.html" class="text-gray-400 hover:text-pine transition-colors">Buyer Resources</a></li>
-                        <li><a href="faq.html" class="text-gray-400 hover:text-pine transition-colors">FAQ</a></li>
-                        <li><a href="case-studies.html" class="text-gray-400 hover:text-pine transition-colors">Case Studies</a></li>
+                        <li><a href="landowner-resources.html" class="text-gray-400 hover:text-pine-light transition-colors">Landowner Resources</a></li>
+                        <li><a href="buyer-resources.html" class="text-gray-400 hover:text-pine-light transition-colors">Buyer Resources</a></li>
+                        <li><a href="faq.html" class="text-gray-400 hover:text-pine-light transition-colors">FAQ</a></li>
+                        <li><a href="case-studies.html" class="text-gray-400 hover:text-pine-light transition-colors">Case Studies</a></li>
                     </ul>
                 </div>
                 <div>
@@ -474,7 +469,7 @@
                                     <circle cx="12" cy="11" r="2.5" stroke-width="1.5"/>
                                 </svg>
                             </span>
-                            <span>4775 S Butterfield Dr, Tucson, AZ 85714</span>
+                            <span>6261 N La Cholla Blvd, Tucson, AZ</span>
                         </li>
                         <li class="flex items-center gap-3">
                             <span class="contact-icon" aria-hidden="true">
@@ -502,4 +497,3 @@
     </footer>
 </body>
 </html>
-
