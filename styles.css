@@ -6,20 +6,20 @@
 
 /* ====================================
    CSS Custom Properties (Design Tokens)
-   Enterprise Lux: Desaturated Primaries + Semantic Constraint
+   Enterprise Forestry: WCAG AAA Compliant Palette
    ==================================== */
 :root {
-    /* Colors - Enterprise Forestry (High Contrast / WCAG AAA) */
-    --pine-light: #2D6A4F;      /* Lighter Forest Green */
-    --pine: #1B4332;            /* Deep Forest Green (Primary Brand) */
-    --pine-dark: #081C15;       /* Midnight Green */
-    --accent-orange: #F59E0B;   /* Amber Alert (Safety/Action) */
-    --accent-glow: rgba(245, 158, 11, 0.15);
-    --jet-black: #020617;       /* Richer Black */
-    --charcoal: #1E293B;        /* Slate-tinted Charcoal */
-    --slate: #2F4F4F;           /* Dark Slate Gray */
-    --blue-sky: #0EA5E9;        /* Professional Sky Blue */
-    --white: #FFFFFF;           /* Pure White for max contrast */
+    /* Colors - Enterprise Forestry (Unified with Tailwind) */
+    --pine-light: #2D6A4F;
+    --pine: #1B4332;
+    --pine-dark: #081C15;
+    --accent-orange: #D97706;
+    --accent-glow: rgba(217, 119, 6, 0.15);
+    --jet-black: #020617;
+    --charcoal: #1E293B;
+    --slate: #2F4F4F;
+    --blue-sky: #0EA5E9;
+    --white: #FAFAFA;
     
     /* Atmospheric Grays (Luma Elevation Stack) */
     --gray-50: #FAFAFA;
