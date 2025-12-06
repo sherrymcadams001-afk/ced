@@ -976,7 +976,6 @@ body {
    Mobile Menu Styles
    ==================================== */
 .mobile-nav-link {
-    display: block;
     padding: 1.25rem 1rem;
     border-bottom: 1px solid var(--gray-100);
     font-size: 1.25rem;
@@ -2092,8 +2091,15 @@ body {
         font-size: 16px;
     }
     
-    /* Ensure touch targets are at least 44x44px */
-    a, button, input, select, textarea {
+    /* Ensure touch targets are at least 44x44px for buttons and interactive controls */
+    button, 
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"],
+    .btn-primary,
+    .calculate-btn,
+    .action-btn,
+    a.touch-target {
         min-height: 44px;
         min-width: 44px;
     }
