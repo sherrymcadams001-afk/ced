@@ -31,10 +31,10 @@
     </script>
 </head>
 <body class="font-sans text-gray-900 bg-white antialiased">
-    <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm">
-        <nav class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
-            <a href="index.html" class="flex items-center gap-3 no-underline text-black">
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm" role="banner">
+        <nav class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto" aria-label="Main navigation">
+            <a href="index.html" class="flex items-center gap-3 no-underline text-black touch-target" aria-label="Cedrick Logging Home">
                 <svg class="w-10 h-10" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <rect width="40" height="40" rx="8" fill="url(#logo-gradient)"/>
                     <path d="M20 6L24 14L20 12L16 14L20 6Z" fill="#2D5016"/>
@@ -45,16 +45,22 @@
                 </svg>
                 <div>
                     <div class="text-xl font-bold tracking-tight font-slab">Cedrick Logging</div>
-                    <script defer src="mobile-nav.js"></script>
                     <div class="text-xs text-gray-500 uppercase tracking-wider">Sustainable Forestry Leadership</div>
                 </div>
             </a>
-            <ul class="hidden lg:flex gap-8 list-none">
-                <li><a href="index.html#process" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">Process</a></li>
-                <li><a href="index.html#services" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">Services</a></li>
-                <li><a href="about.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors">About Cedrick</a></li>
-                <li><a href="contact.html" class="bg-accent-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors">Contact Us</a></li>
+            <ul class="hidden lg:flex gap-8 list-none items-center" role="menubar">
+                <li role="none"><a href="services.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors touch-target" role="menuitem">Services</a></li>
+                <li role="none"><a href="about.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors touch-target" role="menuitem">About Us</a></li>
+                <li role="none"><a href="investors.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors touch-target" role="menuitem">Investors</a></li>
+                <li role="none"><a href="sustainability.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors touch-target" role="menuitem">Safety</a></li>
+                <li role="none"><a href="careers.html" class="text-gray-600 font-medium hover:text-pine-dark transition-colors touch-target" role="menuitem">Careers</a></li>
+                <li role="none"><a href="contact.html" class="action-btn bg-accent-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors touch-target" role="menuitem">Contact Us</a></li>
             </ul>
+            <button class="lg:hidden flex flex-col gap-1.5 p-2 touch-target" id="mobileMenuBtn" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobileNav">
+                <span class="w-6 h-0.5 bg-black rounded transition-all" aria-hidden="true"></span>
+                <span class="w-6 h-0.5 bg-black rounded transition-all" aria-hidden="true"></span>
+                <span class="w-6 h-0.5 bg-black rounded transition-all" aria-hidden="true"></span>
+            </button>
         </nav>
     </header>
 
@@ -358,5 +364,6 @@
             });
         });
     </script>
+    <script defer src="mobile-nav.js"></script>
 </body>
 </html>
